@@ -52,7 +52,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #5AC686;
 }
 
 .bg-dark {
@@ -273,7 +273,8 @@ header .header-content .header-content-inner p {
     height: 100%;
     text-align: center;
     color: #fff;
-    background: rgba(240,95,64,.9);
+    background: rgba(119,195,217,.9);
+    /*background: rgba(100,100,100,0.5);*/
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -381,9 +382,11 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #f05f40;
+    /*border-color: #5AC686;*/
     color: #fff;
-    background-color: #f05f40;
+    /*background-color: #5AC686;*/
+    border-color: #77C3D9;
+    background-color: #77C3D9;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -395,9 +398,9 @@ fieldset[disabled] .btn-default.active {
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
-    border-color: #ed431f;
+    border-color: #438294;
     color: #fff;
-    background-color: #ee4b28;
+    background-color: #438294;
 }
 
 .btn-primary:active,

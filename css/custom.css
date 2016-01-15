@@ -1,3 +1,8 @@
+/*.bg-secondary {
+	background-color: #77C3D9;
+}*/
+
+
 /* ALL STYLING FOR GRID HOVER EFFECTS IN DESIGN PROCESS 
  * =====================================================
  */
@@ -35,4 +40,56 @@
 	-ms-transform: translate3d(0, -125%, 0);
 	-webkit-transform: translate3d(0, -125%, 0);
 	transform: translate3d(0, -125%, 0);
+}
+
+
+
+/* ALL STYLING FOR SECONDARY BUTTON */
+
+.btn-secondary {
+    border-color: #5AC686;
+    color: #fff;
+    background-color: #5AC686;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary.focus,
+.btn-secondary:active,
+.btn-secondary.active,
+.open > .dropdown-toggle.btn-secondary {
+    border-color: #3E9f65;
+    color: #fff;
+    background-color: #3E9f65;
+}
+
+.btn-secondary:active,
+.btn-secondary.active,
+.open > .dropdown-toggle.btn-secondary {
+    background-image: none;
+}
+
+.btn-secondary.disabled,
+.btn-secondary[disabled],
+fieldset[disabled] .btn-secondary,
+.btn-secondary.disabled:hover,
+.btn-secondary[disabled]:hover,
+fieldset[disabled] .btn-secondary:hover,
+.btn-secondary.disabled:focus,
+.btn-secondary[disabled]:focus,
+fieldset[disabled] .btn-secondary:focus,
+.btn-secondary.disabled.focus,
+.btn-secondary[disabled].focus,
+fieldset[disabled] .btn-secondary.focus,
+.btn-secondary.disabled:active,
+.btn-secondary[disabled]:active,
+fieldset[disabled] .btn-secondary:active,
+.btn-secondary.disabled.active,
+.btn-secondary[disabled].active,
+fieldset[disabled] .btn-secondary.active {
+    border-color: #f05f40;
+    background-color: #f05f40;
 }
