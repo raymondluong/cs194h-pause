@@ -2,6 +2,24 @@
 	background-color: #77C3D9;
 }*/
 
+@font-face {
+  font-family: 'Avenir Light';
+  src: url('../fonts/avenir-light.woff') format('woff');
+}
+
+.img-logo {
+	height: 50px;
+}
+
+header .header-content .header-content-inner h1 {
+	font-family: Avenir Light;
+	text-transform: lowercase;
+}
+
+.navbar-brand {
+	padding: 2px 0 0 5px;
+}
+
 
 /* ALL STYLING FOR GRID HOVER EFFECTS IN DESIGN PROCESS 
  * =====================================================
