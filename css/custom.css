@@ -1,4 +1,38 @@
-div.stage-title {
-	padding: 100px 10px 30px 10px;
+/* ALL STYLING FOR GRID HOVER EFFECTS IN DESIGN PROCESS 
+ * =====================================================
+ */
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name,
+.portfolio-box .portfolio-box-caption .project-links {
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
 }
 
+.portfolio-box .portfolio-box-caption .project-links {
+	opacity: 0;
+	position: absolute;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.portfolio-box:hover .portfolio-box-caption .project-links {
+	opacity: 1;
+	bottom: 3em;
+}
+
+.portfolio-box:hover .portfolio-box-caption .portfolio-box-caption-content .project-category {
+	-moz-transform: translate3d(0, -185%, 0);
+	-ms-transform: translate3d(0, -185%, 0);
+	-webkit-transform: translate3d(0, -185%, 0);
+	transform: translate3d(0, -185%, 0);
+}
+
+.portfolio-box:hover .portfolio-box-caption .portfolio-box-caption-content .project-name {
+	-moz-transform: translate3d(0, -125%, 0);
+	-ms-transform: translate3d(0, -125%, 0);
+	-webkit-transform: translate3d(0, -125%, 0);
+	transform: translate3d(0, -125%, 0);
+}
