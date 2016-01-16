@@ -448,6 +448,11 @@ fieldset[disabled] .btn-primary.active {
     padding: 15px 30px;
 }
 
+.btn-lg {
+    padding: 10px 20px;
+    font-size: 0.8em;
+}
+
 ::-moz-selection {
     text-shadow: none;
     color: #fff;
