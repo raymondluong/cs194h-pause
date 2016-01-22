@@ -1,4 +1,4 @@
-.circle{
+.circle {
 	overflow: hidden;
 	border-radius: 50%;
     margin-left: auto;
@@ -39,7 +39,7 @@
 }
 
 #print{
-    background-image: url(“../../img/print.png");
+    background-image: url(../../img/print.png);
     background-repeat: no-repeat;
     /*background-size: 250px 250px;*/
     background-size: 25vw 25vw;
@@ -88,7 +88,7 @@
 }
 
 #found{
-    background-image: url(“../../img/location_connection.png");
+    background-image: url(../../img/location_connection.png);
     background-repeat: no-repeat;
     /*background-size: 470px 110px;
     height: 110px;

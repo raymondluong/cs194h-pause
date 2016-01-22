@@ -1,19 +1,19 @@
-;(function($, window, document, undefined){
+(function($, window, document, undefined){
     var pluginName = 'circleMenu',
         defaults = {
             depth: 0,
-            item_diameter: 300,
-            circle_radius: 370,
+            item_diameter: 5.75,
+            circle_radius: 105,
             angle:{
                 start: 0,
                 end: 90
             },
-            speed: 700,
-            delay: 1000,
+            speed: 800,
+            delay: 800,
             step_out: 20,
             step_in: -20,
             trigger: 'hover',
-            transition_function: 'ease'
+            transition_function: 'ease-out'
         };
 
     function vendorPrefixes(items,prop,value){
@@ -46,7 +46,7 @@
                 'top-half':[180,360],
                 'top-left':[270,180],
                 'top-right':[270,360],
-                'full':[-90,270-Math.floor(360/self.element.children('li').length)],
+                'full':[-40,270-Math.floor(360/self.element.children('li').length)],
                 'bottom-right':[0,90]
             },
             dir;
@@ -97,6 +97,7 @@
 
         self.trigger('init');
     };
+
     CircleMenu.prototype.trigger = function(){
         var args = [],
             i, len;
@@ -106,6 +107,7 @@
         }
         this.element.trigger(pluginName+'-'+args.shift(), args);
     };
+
     CircleMenu.prototype.hook = function(){
         var self = this;
 
@@ -129,6 +131,7 @@
             // Do nothing
         }
     };
+
     CircleMenu.prototype.open = function(){
         var self = this,
             $self = this.element,
@@ -162,6 +165,7 @@
         self._state = 'opening';
         return self;
     };
+
     CircleMenu.prototype.close = function(immediate){
         var self = this,
             $self = this.element,
@@ -182,7 +186,7 @@
 
                 self._timeouts.push(setTimeout(function(){
                     $item.css({top:0,left:0});
-                    vendorPrefixes($item,'transform','scale(.5)');
+                    vendorPrefixes($item,'transform','scale(0)');
                 }, start + Math.abs(self.options.step_in) * index));
             });
             self._timeouts.push(setTimeout(function(){
@@ -201,6 +205,7 @@
         }
         return this;
     };
+
     CircleMenu.prototype.select = function(index){
         var self = this,
             selected, set_other;
@@ -210,15 +215,16 @@
             set_other = self.element.children('li:not(:nth-child('+index+'),:first-child)');
             selected = self.element.children('li:nth-child('+index+')');
             self.trigger('select',selected);
-            vendorPrefixes(selected.add(set_other), 'transition', 'all 500ms ease-out');
+            vendorPrefixes(selected.add(set_other), 'transition', 'all 300ms ease-out');
             vendorPrefixes(selected, 'transform', 'scale(2)');
             vendorPrefixes(set_other, 'transform', 'scale(0)');
             selected.css('opacity','0');
             set_other.css('opacity','0');
             self.element.removeClass(pluginName+'-open');
-            setTimeout(function(){self.initCss();},500);
+            setTimeout(function(){self.initCss();}, 500);
         }
     };
+
     CircleMenu.prototype.clearTimeouts = function(){
         var timeout;
 
@@ -226,6 +232,7 @@
             clearTimeout(timeout);
         }
     };
+
     CircleMenu.prototype.initCss = function(){
         var self = this, 
             $items;
@@ -234,18 +241,18 @@
         self.element.removeClass(pluginName+'-open');
         self.element.css({
             'list-style': 'none',
-            'margin': 0,
+            'margin': 'auto',
             'padding': 0,
-            'width': self.options.item_diameter+'px'
+            'width': self.options.item_diameter+'em'
         });
         $items = self.element.children('li');
         $items.attr('style','');
         $items.css({
             'display': 'block',
-            'width': self.options.item_diameter+'px',
-            'height': self.options.item_diameter+'px',
+            'width': self.options.item_diameter+'em',
+            'height': self.options.item_diameter+'em',
             'text-align': 'center',
-            'line-height': self.options.item_diameter+'px',
+            'line-height': self.options.item_diameter+'em',
             'position': 'absolute',
             'z-index': 1,
             'opacity': ''
@@ -255,8 +262,8 @@
             top:0,
             left:0
         });
-        vendorPrefixes($items, 'border-radius', self.options.item_diameter+'px');
-        vendorPrefixes(self.menu_items, 'transform', 'scale(.5)');
+        vendorPrefixes($items, 'border-radius', self.options.item_diameter+'em');
+        vendorPrefixes(self.menu_items, 'transform', 'scale(0)');
         setTimeout(function(){
             vendorPrefixes($items, 'transition', 'all '+self.options.speed+'ms '+self.options.transition_function);
         },0);

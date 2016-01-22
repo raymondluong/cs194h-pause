@@ -1,76 +1,26 @@
-#first_row {
-    height: 400px;
+.menu {
+	position: relative;
+
+	/* To brute force center the menu */
+	top: -4em;
+	left: -1em;
 }
 
 .menu li:first-child {
-    font-weight:bold;
-    font-family: 'Raleway';
-    font-size: 200%;
-    
-  
-    border: none;
-    background: url("symbol.png") no-repeat center;
-    background-size: 200px 200px;
+	background: url("../../img/bluelotus.jpg") no-repeat center;
+	background-size: cover;
 }
-.img{
-    margin-top: 10px;
-    margin-left: 120px;
 
-}
-#bg {
-  position: fixed; 
-  top: -50%; 
-  left: -50%; 
-  width: 200%; 
-  height: 200%;
-}
-#bg img {
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0; 
-  margin: auto; 
-  min-width: 50%;
-  min-height: 50%;
-}
-.paper{
-    margin-top: 45px;
-}
 .menu li {
-    background: #F49230;
-    font-family: 'Raleway';
-    color: black;
-    font-size: 62px;
-   border: none;
-}
-.menu a{
-    text-decoration: none;
-    color:#fff;
+	background: #F49230;
+	font-family: 'Raleway';
+	color: #323232;
+	font-size: 1.5em;
+	opacity: 0.85;
+	filter: alpha(opacity=85);
 }
 
-nav{
-    width:200px;
-    float:left;
-}
-nav ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-}
-nav a{
-    display:block;
-    text-decoration:none;
-}
-nav a.active{
-    text-decoration: none;
-    color:#fff;
-}
-
-
-.menu{position:absolute;}
-
-#menu2{
-  left: 100px;
-  top: 220px;
+.menu a {
+	text-decoration: none;
+	color:#fff;
 }
