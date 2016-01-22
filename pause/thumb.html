@@ -1,93 +1,67 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<title>Thumb Page</title>
+		<meta charset="utf-8"/>
+		<title>Connection</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href="assets/css/circle-menu.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/circle-menu.css" rel="stylesheet" type="text/css" />
-		<link href="assets/css/thumb.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Raleway:400,200'>
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/custom.css"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/thumb.css"/>
 
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel="stylesheet" type="text/css">
+	</head>
+   
+	<body>
+		<div class="table text-center">
+			<div class="table-overlay">
+				<div id="one" class="circle">
+					<div id="print" class="circle"></div>
+					<div id="two" class="circle"></div>
+
+					<div id="searching_text">
+						<p>Searching for connection</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="small_circle" id="left">
+						<div class="small_circle" id="left_fill"></div>
+					</div>
+					<div class="small_circle" id="center">
+						<div class="small_circle" id="center_fill"></div>
+					</div>
+					<div class="small_circle" id="right">
+						<div class="small_circle" id="right_fill"></div>
+					</div>
+					<div id="found"></div>
+				</div>
+			</div>
+		</div>
+
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
 		<script>
 		$(document).ready(function(){
 			//get URL info
-			var input = (window.location.href).split('?=')[1];
+			/*var input = (window.location.href).split('?=')[1];
 			var str = input.concat(".jpg");
-			document.getElementById("quote").setAttribute("src", str);
+			document.getElementById("quote").setAttribute("src", str);*/
 
 			//hide relevant things at first          
-			$("#left_fill").hide().delay(1000).fadeIn(3000);
-			$("#center_fill").hide().delay(4000).fadeIn(3000);
-			$("#right_fill").hide().delay(7000).fadeIn(3000);
-			$(".small_circle").delay(11000).fadeOut();
-			$("p").delay(10000).fadeOut(500);
-			$("#print").hide().delay(13000).fadeIn(3000);
-			$("#found").hide().delay(11500).fadeIn();
+			$("#left_fill").hide().delay(500).fadeIn(1500);
+			$("#center_fill").hide().delay(2500).fadeIn(2000);
+			$("#right_fill").hide().delay(4500).fadeIn(2000);
+			$(".small_circle").delay(8000).fadeOut(500);
+			$("p").delay(9000).fadeOut(1000);
+			$("#print").hide().delay(10000).fadeIn(2000);
+			$("#found").hide().delay(12000).fadeIn(500);
 		});  
 		</script>
 
-	</head>
-   
-	<body>
-		<div class="container-fluid">
-			<div class="row" style="height: 1vh"></div>
-			<div class="row" id="first_row" style="height: 33vh">
-				<div class="img" style="margin-left:auto; margin-right:auto;">
-					<img id="quote" width="1000vw"></img>
-				</div>
-			</div>
-
-			<div class="row" style="height: 33vh">
-				<div class="col-xs-3"></div>
-				<div class="col-xs-6">
-					<div id="one" class="circle">
-						<div id="print" class="circle"></div>
-						<div id="two" class="circle"></div>
-						<div id="searching_text">
-							<p>Searching for connection</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-3"></div>
-			</div>
-
-			<div class="row" style="height: 20vw">
-				<div class="col-xs-3"></div>
-				<div class="col-xs-6" style="position:relative; top: 4vw">
-					<div class="col-xs-12" style="position:absolute; height: 15vw">
-						<div id="found"></div>
-					</div>
-					<div class="col-xs-4">
-						<div class="small_circle" id="left">
-							<div class="small_circle" id="left_fill"></div>
-						</div>
-					</div>
-					<div class="col-xs-4">
-						<div class="small_circle" id="center">
-							<div class="small_circle" id="center_fill"></div>
-						</div>
-					</div>
-					<div class="col-xs-4">
-						<div class="small_circle" id="right">
-							<div class="small_circle" id="right_fill"></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-xs-3"></div>
-			</div>
-
-			<div class="row" style="background-color: blue">
-		</div>
-
 		<!-- script to fill the circle when holding down on computer -->
 		<script type="text/javascript">
-			//$(".circle").bind("touchstart", function(){
 			navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
 			$(".circle").bind('touchstart mousedown',function(){
@@ -108,7 +82,7 @@
 				}
 				setTimeout(function() {
 					window.location.href="colorPickScreen.html";
-				}, 2000);
+				}, 1000);
 			});
 		</script>
 
