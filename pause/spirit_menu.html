@@ -1,101 +1,90 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Spirit Menu</title>
+	<head>
+		<meta charset="utf-8" />
+		<title>Spirit Menu</title>
 
-        <link rel="stylesheet" type="text/css" href="assets/css/circle-menu.css" />
-        <link href="assets/css/bootstrap.css" rel="stylesheet">
-        <link href="assets/css/bootstrap-theme.css" rel="stylesheet">
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="assets/css/circle-menu.css" />
+		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="assets/css/bootstrap-theme.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel='stylesheet' type='text/css'>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script src="assets/js/circleMenu.js"></script>
-        <script>
-            $(function(){
-              
-                $('#menu2').circleMenu({
-                    direction:'full', 
-                    trigger:'click',
-                    open: function(){console.log('menu opened');
-                                    document.body.style.backgroundImage = "none";
-                                    document.getElementById("title_img").innerHTML =  "<img alt=\"Brand\" src=\"img/pause_title.jpg\" width=\"380\"></img>"; 
-                                    document.getElementById("bg").style.visibility = "hidden";
-                                },
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="assets/js/circleMenu.js"></script>
+		<script>
+		$(function(){
+		  
+			$('#menu2').circleMenu({
+				direction:'full', 
+				trigger:'click',
+				open: function(){console.log('menu opened');
+					document.body.style.backgroundImage = "none";
+					document.getElementById("title_img").innerHTML =  "<img alt=\"Brand\" src=\"img/pause_title.jpg\" width=\"380\"></img>";
+					document.getElementById("bg").style.visibility = "hidden";
+				},
 
-                    close: function(){console.log('menu closed');
-                             document.getElementById("bg").style.visibility = "visible";
-                             document.getElementById("title_img").innerHTML =  "";},
-                    init: function(){console.log('menu initialized');},
-                    select: function(evt,index){console.log(evt,index)}
-                }).on('circleMenu-open',function(){
-                    console.log('menu opened 2');
-                });
-                
-                              
-                $('#examples > div:first-child').css('display','block');
-                $('nav li:first-child a').addClass('active');
-                $('nav a').each(function(){
-                    var $link = $(this);
-                    $link.on('click', function(evt){
-                        $('nav a').removeClass('active');
-                        $('#examples > div').css('display','none');
-                        $('#'+$link.attr('rel')).css('display','block');
-                        $link.addClass('active');
-                    });
-                })
-            });
-        </script>
+				close: function(){console.log('menu closed');
+					document.getElementById("bg").style.visibility = "visible";
+					document.getElementById("title_img").innerHTML =  "";},
+				init: function(){console.log('menu initialized');},
+				select: function(evt,index){console.log(evt,index)}
+			}).on('circleMenu-open', function(){
+				console.log('menu opened 2');
+			});
 
-        <style type="text/css">
+			$('#examples > div:first-child').css('display','block');
+			$('nav li:first-child a').addClass('active');
 
-            body {
-                background-repeat: no-repeat;
-            }
-        </style>
-       
-    </head>
+			$('nav a').each(function(){
+				var $link = $(this);
+				$link.on('click', function(evt){
+					$('nav a').removeClass('active');
+					$('#examples > div').css('display','none');
+					$('#'+$link.attr('rel')).css('display','block');
+					$link.addClass('active');
+				});
+			})
+		});
+		</script>
+
+		<style type="text/css">
+			body {
+				background-repeat: no-repeat;
+			}
+		</style>
+	   
+	</head>
    
-    <body>
-        <div id="bg">
-            <img src="img/spiral4.png" alt="">
-        </div>
+	<body>
+		<div id="bg">
+			<img src="img/spiral4.png" alt="">
+		</div>
 
-        <div class="container">
-            <div class="row" id="first_row">
-                <div class="col-xs-1"></div>
-                <div class="col-xs-10">
-                     <div class="img" id="title_img">
-                       
-                    </div>
-                </div>
-                
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-xs-3"></div>
-            <div class="col-xs-2">
-             
-       
-      
-            <div id="ex-full-clickopen">
-                <ul class="menu" id="menu2">
-                    <li><a href="#"></a></li>
-                    <li><a href="thumb.html?=love" alt="Item 1" title="Item 1"> love </a></li>
-                    <li><a href="thumb.html?=stress" alt="Item 2" title="Item 2"> stress </a></li>
-                    <li><a href="thumb.html?=fear" alt="Item 3" title="Item 3"> fear </a></li>
-                    <li><a href="thumb.html?=grief" alt="Item 4" title="Item 4"> grief </a></li>
-                    <li><a href="thumb.html?=faith" alt="Item 5" title="Item 5"> faith </a></li>
-                    <li><a href="thumb.html?=solitude" alt="Item 6" title="Item 6">solitude</a></li>
+		<div class="container">
+			<div class="row" id="first_row">
+				<div class="col-xs-1"></div>
+				<div class="col-xs-10">
+					<div class="img" id="title_img"></div>
+				</div>
+			</div>
+		</div>
 
-                    
-               
-                </ul>
-            </div>
-            </div>
-            </div>
-            </div>
-           
-    
-    </body>
+		<div class="row">
+			<div class="col-xs-3"></div>
+			<div class="col-xs-2">
+				<div id="ex-full-clickopen">
+					<ul class="menu" id="menu2">
+						<li><a href="#"></a></li>
+						<li><a href="thumb.html?=love" alt="Item 1" title="Item 1"> love </a></li>
+						<li><a href="thumb.html?=stress" alt="Item 2" title="Item 2"> stress </a></li>
+						<li><a href="thumb.html?=fear" alt="Item 3" title="Item 3"> fear </a></li>
+						<li><a href="thumb.html?=grief" alt="Item 4" title="Item 4"> grief </a></li>
+						<li><a href="thumb.html?=faith" alt="Item 5" title="Item 5"> faith </a></li>
+						<li><a href="thumb.html?=solitude" alt="Item 6" title="Item 6">solitude</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>		   
+	
+	</body>
 </html>

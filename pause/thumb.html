@@ -1,117 +1,116 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Thumb pages</title>
-        <link rel="stylesheet" type="text/css" href="circle-menu.css" />
-        <link href="bootstrap.css" rel="stylesheet">
-        <link href="bootstrap-theme.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="circle-menu.css" />
-        <link rel="stylesheet" type="text/css" href="thumb.css"/>
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel='stylesheet' type='text/css'>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
-        <script>
-        $(document).ready(function(){
-            //get URL info
-            var input = (window.location.href).split('?=')[1];
-            var str = input.concat(".jpg");
-            document.getElementById("quote").setAttribute("src", str);
+	<head>
+		<meta charset="utf-8" />
+		<title>Thumb Page</title>
 
-            //hide relevant things at first          
-            $("#left_fill").hide().delay(1000).fadeIn(3000);
-            $("#center_fill").hide().delay(4000).fadeIn(3000);
-            $("#right_fill").hide().delay(7000).fadeIn(3000);
-            $(".small_circle").delay(11000).fadeOut();
-            $("p").delay(10000).fadeOut(500);
-            $("#print").hide().delay(13000).fadeIn(3000);
-            $("#found").hide().delay(11500).fadeIn();
-        });  
-        </script>
-    </head>
+		<link href="assets/css/circle-menu.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/circle-menu.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/thumb.css" rel="stylesheet" type="text/css" />
+
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel="stylesheet" type="text/css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+		<script>
+		$(document).ready(function(){
+			//get URL info
+			var input = (window.location.href).split('?=')[1];
+			var str = input.concat(".jpg");
+			document.getElementById("quote").setAttribute("src", str);
+
+			//hide relevant things at first          
+			$("#left_fill").hide().delay(1000).fadeIn(3000);
+			$("#center_fill").hide().delay(4000).fadeIn(3000);
+			$("#right_fill").hide().delay(7000).fadeIn(3000);
+			$(".small_circle").delay(11000).fadeOut();
+			$("p").delay(10000).fadeOut(500);
+			$("#print").hide().delay(13000).fadeIn(3000);
+			$("#found").hide().delay(11500).fadeIn();
+		});  
+		</script>
+
+	</head>
    
-    <body>
-        <div class="container-fluid">
-            <div class="row" style="height: 1vh"></div>
-            <div class="row" id="first_row" style="height: 33vh">
-                
-                
-                     <div class="img" style="margin-left:auto; margin-right:auto;">
-                        <img id="quote" width="1000vw">
+	<body>
+		<div class="container-fluid">
+			<div class="row" style="height: 1vh"></div>
+			<div class="row" id="first_row" style="height: 33vh">
+				<div class="img" style="margin-left:auto; margin-right:auto;">
+					<img id="quote" width="1000vw"></img>
+				</div>
+			</div>
 
-                        </img>
-                    </div>
-                
-                
-            </div>
+			<div class="row" style="height: 33vh">
+				<div class="col-xs-3"></div>
+				<div class="col-xs-6">
+					<div id="one" class="circle">
+						<div id="print" class="circle"></div>
+						<div id="two" class="circle"></div>
+						<div id="searching_text">
+							<p>Searching for connection</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-3"></div>
+			</div>
 
-            <div class="row" style="height: 33vh">
-                <div class="col-xs-3"></div>
-                <div class="col-xs-6">
-                    <div id="one" class="circle">
-                        <div id="print" class="circle"></div>
-                        <div id="two" class="circle"></div>
-                        <div id="searching_text">
-                            <p>Searching for connection</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-3"></div>
-            </div>
+			<div class="row" style="height: 20vw">
+				<div class="col-xs-3"></div>
+				<div class="col-xs-6" style="position:relative; top: 4vw">
+					<div class="col-xs-12" style="position:absolute; height: 15vw">
+						<div id="found"></div>
+					</div>
+					<div class="col-xs-4">
+						<div class="small_circle" id="left">
+							<div class="small_circle" id="left_fill"></div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="small_circle" id="center">
+							<div class="small_circle" id="center_fill"></div>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="small_circle" id="right">
+							<div class="small_circle" id="right_fill"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-3"></div>
+			</div>
 
-            <div class="row" style="height: 20vw">
-                <div class="col-xs-3"></div>
-                <div class="col-xs-6" style="position:relative; top: 4vw">
-                    <div class="col-xs-12" style="position:absolute; height: 15vw">
-                        <div id="found"></div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="small_circle" id="left">
-                            <div class="small_circle" id="left_fill"></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="small_circle" id="center">
-                            <div class="small_circle" id="center_fill"></div>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="small_circle" id="right">
-                            <div class="small_circle" id="right_fill"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-3"></div>
-            </div>
+			<div class="row" style="background-color: blue">
+		</div>
 
-            <div class="row" style="background-color: blue">
-        </div>
+		<!-- script to fill the circle when holding down on computer -->
+		<script type="text/javascript">
+			//$(".circle").bind("touchstart", function(){
+			navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
-        <!-- script to fill the circle when holding down on computer -->
-        <script type="text/javascript">
-            //$(".circle").bind("touchstart", function(){
-            navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
+			$(".circle").bind('touchstart mousedown',function(){
+				$("#two").animate({
+					right: 0,
+					left: 0,
+					top: 0,
+					bottom: 0
+				}, {duration: 10000});
+				if(navigator.vibrate){
+					navigator.vibrate(1000);
+				}
+			}).bind('touchend mouseup', function(){
+				$("#two").stop();
+				$('.container').fadeOut(2000);
+				if(navigator.vibrate){
+					navigator.vibrate(0);
+				}
+				setTimeout(function() {
+					window.location.href="colorPickScreen.html";
+				}, 2000);
+			});
+		</script>
 
-            $(".circle").bind('touchstart mousedown',function(){
-                $("#two").animate({
-                    right: 0,
-                    left: 0,
-                    top: 0,
-                    bottom: 0
-                }, {duration: 10000});
-                if(navigator.vibrate){
-                    navigator.vibrate(1000);
-                }
-            }).bind('touchend mouseup', function(){
-                $("#two").stop();
-                $('.container').fadeOut(2000);
-                if(navigator.vibrate){
-                    navigator.vibrate(0);
-                }
-                setTimeout(function() {
-                    window.location.href="colorPickScreen.html";
-                }, 2000);
-            });
-        </script>
-
-    </body>
+	</body>
 </html>
