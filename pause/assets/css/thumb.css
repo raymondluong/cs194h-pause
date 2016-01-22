@@ -1,0 +1,138 @@
+.circle{
+	overflow: hidden;
+	border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.small_circle{
+    overflow: hidden;
+    border-radius: 50%;
+    /*width: 50px;
+    height: 50px;*/
+    width: 7vw;
+    height: 7vw;
+    /*text-align: left*/
+    background-color: white;
+    border-style: solid;
+    border-color: orange;
+    /*border-width: 2px; */
+    border-width: .2vh;
+}
+
+#one{
+	background-color: white;
+    /*left: 50px;
+    top: 50px;*/
+    /*width: 500px; 
+    height: 500px;*/
+    width: 50vw;
+    height: 50vw;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    
+    border-style: solid;
+    border-color: orange;
+    /*border-width: 5px;*/
+    border-width: .5vh;
+}
+
+#print{
+    background-image: url(“../../img/print.png");
+    background-repeat: no-repeat;
+    /*background-size: 250px 250px;*/
+    background-size: 25vw 25vw;
+    background-position: center center;
+
+    position: absolute;
+    /*right:125px;
+    left:125px;
+    top:125px;
+    bottom:125px;*/
+    right:12.5vw;
+    left:12.5vw;
+    top:12.5vw;
+    bottom:12.5vw;
+}
+
+#two{
+	position: absolute;
+	background-color: orange;
+	/*right: 250px;
+    left: 250px;
+    top: 250px;
+    bottom: 250px;*/
+    right:25vw;
+    left:25vw;
+    top:25vw;
+    bottom:25vw;
+}
+
+#searching_text{
+    /*background-color: red;*/
+    text-align: center;
+    color: orange;
+    position: absolute;
+    /*
+    right:110px;
+    left:110px;
+    top:110px;
+    bottom:110px;
+    font-size: 56px;*/
+    right:11vw;
+    left:11vw;
+    top:11vw;
+    bottom:11vw;
+    font-size:5.5vw;
+}
+
+#found{
+    background-image: url(“../../img/location_connection.png");
+    background-repeat: no-repeat;
+    /*background-size: 470px 110px;
+    height: 110px;
+    width: 470px;
+    */
+    background-size: 47vw 11vw;
+    height: 11vw;
+    width:47vw;
+    background-position: center center;
+    /*position: absolute;
+    top: 0px;
+    bottom: 0px;*/
+
+}
+
+#left{
+    margin-left: auto;
+    margin-right: 0;
+}
+
+#left_fill{
+    margin-left: auto;
+    margin-right: 0;
+    background-color: orange
+}
+
+#center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#center_fill{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: orange
+}
+
+#right{
+    margin-left: 0;
+    margin-right: auto;
+}
+
+#right_fill{
+    margin-left: 0;
+    margin-right: auto;  
+    background-color: orange 
+}
