@@ -1,0 +1,90 @@
+body {
+	height: 100%;
+	letter-spacing: 1px;
+	line-height: 1.2em;
+	font-weight: 200;
+	color: #373712;
+}
+
+h1 {
+	margin: 0;
+	padding: 0.5em 0;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+
+
+/* This is for vertical aligning a div inside another div. */
+.table {
+	display: table;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 0;
+}
+.table-overlay {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+div#home-screen {
+	background: url(../../img/blueyellowbkgrd.png) no-repeat fixed center center;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	width: 100%;
+	height: 100vh;
+}
+
+h1#home-title {
+	position: absolute;
+	top: 15vh;
+	width: 100%;
+}
+
+
+
+
+/* =======================
+ *  CIRCLE MENU STYLING
+ * ======================= */
+#behind-lotus {
+	margin: auto;
+	width: 140px;
+	height: 140px;
+	background-color: #383838;
+	border-radius: 68px;
+	opacity: 0.9;
+}
+
+ .menu {
+	position: relative;
+	margin: auto;
+	top: 0em;
+	left: -1.25em;
+	height: 100%;
+}
+
+.menu li:first-child {
+	background: #fff url("../../img/bluelotus.jpg") no-repeat center;
+	background-size: 4.5em 4.5em;
+}
+
+.menu li {
+	background: #F49230;
+	font-family: 'Raleway';
+	color: #323232;
+	font-size: 1.5em;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+
+.menu li:hover {
+	cursor: pointer;
+}
+
+.menu a {
+	text-decoration: none;
+	color:#fff;
+}
+

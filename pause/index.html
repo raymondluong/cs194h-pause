@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Pause: Home Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300'/>
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/custom.css"/>
+	   
+	</head>
+   
+	<body>
+		<div class="text-center" id="home-screen">
+			<h1 id="home-title">pause</h1>
+			<div class="table">
+				<div class="table-overlay">
+					<div id="ex-full-clickopen" style="position: relative; top: 2em">
+						<ul class="menu" id="options">
+							<li id="cover"><a href="#"></a></li>
+							<li><a href="thumb.html?=love" alt="Item 1">meditate</a></li>
+							<li><a href="thumb.html?=stress" alt="Item 2">connect</a></li>
+							<li><a href="thumb.html?=fear" alt="Item 3">log</a></li>
+						</ul>
+						<div class="circle" id="behind-lotus"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="assets/js/circleMenu.js"></script>
+		<script>
+		$(function(){
+		  
+			$('#options').circleMenu({
+				direction:'full', 
+				trigger:'click',
+
+				select: function(evt, index){
+					console.log(evt, index);
+				}
+			}).on('circleMenu-open', function(){
+				console.log('menu opened 2');
+			});
+
+		});
+		</script>
+
+	</body>
+</html>
