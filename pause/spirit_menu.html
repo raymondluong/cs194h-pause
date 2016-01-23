@@ -3,50 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Spirit Menu</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" type="text/css" href="assets/css/circle-menu.css" type="text/css"/>
-		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-		<link href="assets/css/bootstrap-theme.css" rel="stylesheet" type="text/css"/>
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel="stylesheet" type="text/css">
-
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<script src="assets/js/circleMenu.js"></script>
-		
-		<script>
-		$(function(){
-		  
-			$('#menu2').circleMenu({
-				direction:'full', 
-				trigger:'click',
-				open: function(){console.log('menu opened');
-					document.body.style.backgroundImage = "none";
-					document.getElementById("title_img").innerHTML =  "<img alt=\"Brand\" src=\"img/pause_title.jpg\" width=\"380\">";
-					document.getElementById("bg").style.visibility = "hidden";
-				},
-
-				close: function(){console.log('menu closed');
-					document.getElementById("bg").style.visibility = "visible";
-					document.getElementById("title_img").innerHTML =  "";},
-				init: function(){console.log('menu initialized');},
-				select: function(evt,index){console.log(evt,index)}
-			}).on('circleMenu-open', function(){
-				console.log('menu opened 2');
-			});
-
-			$('#examples > div:first-child').css('display','block');
-			$('nav li:first-child a').addClass('active');
-
-			$('nav a').each(function(){
-				var $link = $(this);
-				$link.on('click', function(evt){
-					$('nav a').removeClass('active');
-					$('#examples > div').css('display','none');
-					$('#'+$link.attr('rel')).css('display','block');
-					$link.addClass('active');
-				});
-			})
-		});
-		</script>
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Raleway:400,200'>
 
 		<style type="text/css">
 			body {
@@ -85,7 +45,48 @@
 					</ul>
 				</div>
 			</div>
-		</div>		   
+		</div>
+
+
+		<!-- scripts at the bottom so page loads faster -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="assets/js/circleMenu.js"></script>
+		
+		<script>
+		$(function(){
+		  
+			$('#menu2').circleMenu({
+				direction:'full', 
+				trigger:'click',
+				open: function(){console.log('menu opened');
+					document.body.style.backgroundImage = "none";
+					document.getElementById("title_img").innerHTML =  "<img alt=\"Brand\" src=\"img/pause_title.jpg\" width=\"380\">";
+					document.getElementById("bg").style.visibility = "hidden";
+				},
+
+				close: function(){console.log('menu closed');
+					document.getElementById("bg").style.visibility = "visible";
+					document.getElementById("title_img").innerHTML =  "";},
+				init: function(){console.log('menu initialized');},
+				select: function(evt,index){console.log(evt,index)}
+			}).on('circleMenu-open', function(){
+				console.log('menu opened 2');
+			});
+
+			$('#examples > div:first-child').css('display','block');
+			$('nav li:first-child a').addClass('active');
+
+			$('nav a').each(function(){
+				var $link = $(this);
+				$link.on('click', function(evt){
+					$('nav a').removeClass('active');
+					$('#examples > div').css('display','none');
+					$('#'+$link.attr('rel')).css('display','block');
+					$link.addClass('active');
+				});
+			})
+		});
+		</script>		   
 	
 	</body>
 </html>

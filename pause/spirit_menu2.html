@@ -3,12 +3,60 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>Spirit Menu</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href="assets/css/circles2.css" rel="stylesheet" type="text/css">
-		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
-		<link href="assets/css/bootstrap-theme.css" rel="stylesheet" type="text/css">
-		<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300' rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:400,200">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 
+		<style type="text/css">
+			body {
+				background-repeat: no-repeat;
+				}
+		</style>
+	   
+	</head>
+   
+	<body>
+		<div id="bg">
+			<img src="img/spiral4.png" alt="">
+		</div>
+
+		<div class="container">
+			<div class="row" id="first_row">
+				<div class="col-xs-1"></div>
+				<div class="col-xs-10">
+					 <div class="img" id = "title_img"></div>
+				</div>
+			</div> 
+		</div>
+
+		<div class="row" id="second_row">
+			<div class="col-xs-3"></div>
+			<div class="col-xs-2">
+				<div id="ex-full-clickopen">
+					<ul class="menu" id="menu2">
+						<li><a href="#"></a></li>
+						<li><a href="thumb.html?=love" alt="Item 1" title="Item 1"> love </a></li>
+						<li><a href="thumb.html?=stress" alt="Item 2" title="Item 2"> stress </a></li>
+						<li><a href="thumb.html?=fear" alt="Item 3" title="Item 3"> fear </a></li>
+						<li><a href="thumb.html?=grief" alt="Item 4" title="Item 4"> grief </a></li>
+						<li><a href="thumb.html?=faith" alt="Item 5" title="Item 5"> faith </a></li>
+						<li><a href="thumb.html?=solitude" alt="Item 6" title="Item 6">solitude</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row" id="third_row">
+			<div class="col-xs-2"></div>
+			<div id="oval">
+				<img id="oval_img" src="img/oval5.png" alt="" height="60" width="60">
+			</div>
+		</div>
+
+
+
+		<!-- scripts put at the bottom so page loads faster -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script src="assets/js/circleMenu.js"></script>
 
@@ -57,51 +105,6 @@
 			});
 		</script>
 
-		<style type="text/css">
-			body {
-				background-repeat: no-repeat;
-				}
-		</style>
-	   
-	</head>
-   
-	<body>
-		<div id="bg">
-			<img src="img/spiral4.png" alt="">
-		</div>
-
-		<div class="container">
-			<div class="row" id="first_row">
-				<div class="col-xs-1"></div>
-				<div class="col-xs-10">
-					 <div class="img" id = "title_img"></div>
-				</div>
-			</div> 
-		</div>
-
-		<div class="row" id="second_row">
-			<div class="col-xs-3"></div>
-			<div class="col-xs-2">
-				<div id="ex-full-clickopen">
-					<ul class="menu" id="menu2">
-						<li><a href="#"></a></li>
-						<li><a href="thumb.html?=love" alt="Item 1" title="Item 1"> love </a></li>
-						<li><a href="thumb.html?=stress" alt="Item 2" title="Item 2"> stress </a></li>
-						<li><a href="thumb.html?=fear" alt="Item 3" title="Item 3"> fear </a></li>
-						<li><a href="thumb.html?=grief" alt="Item 4" title="Item 4"> grief </a></li>
-						<li><a href="thumb.html?=faith" alt="Item 5" title="Item 5"> faith </a></li>
-						<li><a href="thumb.html?=solitude" alt="Item 6" title="Item 6">solitude</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-
-		<div class="row" id="third_row">
-			<div class="col-xs-2"></div>
-			<div id="oval">
-				<img id="oval_img" src="img/oval5.png" alt="" height="60" width="60">
-			</div>
-		</div>	   
 	
 	</body>
 </html>
