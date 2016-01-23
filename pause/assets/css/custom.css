@@ -6,15 +6,43 @@ body {
 	color: #373712;
 }
 
-h1 {
+h2 {
 	margin: 0;
 	padding: 0.5em 0;
-	font-weight: 200;
+	font-weight: 100;
 	letter-spacing: 1px;
+	color: #707070;
 }
 
 
-/* This is for vertical aligning a div inside another div. */
+
+
+/* =========================
+ *  STYLIZING THE HOME PAGE
+ * =========================
+ */
+div#home-screen {
+	background: url(../../img/blueyellowbkgrd.png) no-repeat fixed center center;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	width: 100%;
+	height: 100vh;
+}
+#home-title {
+	position: absolute;
+	top: 25vh;
+	width: 100%;
+}
+
+
+
+
+/* ==========================
+ *  vertical aligning a div
+ *  inside another div.
+ * =========================
+ */
 .table {
 	display: table;
 	width: 100%;
@@ -27,47 +55,35 @@ h1 {
 }
 
 
-div#home-screen {
-	background: url(../../img/blueyellowbkgrd.png) no-repeat fixed center center;
-	background-size: 100% 100%;
-	-webkit-background-size: 100% 100%;
-	-moz-background-size: 100% 100%;
-	width: 100%;
-	height: 100vh;
-}
-
-h1#home-title {
-	position: absolute;
-	top: 15vh;
-	width: 100%;
-}
-
-
 
 
 /* =======================
  *  CIRCLE MENU STYLING
- * ======================= */
-#behind-lotus {
+ * =======================
+ */
+/*#behind-lotus {
 	margin: auto;
 	width: 140px;
 	height: 140px;
 	background-color: #383838;
 	border-radius: 68px;
 	opacity: 0.9;
-}
+}*/
 
  .menu {
 	position: relative;
 	margin: auto;
-	top: 0em;
+	top: -2.5em;
 	left: -1.25em;
 	height: 100%;
+	box-shadow: 2px 2px 2px;
 }
 
 .menu li:first-child {
-	background: #fff url("../../img/bluelotus.jpg") no-repeat center;
+	background: #323232 url("../../img/hand.png") no-repeat center;
 	background-size: 4.5em 4.5em;
+	-webkit-background-size: 4.5em 4.5em;
+	-moz-background-size: 4.5em 4.5em;
 }
 
 .menu li {
@@ -87,4 +103,6 @@ h1#home-title {
 	text-decoration: none;
 	color:#fff;
 }
+
+
 

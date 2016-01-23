@@ -1,13 +1,13 @@
 .circle {
 	overflow: hidden;
-	border-radius: 50%;
+	border-radius: 48%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .small_circle{
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 48%;
     width: 7vw;
     height: 7vw;
     background-color: white;

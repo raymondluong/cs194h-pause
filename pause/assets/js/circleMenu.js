@@ -46,7 +46,7 @@
                 'top-half':[180,360],
                 'top-left':[270,180],
                 'top-right':[270,360],
-                'full':[-40,270-Math.floor(360/self.element.children('li').length)],
+                'full':[-150,210-Math.floor(360/self.element.children('li').length)],
                 'bottom-right':[0,90]
             },
             dir;
@@ -262,7 +262,7 @@
             top:0,
             left:0
         });
-        vendorPrefixes($items, 'border-radius', self.options.item_diameter+'em');
+        vendorPrefixes($items, 'border-radius', self.options.item_diameter-3+'em');
         vendorPrefixes(self.menu_items, 'transform', 'scale(0)');
         setTimeout(function(){
             vendorPrefixes($items, 'transition', 'all '+self.options.speed+'ms '+self.options.transition_function);
