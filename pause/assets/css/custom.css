@@ -84,6 +84,7 @@ div#home-screen {
 	background-size: 4.5em 4.5em;
 	-webkit-background-size: 4.5em 4.5em;
 	-moz-background-size: 4.5em 4.5em;
+	box-shadow: 1px 1px 7px #797979;
 }
 
 .menu li {
