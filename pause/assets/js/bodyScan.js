@@ -1,21 +1,27 @@
 (function($, window, document, undefined){
-    var background = $("#body-scan-screen")
-    var scanner = $("#scanner")
+    var background = $("#body-scan-screen");
+    var scanner = $("#scanner");
 
     background.fadeIn("slow", function() {
-        background.click(function() {
-            scan()
-        })
-    })
+        var color = document.getElementById("#black-layer");
+        background.click(function(){
+            
+            $("#black-layer").fadeTo(2000, 0.25);
+            setTimeout(function() {
+                $("#black-layer").animate({background: "white url(img/blueyellowbkgrd.png) no-repeat center"});
+            }, 500);
+            scan();
+        });
+    });
 
     function scan() {
         if (scanner.length > 0) {
             scanner.css("visibility","visible").hide().fadeIn("slow", function() {
                 scanner.animate({top: "580px"}, 75000, "linear", function() {
                     scanner.fadeOut("slow", function() {
-                        scanner.show().css("visibility", "hidden")
+                        scanner.show().css("visibility", "hidden");
                         // DONE SCANNING CALLBACK
-                    })
+                    });
                 })
             })
         }

@@ -5,18 +5,38 @@
 		<title>Body Scan</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Raleway:400,200'>
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Raleway:200,100'>
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/custom.css"/>
 		<link rel="stylesheet" type="text/css" href="assets/css/thumb.css"/>
+
+		<style>
+		div#black-layer {
+			width: 100%;
+			height: 100vh;
+			position: absolute;
+			top: 0;
+			background: #a0a9a9 url(img/blueyellowbkgrd.png) no-repeat center;/*
+			background-color: #a0a0a0;
+			background-image: url(img/blueyellowbkgrd.png);
+			background-repeat: no-repeat;
+			background-position: center;*/
+			opacity: 0.6;
+			filter: alpha(opacity=60);
+			pointer-events: none;
+		}
+		</style>
 
 	</head>
    
 	<body>
 		<div id="scanner"></div>
 		<div id="body-scan-screen"></div>
+		<div id="black-layer"></div>
 		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script src="assets/js/bodyScan.js"></script>
+
+
 	</body>
 </html>
