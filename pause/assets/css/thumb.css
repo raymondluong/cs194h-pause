@@ -1,20 +1,3 @@
-.circle {
-	overflow: hidden;
-	border-radius: 48%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.small_circle{
-    overflow: hidden;
-    border-radius: 48%;
-    width: 7vw;
-    height: 7vw;
-    background-color: white;
-    border: .2vh solid orange;
-    display: inline-block;
-    margin: auto;
-}
 
 #one{
 	background-color: #fff;
