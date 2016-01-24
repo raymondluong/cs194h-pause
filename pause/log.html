@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Pause: Log your Mood</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:200,100">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/custom.css">
+	</head>
+
+	<body>
+		<div class="gradient-bkgrd">
+			<div class="container table" id="fadeIn">
+				<div class="table-overlay text-center">
+					<h3>I'm feeling...</h3>
+					<br>
+					<!--<a href="spirit_menu2.html">-->
+					  	<div class="row">
+					  		<div class="col-xs-6">
+								<div class="colored-block" id="red-block" >
+									<h4 class="mood">fiery</h4>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="colored-block" id="orange-block">
+									<h4 class="mood">peachy</h4>
+								</div>
+							</div>
+					  	</div>
+					  	<div class="row">
+					  		<div class="col-xs-6">
+								<div class="colored-block" id="yellow-block">
+									<h4 class="mood mood-dark">golden</h4>
+								</div>
+							</div>
+					  		<div class="col-xs-6">
+								<div class="colored-block" id="green-block">
+									<h4 class="mood">naive</h4>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-6">
+								<div class="colored-block" id="blue-block">
+									<h4 class="mood">blue</h4>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="colored-block" id="purple-block">
+									<h4 class="mood">royal</h4>
+								</div>
+							</div>
+					  	</div>
+					  	<div class="row">
+							<div class="col-xs-6">
+								<div class="colored-block" id="white-block">
+									<h4 class="mood mood-dark">safe</h4>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="colored-block" id="black-block">
+									<h4 class="mood">cynical</h4>
+								</div>
+							</div>
+					  	</div>
+					<!--</a>-->
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts located at the bottom to enable faster page loading -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>  
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$("#fadeIn").hide().fadeIn(2500);
+			});
+		</script>
+
+		<!-- to detect whether or not a color has been chosen -->
+		<script>
+		var d = new Date();
+
+		document.getElementById("red-block").onclick = function(){
+			if (confirm("Log current mood as fiery?")) {
+				alert("You logged as feeling FIERY at " + d.getHours() + ":" + d.getMinutes());
+			}
+			window.location.href = "index.html";
+		}
+		document.getElementById("orange-block").onclick = function(){
+			if (confirm("Log current mood as peachy?")) {
+				alert("You logged as feeling PEACHY at " + d.getHours() + ":" + d.getMinutes());
+				window.location.href = "index.html";
+			}
+		}
+		document.getElementById("yellow-block").onclick = function(){
+			if (confirm("Log current mood as golden?")) {
+				alert("You logged as feeling GOLDEN at " + d.getHours() + ":" + d.getMinutes());
+				window.location.href = "index.html";
+			}
+		}
+		document.getElementById("green-block").onclick = function(){
+			if (confirm("Log current mood as naive?")) {
+				alert("You logged as feeling NAIVE at " + d.getHours() + ":" + d.getMinutes());
+				window.location.href = "index.html";
+			}
+		}
+		document.getElementById("blue-block").onclick = function(){
+			if (confirm("Log current mood as blue?")) {
+				alert("You logged as feeling BLUE at " + d.getHours() + ":" + d.getMinutes());
+				window.location.href = "index.html";
+			}
+		}
+		document.getElementById("purple-block").onclick = function(){
+			if (confirm("Log current mood as royal?")) {
+				alert("You logged as feeling ROYAL at " + d.getHours() + ":" + d.getMinutes());
+				window.location.href = "index.html";
+			}
+		}
+		document.getElementById("white-block").onclick = function(){
+			if (confirm("Log current mood as safe?")) {
+				alert("You logged as feeling SAFE at " + d.getHours() + ":" + d.getMinutes());
+				window.location.href = "index.html";
+			}
+		}
+		document.getElementById("black-block").onclick = function(){
+			if (confirm("Log current mood as cynical?")) {
+				alert("You logged as feeling CYNICAL at " + d.getHours() + ":" + d.getMinutes());
+				window.location.href = "index.html";
+			}
+		}
+
+		</script>
+
+	</body>
+</html>
