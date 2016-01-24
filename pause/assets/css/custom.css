@@ -18,6 +18,12 @@ h2 {
 	color: #707070;
 }
 
+h3 {
+	font-weight: 200;
+	letter-spacing: 1px;
+	color: #707070;
+}
+
 /* vertically aligning a div inside another div */
 .table {
 	display: table;
@@ -40,7 +46,7 @@ h2 {
  *  THE HOME PAGE
  * =========================
  */
-div#home-screen {
+div.gradient-bkgrd {
 	background: url(../../img/blueyellowbkgrd.png) no-repeat fixed center center;
 	background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
@@ -92,47 +98,13 @@ div#home-screen {
  *  LOG PAGE
  * ===========
  */
-.colored {
-	height: 9em;
+.colored-block {
+	height: 7em;
 	opacity: 0.95;
 	filter: alpha(opacity=95);
 	margin: auto;
+	border-radius: 3px;
 }
-.wrapper {
-	margin: auto;
-	max-width: 300px;
-}
-
-
-
-/* ===========================
- *   CIRCLES
- * ===========================
- */
-.circle {
-	overflow: hidden;
-	border-radius: 48%;
-    margin-left: auto;
-    margin-right: auto;
-}
-.small_circle{
-    overflow: hidden;
-    border-radius: 48%;
-    width: 7vw;
-    height: 7vw;
-    background-color: white;
-    border: .2vh solid orange;
-    display: inline-block;
-    margin: auto;
-}
-
-
-
-
-/* ==================
- *  COLOR CLASSES
- * ==================
-*/
 .black-block {
 	background-color: #272727;
 	/*box-shadow: 0 0 2px 5px #272727;*/
@@ -169,6 +141,33 @@ div#home-screen {
 	background-color: #f9f9f9;
 	/*box-shadow: 0 0 2px 5px #f9f9f9;*/
 }
+
+
+
+/* ===========================
+ *   CIRCLES
+ * ===========================
+ */
+.circle {
+	overflow: hidden;
+	border-radius: 48%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.small_circle{
+    overflow: hidden;
+    border-radius: 48%;
+    width: 7vw;
+    height: 7vw;
+    background-color: white;
+    border: .2vh solid orange;
+    display: inline-block;
+    margin: auto;
+}
+
+
+
+
 
 
 

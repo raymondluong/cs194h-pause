@@ -221,6 +221,7 @@
             selected.css('opacity','0');
             set_other.css('opacity','0');
             self.element.removeClass(pluginName+'-open');
+            
             setTimeout(function(){self.initCss();}, 500);
         }
     };
