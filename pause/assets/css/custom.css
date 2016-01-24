@@ -29,6 +29,9 @@ h2 {
 	display: table-cell;
 	vertical-align: middle;
 }
+.col-xs-6 {
+	padding: 5px;
+}
 
 
 
@@ -85,6 +88,22 @@ div#home-screen {
 
 
 
+/* ===========
+ *  LOG PAGE
+ * ===========
+ */
+.colored {
+	height: 9em;
+	opacity: 0.95;
+	filter: alpha(opacity=95);
+	margin: auto;
+}
+.wrapper {
+	margin: auto;
+	max-width: 300px;
+}
+
+
 
 /* ===========================
  *   CIRCLES
@@ -106,6 +125,59 @@ div#home-screen {
     display: inline-block;
     margin: auto;
 }
+
+
+
+
+/* ==================
+ *  COLOR CLASSES
+ * ==================
+*/
+.black-block {
+	background-color: #272727;
+	/*box-shadow: 0 0 2px 5px #272727;*/
+}
+.purple-block {
+	background-color: mediumpurple;
+	/*box-shadow: 0 0 2px 5px mediumpurple;*/
+}
+.blue-block {
+	background-color: royalblue;
+	/*box-shadow: 0 0 2px 5px royalblue;*/
+}
+.green-block {
+	background-color: mediumseagreen;
+	/*box-shadow: 0 0 2px 5px mediumseagreen;*/
+}
+.yellow-block {
+	background-color: khaki;
+	/*box-shadow: 0 0 2px 5px khaki;*/
+}
+.orange-block {
+	background-color: sandybrown;
+	/*box-shadow: 0 0 2px 5px sandybrown;*/
+}
+.red-block {
+	background-color: firebrick;
+	/*box-shadow: 0 0 2px 5px firebrick;*/
+}
+.pink-block {
+	background-color: lightcoral;
+	/*box-shadow: 0 0 2px 5px lightcoral;*/
+}
+.white-block {
+	background-color: #f9f9f9;
+	/*box-shadow: 0 0 2px 5px #f9f9f9;*/
+}
+
+
+
+
+
+
+
+
+
 
 
 
