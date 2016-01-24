@@ -218,7 +218,7 @@
             setTimeout(function(){
                 if (index == 2) {
                     console.log("I should have clicked on meditate!");
-                    window.location.href="#";
+                    window.location.href="body-scan.html";
                 } else if (index == 3) {
                     console.log("I should have clicked on connect!");
                     window.location.href="thumb.html";
