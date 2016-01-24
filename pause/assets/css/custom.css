@@ -56,14 +56,14 @@ div.gradient-bkgrd {
 }
 #home-title {
 	position: absolute;
-	top: 25vh;
+	top: 15vh;
 	width: 100%;
 }
 
 .menu {
 	position: relative;
 	margin: auto;
-	top: -2.5em;
+	top: -3em;
 	left: -1.25em;
 	height: 100%;
 	box-shadow: 2px 2px 2px;
