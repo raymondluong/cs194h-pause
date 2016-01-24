@@ -1,3 +1,7 @@
+/* ===================
+ *  GENERAL STYLING
+ * ===================
+ */
 body {
 	height: 100%;
 	letter-spacing: 1px;
@@ -14,14 +18,35 @@ h2 {
 	color: #707070;
 }
 
+h3 {
+	font-weight: 200;
+	letter-spacing: 1px;
+	color: #707070;
+}
+
+/* vertically aligning a div inside another div */
+.table {
+	display: table;
+	width: 100%;
+	height: 100vh;
+	margin-bottom: 0;
+}
+.table-overlay {
+	display: table-cell;
+	vertical-align: middle;
+}
+.col-xs-6 {
+	padding: 5px;
+}
+
 
 
 
 /* =========================
- *  STYLIZING THE HOME PAGE
+ *  THE HOME PAGE
  * =========================
  */
-div#home-screen {
+div.gradient-bkgrd {
 	background: url(../../img/blueyellowbkgrd.png) no-repeat fixed center center;
 	background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
@@ -35,42 +60,7 @@ div#home-screen {
 	width: 100%;
 }
 
-
-
-
-/* ==========================
- *  vertical aligning a div
- *  inside another div.
- * =========================
- */
-.table {
-	display: table;
-	width: 100%;
-	height: 100vh;
-	margin-bottom: 0;
-}
-.table-overlay {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-
-
-
-/* =======================
- *  CIRCLE MENU STYLING
- * =======================
- */
-/*#behind-lotus {
-	margin: auto;
-	width: 140px;
-	height: 140px;
-	background-color: #383838;
-	border-radius: 68px;
-	opacity: 0.9;
-}*/
-
- .menu {
+.menu {
 	position: relative;
 	margin: auto;
 	top: -2.5em;
@@ -78,7 +68,6 @@ div#home-screen {
 	height: 100%;
 	box-shadow: 2px 2px 2px;
 }
-
 .menu li:first-child {
 	background: #323232 url("../../img/hand.png") no-repeat center;
 	background-size: 4.5em 4.5em;
@@ -86,7 +75,6 @@ div#home-screen {
 	-moz-background-size: 4.5em 4.5em;
 	box-shadow: 1px 1px 7px #797979;
 }
-
 .menu li {
 	background: #F49230;
 	font-family: 'Raleway';
@@ -95,19 +83,17 @@ div#home-screen {
 	opacity: 0.9;
 	filter: alpha(opacity=90);
 }
-
 .menu li:hover {
 	cursor: pointer;
 }
-
 .menu a {
 	text-decoration: none;
 	color:#fff;
 }
 
-/* ===============
- *  BODY SCANNING
- * ===============
+/* ======================
+ *  BODY SCANNING SCREEN
+ * ======================
  */
 
 #scanner {
@@ -126,3 +112,82 @@ div#home-screen {
 	background: url("../../img/bodyoutline.jpg") no-repeat center;
 	background-size: 75% 85%;
 }
+
+/* ===========
+ *  LOG PAGE
+ * ===========
+ */
+.colored-block {
+	height: 7em;
+	opacity: 0.95;
+	filter: alpha(opacity=95);
+	margin: auto;
+	border-radius: 3px;
+}
+.black-block {
+	background-color: #272727;
+	/*box-shadow: 0 0 2px 5px #272727;*/
+}
+.purple-block {
+	background-color: mediumpurple;
+	/*box-shadow: 0 0 2px 5px mediumpurple;*/
+}
+.blue-block {
+	background-color: royalblue;
+	/*box-shadow: 0 0 2px 5px royalblue;*/
+}
+.green-block {
+	background-color: mediumseagreen;
+	/*box-shadow: 0 0 2px 5px mediumseagreen;*/
+}
+.yellow-block {
+	background-color: khaki;
+	/*box-shadow: 0 0 2px 5px khaki;*/
+}
+.orange-block {
+	background-color: sandybrown;
+	/*box-shadow: 0 0 2px 5px sandybrown;*/
+}
+.red-block {
+	background-color: firebrick;
+	/*box-shadow: 0 0 2px 5px firebrick;*/
+}
+.pink-block {
+	background-color: lightcoral;
+	/*box-shadow: 0 0 2px 5px lightcoral;*/
+}
+.white-block {
+	background-color: #f9f9f9;
+	/*box-shadow: 0 0 2px 5px #f9f9f9;*/
+}
+
+
+
+/* ===========================
+ *   CIRCLES
+ * ===========================
+ */
+.circle {
+	overflow: hidden;
+	border-radius: 48%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.small_circle{
+    overflow: hidden;
+    border-radius: 48%;
+    width: 7vw;
+    height: 7vw;
+    background-color: white;
+    border: .2vh solid orange;
+    display: inline-block;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
