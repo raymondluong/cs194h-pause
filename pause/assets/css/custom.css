@@ -124,42 +124,15 @@ div.gradient-bkgrd {
 	margin: auto;
 	border-radius: 3px;
 }
-.black-block {
-	background-color: #272727;
-	/*box-shadow: 0 0 2px 5px #272727;*/
-}
-.purple-block {
-	background-color: mediumpurple;
-	/*box-shadow: 0 0 2px 5px mediumpurple;*/
-}
-.blue-block {
-	background-color: royalblue;
-	/*box-shadow: 0 0 2px 5px royalblue;*/
-}
-.green-block {
-	background-color: mediumseagreen;
-	/*box-shadow: 0 0 2px 5px mediumseagreen;*/
-}
-.yellow-block {
-	background-color: khaki;
-	/*box-shadow: 0 0 2px 5px khaki;*/
-}
-.orange-block {
-	background-color: sandybrown;
-	/*box-shadow: 0 0 2px 5px sandybrown;*/
-}
-.red-block {
-	background-color: firebrick;
-	/*box-shadow: 0 0 2px 5px firebrick;*/
-}
-.pink-block {
-	background-color: lightcoral;
-	/*box-shadow: 0 0 2px 5px lightcoral;*/
-}
-.white-block {
-	background-color: #f9f9f9;
-	/*box-shadow: 0 0 2px 5px #f9f9f9;*/
-}
+#black-block { background-color: #272727; }
+#purple-block { background-color: mediumpurple; }
+#blue-block { background-color: royalblue; }
+#green-block { background-color: mediumseagreen; }
+#yellow-block { background-color: khaki; }
+#orange-block { background-color: sandybrown; }
+#red-block { background-color: firebrick; }
+#pink-block { background-color: lightcoral; }
+#white-block { background-color: #f9f9f9; }
 
 
 

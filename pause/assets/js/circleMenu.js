@@ -215,25 +215,29 @@
             set_other = self.element.children('li:not(:nth-child('+index+'),:first-child)');
             selected = self.element.children('li:nth-child('+index+')');
             self.trigger('select',selected);
-            setTimeout(function(){
-                if (index == 2) {
-                    console.log("I should have clicked on meditate!");
-                    window.location.href="body-scan.html";
-                } else if (index == 3) {
-                    console.log("I should have clicked on connect!");
-                    window.location.href="thumb.html";
-                } else {
-                    console.log("I should have clicked on log!");
-                    window.location.href="log.html";
-                }
-            }, 50);
             vendorPrefixes(selected.add(set_other), 'transition', 'all 1s ease-out');
             vendorPrefixes(selected, 'transform', 'scale(2)');
             vendorPrefixes(set_other, 'transform', 'scale(0)');
             selected.css('opacity','0');
             set_other.css('opacity','0');
             self.element.removeClass(pluginName+'-open');
-            //setTimeout(function(){self.initCss();}, 500);
+            if (index == 2) {
+                console.log("I should have clicked on meditate!");
+                setTimeout(function(){
+                    window.location.href="body-scan.html";
+                }, 700);
+            } else if (index == 3) {
+                console.log("I should have clicked on connect!");
+                setTimeout(function(){
+                    window.location.href="thumb.html";
+                }, 700);
+            } else {
+                console.log("I should have clicked on log!");
+                setTimeout(function(){
+                    window.location.href="log.html";
+                }, 700);
+            }
+            setTimeout(function(){self.initCss();}, 500);
         }
     };
 
