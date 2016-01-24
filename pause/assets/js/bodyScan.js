@@ -10,9 +10,10 @@
 
     function scan() {
         if (scanner.length > 0) {
-            scanner.css('visibility','visible').hide().fadeIn("slow", function() {
+            scanner.css("visibility","visible").hide().fadeIn("slow", function() {
                 scanner.animate({top: "580px"}, 75000, "linear", function() {
                     scanner.fadeOut("slow", function() {
+                        scanner.show().css("visibility", "hidden")
                         // DONE SCANNING CALLBACK
                     })
                 })
