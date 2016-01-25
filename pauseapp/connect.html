@@ -1,0 +1,29 @@
+<div ng-controller="ConnectCtrl" class="text-center gradient-bkgrd">
+	<div class="main-wrapper">
+		<div class="pause-nav">
+			<a href="home"><i class="fa fa-home"></i> Home</a>
+		</div>
+		<div id="connect-status">
+			<h3>{{statusText}}</h3>
+			<h4 ng-if="locationFound"><i class="fa fa-map-marker"></i> {{locationText}}</h4>
+		</div>
+		<div id="thumbWrapper">
+			<div id="one" class="circle">
+				<div id="two" class="circle"></div>
+				<div id="print"></div>
+			</div>
+		</div>
+
+		<div class="row circleContainer">
+			<div class="small_circle" id="left">
+				<div class="small_circle" id="left_fill"></div>
+			</div>
+			<div class="small_circle" id="center">
+				<div class="small_circle" id="center_fill"></div>
+			</div>
+			<div class="small_circle" id="right">
+				<div class="small_circle" id="right_fill"></div>
+			</div>
+		</div>
+	</div>
+</div>

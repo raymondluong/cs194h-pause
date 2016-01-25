@@ -1,0 +1,301 @@
+/* ===================
+ *  GENERAL STYLING
+ * ===================
+ */
+
+body {
+	height: 100%;
+	letter-spacing: 1px;
+	line-height: 1.2em;
+	font-weight: 200;
+	color: #373712;
+	padding: 0;
+}
+
+h2 {
+	margin: 0;
+	padding: 0.5em 0;
+	font-weight: 100;
+	letter-spacing: 1px;
+	color: #707070;
+}
+
+h3 {
+	font-weight: 200;
+	letter-spacing: 1px;
+	color: #707070;
+}
+
+/* vertically aligning a div inside another div using flex */
+.main-wrapper {
+	/*display: table;
+	width: 100%;
+	height: 100%;
+	*/
+	margin-bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+/*.table-overlay {
+	display: table-cell;
+	vertical-align: middle;
+}*/
+.col-xs-6 {
+	padding: 5px;
+}
+
+/* ===================
+ *  CONTAINER FOR APP
+ * ===================
+ */
+.main-app {
+	width: 375px;
+	height: 667px;
+	margin: auto;
+	position: relative;
+}
+
+.pause-nav {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.pause-nav a {
+	color: black;
+}
+
+.pause-nav a:hover {
+	text-decoration: none
+}
+
+
+
+
+/* =========================
+ *  THE HOME PAGE
+ * =========================
+ */
+.gradient-bkgrd {
+	background: url('blueyellowbkgrd.png') no-repeat fixed center center;
+	background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+#home-title {
+	position: relative;
+	top: 15vh;
+	width: 100%;
+}
+
+.menu {
+	position: relative;
+	margin: auto;
+	top: -3em;
+	left: -1.25em;
+	height: 100%;
+	box-shadow: 2px 2px 2px;
+}
+.menu li:first-child {
+	background: #323232 url("hand.png") no-repeat center;
+	background-size: 4.5em 4.5em;
+	-webkit-background-size: 4.5em 4.5em;
+	-moz-background-size: 4.5em 4.5em;
+	box-shadow: 1px 1px 7px #797979;
+}
+.menu li {
+	background: #F49230;
+	font-family: 'Raleway';
+	color: #323232;
+	font-size: 1.5em;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+}
+.menu li:hover {
+	cursor: pointer;
+}
+.menu a {
+	text-decoration: none;
+	color:#fff;
+}
+
+/*#ex-full-clickopen {
+	position: relative;
+}*/
+
+/* =========================
+ *  THUMB CONNECTION
+ * =========================
+ */
+
+#connect-status {
+	position: absolute;
+	top: 50px;
+	width: 100%;
+}
+
+.circleContainer {
+	position: relative;
+	top: 50px;
+}
+
+#one {
+	background-color: #fff;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: .5vh solid orange;
+}
+
+#print{
+    background-image: url('thumb.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 150px 225px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1vw;
+    right: 1vw;
+}
+
+#two {
+	position: absolute;
+	background-color: orange;
+    right: 40vw;
+    left: 40vw;
+    top: 40vw;
+    bottom: 40vw;
+}
+
+#searching_text{
+    text-align: center;
+    color: orange;
+    position: absolute;
+    right:11vw;
+    left:11vw;
+    top:11vw;
+    bottom:11vw;
+}
+
+#left_fill, #center_fill, #right_fill {
+    background-color: orange;
+}
+
+
+
+
+
+/* ======================
+ *  BODY SCANNING SCREEN
+ * ======================
+ */
+
+#scanner {
+	border: 3px solid red;
+	width: 50%;
+	margin: 0 auto;
+	position: relative;
+	top: 50px;
+	visibility: hidden;
+}
+
+#body-scan-screen {
+	width: 100%;
+	height: 100vh;
+	background: url("bodyoutline.png") no-repeat center;
+	background-size: 75% 85%;
+}
+
+.btn-body-scan {
+	position: relative;
+	top: 30px;
+}
+
+#black-layer {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	background: #a0a9a9 url('blueyellowbkgrd.png') no-repeat center;/*
+	background-color: #a0a0a0;
+	background-image: url(img/blueyellowbkgrd.png);
+	background-repeat: no-repeat;
+	background-position: center;*/
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	pointer-events: none;
+}
+
+
+
+
+/* ===========
+ *  LOG PAGE
+ * ===========
+ */
+.log-colors {
+	width: 90%;
+}
+
+.log-color-block {
+	height: 7em;
+	opacity: 0.95;
+	filter: alpha(opacity=95);
+	border-radius: 3px;
+	cursor: pointer;
+}
+#black-block { background-color: #272727; }
+#purple-block { background-color: mediumpurple; }
+#blue-block { background-color: royalblue; }
+#green-block { background-color: mediumseagreen; }
+#yellow-block { background-color: khaki; }
+#orange-block { background-color: sandybrown; }
+#red-block { background-color: firebrick; }
+#pink-block { background-color: lightcoral; }
+#white-block { background-color: #f9f9f9; }
+
+/*.mood {
+	margin: 0;
+	position: relative;
+	top: 2em;
+	color: #f0f0f0;
+	font-weight: 200;
+	letter-spacing: 1px;
+}
+.mood-dark {
+	color: #373737;
+}*/
+
+
+
+/* ===========================
+ *   CIRCLES
+ * ===========================
+ */
+.circle {
+	overflow: hidden;
+	border-radius: 48%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.small_circle{
+    overflow: hidden;
+    border-radius: 48%;
+    width: 7vw;
+    height: 7vw;
+    background-color: white;
+    border: .2vh solid orange;
+    display: inline-block;
+    margin: auto;
+}
