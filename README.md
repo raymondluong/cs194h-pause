@@ -1,6 +1,6 @@
 # cs194h-pause
 Repo for CS194H: User Interface Design Project at Stanford University
-<br>Team members: Raymond Luong, Sukhi Gulati (sgulati3), Julie Ni (njulie), Kyle Qian (kyleqian)
+<br>Team members: Raymond Luong (raymondluong), Sukhi Gulati (sgulati3), Julie Ni (njulie), Kyle Qian (kyleqian)
 
 <i>pause</i>
 contains static prototype files imported from CS147
