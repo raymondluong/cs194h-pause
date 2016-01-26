@@ -2,8 +2,6 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
 	console.log('meditate controller');
 	
 	$scope.beginScan = function() {
-        
-        
 		$('.btn-body-scan').css('visibility', 'hidden');
 
         var audioElement = document.createElement('audio');
@@ -17,11 +15,11 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
         });
 
         audioElement.addEventListener('ended', function(){
-            scan();
+            window.location.href = "/meditate#openModal";
         });
 	}
 
-	function scan() {
+	$scope.scan = function() {
 		var scanner = $("#scanner");
         console.log('scan');
         if (scanner.length > 0) {
