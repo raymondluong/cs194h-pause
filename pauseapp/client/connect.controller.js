@@ -8,8 +8,8 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 	$("#left_fill").hide();
 	$("#center_fill").hide();
 	$("#right_fill").hide();
-	$('#two').hide();
-	$('#print').hide();
+	$('#connect-thumb-inner').hide();
+	$('#connect-thumb-print').hide();
 	fillInLoadingCircles();
 
 	function fillInLoadingCircles() {
@@ -17,7 +17,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 		$("#center_fill").delay(1500).fadeIn(1500);
 		$("#right_fill").delay(3000).fadeIn(1500);
 		setTimeout(function() {
-			$('#print').show();
+			$('#connect-thumb-print').show();
 			$scope.locationFound = true;
 			$scope.$apply(function() {
 				$scope.statusText = 'Connection found';
@@ -37,9 +37,9 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 
 	navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
-	$("#print").bind('touchstart mousedown', function() {
-		$('#two').show();
-		$("#two").animate({
+	$("#connect-thumb-print").bind('touchstart mousedown', function() {
+		$('#connect-thumb-inner').show();
+		$("#connect-thumb-inner").animate({
 			right: 0,
 			left: 0,
 			top: 0,
@@ -49,7 +49,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 			navigator.vibrate(1000);
 		}
 	}).bind('touchend mouseup', function() {
-		$("#two").stop();
+		$("#connect-thumb-inner").stop();
 		if (navigator.vibrate) {
 			navigator.vibrate(0);
 		}

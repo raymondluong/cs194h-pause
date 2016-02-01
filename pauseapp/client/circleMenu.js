@@ -1,5 +1,6 @@
+/* Source: http://zikes.github.io/circle-menu/ */
+
 (function($, window, document, undefined){
-    console.log('circle menu');
     var pluginName = 'circleMenu',
         defaults = {
             depth: 0,

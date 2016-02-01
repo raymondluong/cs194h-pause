@@ -12,26 +12,17 @@ body {
 	padding: 0;
 }
 
-h2 {
+h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	padding: 0.5em 0;
-	font-weight: 100;
-	letter-spacing: 1px;
-	color: #707070;
+	padding: 5px 0;
 }
 
-h3 {
-	font-weight: 200;
-	letter-spacing: 1px;
-	color: #707070;
+.thin-text {
+	font-weight: 100;
 }
 
 /* vertically aligning a div inside another div using flex */
 .main-wrapper {
-	/*display: table;
-	width: 100%;
-	height: 100%;
-	*/
 	margin-bottom: 0;
 	display: flex;
 	align-items: center;
@@ -42,18 +33,8 @@ h3 {
 	position: absolute;
 	top: 0;
 }
-/*.table-overlay {
-	display: table-cell;
-	vertical-align: middle;
-}*/
-.col-xs-6 {
-	padding: 5px;
-}
 
-/* ===================
- *  CONTAINER FOR APP
- * ===================
- */
+/* Container for mobile app */
 .main-app {
 	width: 375px;
 	height: 667px;
@@ -75,13 +56,6 @@ h3 {
 	text-decoration: none
 }
 
-
-
-
-/* =========================
- *  THE HOME PAGE
- * =========================
- */
 .gradient-bkgrd {
 	background: url('blueyellowbkgrd.png') no-repeat fixed center center;
 	background-size: 100% 100%;
@@ -90,13 +64,27 @@ h3 {
 	width: 100%;
 	height: 100%;
 }
-#home-title {
+
+.col-xs-6 {
+	padding: 0;
+}
+
+
+/* =========================
+ *  THE HOME PAGE
+ * =========================
+ */
+#home-title-wrapper {
 	position: relative;
 	top: 15vh;
 	width: 100%;
 }
 
-.menu {
+#home-title {
+	letter-spacing: 5px;
+}
+
+#home-menu {
 	position: relative;
 	margin: auto;
 	top: -3em;
@@ -104,14 +92,14 @@ h3 {
 	height: 100%;
 	box-shadow: 2px 2px 2px;
 }
-.menu li:first-child {
+#home-menu li:first-child {
 	background: #323232 url("hand.png") no-repeat center;
 	background-size: 4.5em 4.5em;
 	-webkit-background-size: 4.5em 4.5em;
 	-moz-background-size: 4.5em 4.5em;
 	box-shadow: 1px 1px 7px #797979;
 }
-.menu li {
+#home-menu li {
 	background: #F49230;
 	font-family: 'Raleway';
 	color: #323232;
@@ -119,35 +107,27 @@ h3 {
 	opacity: 0.9;
 	filter: alpha(opacity=90);
 }
-.menu li:hover {
+
+#home-menu li:hover {
 	cursor: pointer;
 }
-.menu a {
+
+#home-menu a {
 	text-decoration: none;
 	color:#fff;
 }
-
-/*#ex-full-clickopen {
-	position: relative;
-}*/
 
 /* =========================
  *  THUMB CONNECTION
  * =========================
  */
-
 #connect-status {
 	position: absolute;
 	top: 50px;
 	width: 100%;
 }
 
-.circleContainer {
-	position: relative;
-	top: 50px;
-}
-
-#one {
+#connect-thumb-outer {
 	background-color: #fff;
     width: 300px;
     height: 300px;
@@ -157,7 +137,16 @@ h3 {
     border: .5vh solid orange;
 }
 
-#print{
+#connect-thumb-inner {
+	position: absolute;
+	background-color: orange;
+    right: 150px;
+    left: 150px;
+    top: 150px;
+    bottom: 150px;
+}
+
+#connect-thumb-print {
     background-image: url('thumb.png');
     background-repeat: no-repeat;
     background-position: center center;
@@ -169,26 +158,13 @@ h3 {
     right: 1vw;
 }
 
-#two {
+#connect-loading-wrapper {
 	position: absolute;
-	background-color: orange;
-    right: 40vw;
-    left: 40vw;
-    top: 40vw;
-    bottom: 40vw;
+	width: 100%;
+	top: 550px;
 }
 
-#searching_text{
-    text-align: center;
-    color: orange;
-    position: absolute;
-    right:11vw;
-    left:11vw;
-    top:11vw;
-    bottom:11vw;
-}
-
-#left_fill, #center_fill, #right_fill {
+.connect-loading-circle {
     background-color: orange;
 }
 
@@ -282,6 +258,7 @@ h3 {
 	filter: alpha(opacity=95);
 	border-radius: 3px;
 	cursor: pointer;
+	margin: 5px;
 }
 #black-block { background-color: #272727; }
 #purple-block { background-color: mediumpurple; }
@@ -292,19 +269,6 @@ h3 {
 #red-block { background-color: firebrick; }
 #pink-block { background-color: lightcoral; }
 #white-block { background-color: #f9f9f9; }
-
-/*.mood {
-	margin: 0;
-	position: relative;
-	top: 2em;
-	color: #f0f0f0;
-	font-weight: 200;
-	letter-spacing: 1px;
-}
-.mood-dark {
-	color: #373737;
-}*/
-
 
 
 /* ===========================
@@ -317,12 +281,12 @@ h3 {
     margin-left: auto;
     margin-right: auto;
 }
+
 .small_circle{
     overflow: hidden;
     border-radius: 48%;
     width: 7vw;
     height: 7vw;
-    background-color: white;
     border: .2vh solid orange;
     display: inline-block;
     margin: auto;
