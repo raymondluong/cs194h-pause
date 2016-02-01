@@ -4,7 +4,7 @@ Repo for CS194H: User Interface Design Project at Stanford University
 
 ### Overview
 Pause is a tool designed for travel and work intensive professionals to take a few seconds out of their day to connect with another individual around the globe and share a moment of self-reflection.
-<br>Current stage: prototype
+<br><br>Current stage: prototype
 
 ### Directory
 <i>pause</i>
