@@ -3,7 +3,7 @@ angular.module('pauseApp').config(function($urlRouterProvider, $stateProvider, $
 	
 	$stateProvider
 		.state('home', {
-			url: '/',
+			url: '/home',
 			templateUrl: 'home.html'
 		})
 		.state('connect', {
@@ -22,5 +22,5 @@ angular.module('pauseApp').config(function($urlRouterProvider, $stateProvider, $
 			url: '/log/view',
 			templateUrl: 'logview.html'
 		});
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/home');
 })
