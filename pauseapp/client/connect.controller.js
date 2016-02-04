@@ -2,6 +2,8 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 	console.log('connect controller');
 	$scope.locationFound = false;
 	$scope.connecting = false;
+	$scope.pulseCount = 0;
+	$scope.momentCompleted = false;
 	$scope.statusText = 'Searching for a connection...';
 	var locations = ['Vinhedo, Brazil', 'Manhasset, New York', 'Austin, Texas', 'Reykjavik, Iceland', 
 	'Kyoto, Japan', 'Vancouver, Canada'];
@@ -39,6 +41,8 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 	function stopPulse() {
 		$scope.$apply(function() {
 			$scope.connecting = false;
+			$scope.statusText = "Moment Completed";
+			$scope.momentCompleted = true;
 		})
 	}
 
@@ -51,12 +55,21 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 		}
 	}
 
-	navigator.vibrate = navigator.vibrate || navigator.webkitVibrate || navigator.mozVibrate || navigator.msVibrate;
 
 	$("#connect-thumb-wrapper").bind('touchstart mousedown', function() {
 		if (!$scope.locationFound) return;
 		console.log('mousedown');
-		loadRadial();
+		//loadRadial();
+		var intervalID;
+		intervalID = setInterval(function() {
+			$scope.$apply(function() {
+				$scope.pulseCount++;
+			})
+			console.log('pulse');
+			if ($scope.pulseCount > 4) {
+				clearInterval(intervalID);
+			}
+		}, 5000)
 		// $('#connect-thumb-inner').show();
 		// $("#connect-thumb-inner").animate({
 		// 	right: 0,
@@ -64,22 +77,17 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 		// 	top: 0,
 		// 	bottom: 0
 		// }, {duration: 10000});
-		if(navigator.vibrate){
-			navigator.vibrate(1000);
-		}
 		$scope.$apply(function() {
 			$scope.connecting = true;
+			$scope.statusText = "Sharing a moment";
 		});
-		setTimeout(stopPulse, 10000);
+		setTimeout(stopPulse, 20000);
 	}).bind('touchend mouseup', function() {
 		//todo: fix
 		return;
 		//mouseup event is not registering!!
 		console.log('mouseup');
 		// $("#connect-thumb-inner").stop();
-		if (navigator.vibrate) {
-			navigator.vibrate(0);
-		}
 		$scope.$apply(function() {
 			$scope.connecting = false;
 			console.log('mouseup');
