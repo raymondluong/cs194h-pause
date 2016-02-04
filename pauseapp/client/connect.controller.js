@@ -37,15 +37,14 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 	}
 
 	function stopPulse() {
-		console.log('stop animation');
-		$scope.connecting = false;
-		// $scope.$apply(function() {
-		// 	$scope.connecting = false;
-		// })
+		$scope.$apply(function() {
+			$scope.connecting = false;
+		})
 	}
-	var transform_styles = ['-webkit-transform', '-ms-transform', 'transform'];
 
-	function fillCircle() {
+
+	function loadRadial() {
+		var transform_styles = ['-webkit-transform', '-ms-transform', 'transform'];
 		var fill_rotation = 180;
 		for(i in transform_styles) {
 			$('.radial-load-inner .radial-load-fill, .radial-load-inner .radial-load-mask.full').css(transform_styles[i], 'rotate(' + fill_rotation + 'deg)');
@@ -57,7 +56,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 	$("#connect-thumb-wrapper").bind('touchstart mousedown', function() {
 		if (!$scope.locationFound) return;
 		console.log('mousedown');
-		fillCircle();
+		loadRadial();
 		// $('#connect-thumb-inner').show();
 		// $("#connect-thumb-inner").animate({
 		// 	right: 0,
@@ -73,6 +72,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 		});
 		setTimeout(stopPulse, 10000);
 	}).bind('touchend mouseup', function() {
+		//todo: fix
 		return;
 		//mouseup event is not registering!!
 		console.log('mouseup');
