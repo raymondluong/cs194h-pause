@@ -1,28 +1,42 @@
 <div ng-controller="ConnectCtrl" class="text-center gradient-bkgrd">
 	<div class="main-wrapper">
+		<div class="connect-overlay fade-pulse" ng-show="connecting"></div>
 		<div class="pause-nav">
 			<a href="home"><i class="fa fa-home"></i> Home</a>
 		</div>
 		<div id="connect-status">
-			<h3>{{statusText}}</h3>
+			<h3 class="thin-text">{{statusText}}</h3>
 			<h4 ng-if="locationFound"><i class="fa fa-map-marker"></i> {{locationText}}</h4>
 		</div>
-		<div id="thumbWrapper">
-			<div id="one" class="circle">
-				<div id="two" class="circle"></div>
-				<div id="print"></div>
+		<div id="connect-thumb-wrapper">
+			<div class="circle radial-load-outer" id="connect-thumb-outer" >
+				<!-- <div id="connect-thumb-inner" class="circle"></div> -->
+				<div id="connect-thumb-print"></div>
+				<div class="radial-load-inner">
+					<div class="radial-load-mask full">
+						<div class="radial-load-fill"></div>
+					</div>
+					<div class="radial-load-mask half">
+						<div class="radial-load-fill"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 
-		<div class="row circleContainer">
-			<div class="small_circle" id="left">
-				<div class="small_circle" id="left_fill"></div>
+		<div id="connect-loading-wrapper">
+			<div ng-show="!locationFound">
+				<div class="small_circle">
+					<div class="connect-loading-circle small_circle" id="left_fill"></div>
+				</div>
+				<div class="small_circle">
+					<div class="connect-loading-circle small_circle" id="center_fill"></div>
+				</div>
+				<div class="small_circle">
+					<div class="connect-loading-circle small_circle" id="right_fill"></div>
+				</div>
 			</div>
-			<div class="small_circle" id="center">
-				<div class="small_circle" id="center_fill"></div>
-			</div>
-			<div class="small_circle" id="right">
-				<div class="small_circle" id="right_fill"></div>
+			<div ng-show="locationFound">
+				<h4 class="thin-text">Hold your thumb down to connect</h4>
 			</div>
 		</div>
 	</div>

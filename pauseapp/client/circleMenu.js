@@ -1,5 +1,6 @@
+/* Source: http://zikes.github.io/circle-menu/ */
+
 (function($, window, document, undefined){
-    console.log('circle menu');
     var pluginName = 'circleMenu',
         defaults = {
             depth: 0,
@@ -286,13 +287,13 @@
         },0);
     };
 
-    $.fn[pluginName] = function(options){
-        return this.each(function(){
+    $.fn[pluginName] = function(options) {
+        return this.each(function() {
             var obj = $.data(this, 'plugin_'+pluginName),
                 commands = {
-                'init':function(){obj.init();},
-                'open':function(){obj.open();},
-                'close':function(){obj.close(true);}
+                    'init':function(){obj.init();},
+                    'open':function(){obj.open();},
+                    'close':function(){obj.close(true);}
             };
             if(typeof options === 'string' && obj && commands[options]){
                 commands[options]();
