@@ -15,7 +15,7 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 		});
 		console.log($scope.colorLogs);
 
-	});
+	};
 
 	$scope.colorLogs = $meteor.collection(Colors);
 
