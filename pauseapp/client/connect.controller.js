@@ -4,6 +4,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 	$scope.connecting = false;
 	$scope.pulseCount = 0;
 	$scope.momentCompleted = false;
+	$scope.firstTap = true;
 	$scope.statusText = 'Searching for a connection...';
 	var locations = ['Vinhedo, Brazil', 'Manhasset, New York', 'Austin, Texas', 'Reykjavik, Iceland', 
 	'Kyoto, Japan', 'Vancouver, Canada'];
@@ -55,9 +56,11 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 		}
 	}
 
-
-	$("#connect-thumb-wrapper").bind('touchstart mousedown', function() {
+	$("#connect-thumb-wrapper").bind('touchstart' , function(event) {
+		event.preventDefault();
 		if (!$scope.locationFound) return;
+		if (!$scope.firstTap) return;
+		$scope.$apply( function () {$scope.firstTap = false});
 		console.log('mousedown');
 		//loadRadial();
 		var intervalID;
@@ -65,8 +68,11 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 			$scope.$apply(function() {
 				$scope.pulseCount++;
 			})
+			if (Meteor.isCordova) {
+				navigator.vibrate(3000);
+			}
 			console.log('pulse');
-			if ($scope.pulseCount > 4) {
+			if ($scope.pulseCount >= 4) {
 				clearInterval(intervalID);
 			}
 		}, 5000)
