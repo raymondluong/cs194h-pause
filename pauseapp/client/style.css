@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    border: .5vh solid orange;
+    /*border: .5vh solid orange;*/
 }
 
 #connect-thumb-inner {
@@ -156,6 +156,7 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 0;
     left: 1vw;
     right: 1vw;
+    z-index: 1;
 }
 
 #connect-loading-wrapper {
@@ -168,7 +169,15 @@ h1, h2, h3, h4, h5, h6 {
     background-color: orange;
 }
 
-
+.connect-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 375px;
+	height: 667px;
+	background-color: white;
+	z-index: 1;
+}
 
 
 
@@ -277,17 +286,86 @@ h1, h2, h3, h4, h5, h6 {
  */
 .circle {
 	overflow: hidden;
-	border-radius: 48%;
+	border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.small_circle{
+.small_circle {
     overflow: hidden;
-    border-radius: 48%;
-    width: 7vw;
-    height: 7vw;
-    border: .2vh solid orange;
+    border-radius: 50%;
+    /*width: 7vw;
+    height: 7vw;*/
+    /*border: .2vh solid orange;*/
+    height: 30px;
+    width: 30px;
     display: inline-block;
-    margin: auto;
 }
+
+
+
+/* ===========================
+ *   ANIMATIONS
+ * ===========================
+ */
+.fade-pulse {
+	-webkit-animation: fadePulse 3s;
+	animation: fadePulse 3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: 4;
+	animation-iteration-count: 4;
+}
+
+@-webkit-keyframes fadePulse {
+	0% {
+		opacity: 0; 
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0; 
+	} 
+}
+
+@keyframes fadePulse {
+	0% {
+		opacity: 0; 
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0; 
+	} 
+}
+
+/* Source: https://medium.com/@andsens */
+.radial-load-outer {
+	width: 300px;
+	height: 300px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.radial-load-outer .radial-load-inner .radial-load-mask,
+.radial-load-outer .radial-load-inner .radial-load-fill {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	border-radius: 50%;
+	transition: -webkit-transform 12s;
+	transition: -ms-transform 12s;
+	transition: transform 12s;
+	-webkit-backface-visibility: hidden;
+}
+.radial-load-outer .radial-load-inner .radial-load-mask {
+	clip: rect(0px,300px,300px,150px);
+}
+.radial-load-outer .radial-load-inner .radial-load-mask .radial-load-fill {
+	clip: rect(0px,150px,300px,0px);
+	background-color: orange;
+}
+
