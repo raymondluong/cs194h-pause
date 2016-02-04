@@ -1,13 +1,8 @@
 // Define variable colors
 	var back = ["#22A7F0","#8E44AD","#AEA8D3","#F62459","#DB0A5B","#D64541","#D2527F","#2C3E50","#1E8BC3","#87D37C","#4ECDC4","#3FC380","#E87E04","#F9690E","#F9BF3B"];
 	
-	$('.item').each(function() {
-		
-		// First random color
-		var rand1 = back[Math.floor(Math.random() * back.length)];
-		// Second random color
-		var rand2 = back[Math.floor(Math.random() * back.length)];
-		
+	$('.gradient-bkgrd').each(function() {
+
 		var grad = $(this);
 		
 		// Convert Hex color to RGB
