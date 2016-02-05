@@ -56,7 +56,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 		}
 	}
 
-	$("#connect-thumb-wrapper").bind('touchstart' , function(event) {
+	$("#connect-thumb-wrapper").bind('touchstart mousedown' , function(event) {
 		event.preventDefault();
 		if (!$scope.locationFound) return;
 		if (!$scope.firstTap) return;
