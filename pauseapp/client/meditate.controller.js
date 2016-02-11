@@ -2,11 +2,12 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
 	console.log('meditate controller');
     var background = $("#body-scan-screen");
 
-    // TODO: STOP AUDIO WHEN CLICK HOME
     $scope.stopAudio = function() {
-        // $.each($("audio"), function() {
-        //     this.pause();
-        // });
+        console.log("STOP");
+        $.each($("audio"), function() {
+            console.log(this);
+            this.pause();
+        });
     }
 	
 	$scope.openInstructions = function() {
@@ -18,6 +19,8 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
     //TODO: BETTER TIMING, MAYBE DO LARGER BODY PARTS
 	$scope.beginScan = function() {
         var audioElement = document.createElement('audio');
+        document.querySelector("body").appendChild(audioElement);
+
         audioElement.setAttribute('src', 'meditation-voiceover-trimmed.mp3');
         // audioElement.setAttribute('src', '2sec.mp3');
         audioElement.setAttribute('autoplay', 'autoplay');
