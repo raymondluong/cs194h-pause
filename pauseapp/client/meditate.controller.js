@@ -1,13 +1,15 @@
 angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scope) {
 	console.log('meditate controller');
     var background = $("#body-scan-screen");
+    var audio = playSound('meditation-voiceover-trimmed.mp3');
 
     $scope.stopAudio = function() {
         console.log("STOP");
-        $.each($("audio"), function() {
-            console.log(this);
-            this.pause();
-        });
+        // $.each($("audio"), function() {
+        //     console.log(this);
+        //     this.pause();
+        // });
+        audio.stop();
     }
 	
 	$scope.openInstructions = function() {
@@ -37,16 +39,9 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
         // });
 
         // AUDIO ATTEMPT USING CORDOVA PLUGIN
-        // var test = playSound('meditation-voiceover-trimmed.mp3');
-        // test.play();
+        audio.play();
 
-        // AUDIO ATTEMPT USING HOWLER
-        var path = cordova.file.applicationDirectory + 'www/application/app/meditation-voiceover-trimmed.mp3';
-        var sound = new Howl({
-            urls: [path]
-        }).play();
-
-        changeBackground("feet", 0);
+        changeBackground("head2", 0);
         changeBackground("shoulders", 46000);
         changeBackground("stomach", 16000);
         changeBackground("upperarms", 6000);
@@ -59,21 +54,21 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
         changeBackground("empty", 28000);
     }
 
-    // function getMediaUrl(sound) {
-    //     return cordova.file.applicationDirectory.replace('cdvfile://', '') + 'www/application/app/' + sound;
-    // }
+    function getMediaUrl(sound) {
+        return cordova.file.applicationDirectory.replace('file://', '') + 'www/application/app/' + sound;
+    }
 
-    // function playSound(sound) {
-    //     return new Media(
-    //         getMediaUrl(sound),
-    //         function (success) {
-    //           // success
-    //         },
-    //         function (err) {
-    //           // error
-    //         }
-    //     );
-    // }
+    function playSound(sound) {
+        return new Media(
+            getMediaUrl(sound),
+            function (success) {
+              // success
+            },
+            function (err) {
+              // error
+            }
+        );
+    }
 
     function changeBackground(image, delayTime) {
         background.delay(delayTime).fadeTo(1000, 0, function() {
