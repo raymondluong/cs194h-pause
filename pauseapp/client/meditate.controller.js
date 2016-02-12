@@ -46,7 +46,7 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
             urls: [path]
         }).play();
 
-        changeBackground("head2", 0);
+        changeBackground("feet", 0);
         changeBackground("shoulders", 46000);
         changeBackground("stomach", 16000);
         changeBackground("upperarms", 6000);
