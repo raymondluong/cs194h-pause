@@ -18,21 +18,33 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
 
     //TODO: BETTER TIMING, MAYBE DO LARGER BODY PARTS
 	$scope.beginScan = function() {
-        var audioElement = document.createElement('audio');
-        document.querySelector("body").appendChild(audioElement);
 
-        audioElement.setAttribute('src', 'meditation-voiceover-trimmed.mp3');
-        // audioElement.setAttribute('src', '2sec.mp3');
-        audioElement.setAttribute('autoplay', 'autoplay');
-        //audioElement.load();
+        // AUDIO ATTEMPT USING HTML5 AUDIO
+        // var audioElement = document.createElement('audio');
+        // document.querySelector("body").appendChild(audioElement);
 
-        audioElement.addEventListener("load", function() {
-            audioElement.play();
-        });
+        // audioElement.setAttribute('src', 'meditation-voiceover-trimmed.mp3');
+        // // audioElement.setAttribute('src', '2sec.mp3');
+        // audioElement.setAttribute('autoplay', 'autoplay');
+        // //audioElement.load();
 
-        audioElement.addEventListener('ended', function(){
-            // AUDIO ENDED CALLBACK
-        });
+        // audioElement.addEventListener("load", function() {
+        //     // audioElement.play();
+        // });
+
+        // audioElement.addEventListener('ended', function(){
+        //     // AUDIO ENDED CALLBACK
+        // });
+
+        // AUDIO ATTEMPT USING CORDOVA PLUGIN
+        // var test = playSound('meditation-voiceover-trimmed.mp3');
+        // test.play();
+
+        // AUDIO ATTEMPT USING HOWLER
+        var path = cordova.file.applicationDirectory + 'www/application/app/meditation-voiceover-trimmed.mp3';
+        var sound = new Howl({
+            urls: [path]
+        }).play();
 
         changeBackground("head2", 0);
         changeBackground("shoulders", 46000);
@@ -46,6 +58,22 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
         changeBackground("feet", 19000);
         changeBackground("empty", 28000);
     }
+
+    // function getMediaUrl(sound) {
+    //     return cordova.file.applicationDirectory.replace('cdvfile://', '') + 'www/application/app/' + sound;
+    // }
+
+    // function playSound(sound) {
+    //     return new Media(
+    //         getMediaUrl(sound),
+    //         function (success) {
+    //           // success
+    //         },
+    //         function (err) {
+    //           // error
+    //         }
+    //     );
+    // }
 
     function changeBackground(image, delayTime) {
         background.delay(delayTime).fadeTo(1000, 0, function() {
