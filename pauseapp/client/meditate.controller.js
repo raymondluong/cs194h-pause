@@ -1,38 +1,53 @@
 angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scope) {
 	console.log('meditate controller');
     var background = $("#body-scan-screen");
+    var audio = Meteor.isCordova ? playSound('meditation-voiceover-trimmed.mp3') : null;
 
     $scope.stopAudio = function() {
         console.log("STOP");
-        $.each($("audio"), function() {
-            console.log(this);
-            this.pause();
-        });
+        if (Meteor.isCordova && audio != null) {
+            audio.stop();
+        } else {
+            $.each($("audio"), function() {
+                console.log(this);
+                this.pause();
+            });
+        }
     }
 	
 	$scope.openInstructions = function() {
-        // TODO: visual cue for playing audio
-		$('.btn-body-scan').css('visibility', 'hidden');
         window.location.href = "/meditate#openModal";
 	}
 
     //TODO: BETTER TIMING, MAYBE DO LARGER BODY PARTS
 	$scope.beginScan = function() {
-        var audioElement = document.createElement('audio');
-        document.querySelector("body").appendChild(audioElement);
+        // HIDE BUTTON, SHOW AUDIO ICON
+        $('.btn-body-scan').hide()
+        $('#audio-icon').show()
 
-        audioElement.setAttribute('src', 'meditation-voiceover-trimmed.mp3');
-        // audioElement.setAttribute('src', '2sec.mp3');
-        audioElement.setAttribute('autoplay', 'autoplay');
-        //audioElement.load();
+        if (Meteor.isCordova && audio != null) {
+            // AUDIO PLAYBACK USING CORDOVA PLUGIN
+            audio.play();
+        } else if (audio == null) {
+            // AUDIO PLAYBACK USING HTML5 AUDIO
+            var audioElement = document.createElement('audio');
+            document.querySelector("body").appendChild(audioElement);
 
-        audioElement.addEventListener("load", function() {
-            audioElement.play();
-        });
+            audioElement.setAttribute('src', 'meditation-voiceover-trimmed.mp3');
+            // audioElement.setAttribute('src', '2sec.mp3');
+            audioElement.setAttribute('autoplay', 'autoplay');
+            //audioElement.load();
 
-        audioElement.addEventListener('ended', function(){
-            // AUDIO ENDED CALLBACK
-        });
+            audioElement.addEventListener("load", function() {
+                // audioElement.play();
+            });
+
+            audioElement.addEventListener('ended', function(){
+                // AUDIO ENDED CALLBACK
+            });
+        } else {
+            console.log("FATAL ERROR AUDIO PLAYBACK");
+        }
 
         changeBackground("head2", 0);
         changeBackground("shoulders", 46000);
@@ -45,6 +60,26 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
         changeBackground("lowerlegs", 11000);
         changeBackground("feet", 19000);
         changeBackground("empty", 28000);
+
+        // RE-SHOW BUTTON/HIDE AUDIO ICON
+        $('.btn-body-scan').show()
+        $('#audio-icon').hide()
+    }
+
+    function getMediaUrl(sound) {
+        return cordova.file.applicationDirectory.replace('file://', '') + 'www/application/app/' + sound;
+    }
+
+    function playSound(sound) {
+        return new Media(
+            getMediaUrl(sound),
+            function (success) {
+              // success
+            },
+            function (err) {
+              // error
+            }
+        );
     }
 
     function changeBackground(image, delayTime) {
