@@ -1,12 +1,12 @@
 angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scope) {
 	console.log('meditate controller');
     var background = $("#body-scan-screen");
-    var audio = Meteor.isCordova ? playSound('meditation-voiceover-trimmed.mp3') : null;
+    var cordovaAudio = Meteor.isCordova ? playSound('meditation-voiceover-trimmed.mp3') : null;
 
     $scope.stopAudio = function() {
         console.log("STOP");
-        if (Meteor.isCordova && audio != null) {
-            audio.stop();
+        if (Meteor.isCordova && cordovaAudio != null) {
+            cordovaAudio.stop();
         } else {
             $.each($("audio"), function() {
                 console.log(this);
@@ -21,14 +21,10 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
 
     //TODO: BETTER TIMING, MAYBE DO LARGER BODY PARTS
 	$scope.beginScan = function() {
-        // HIDE BUTTON, SHOW AUDIO ICON
-        $('.btn-body-scan').hide()
-        $('#audio-icon').show()
-
-        if (Meteor.isCordova && audio != null) {
+        if (Meteor.isCordova && cordovaAudio != null) {
             // AUDIO PLAYBACK USING CORDOVA PLUGIN
-            audio.play();
-        } else if (audio == null) {
+            cordovaAudio.play();
+        } else if (cordovaAudio == null) {
             // AUDIO PLAYBACK USING HTML5 AUDIO
             var audioElement = document.createElement('audio');
             document.querySelector("body").appendChild(audioElement);
@@ -49,7 +45,7 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
             console.log("FATAL ERROR AUDIO PLAYBACK");
         }
 
-        changeBackground("head2", 0);
+        changeBackground("head2", 0, 'start');
         changeBackground("shoulders", 46000);
         changeBackground("stomach", 16000);
         changeBackground("upperarms", 6000);
@@ -59,11 +55,7 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
         changeBackground("thighs", 10000);
         changeBackground("lowerlegs", 11000);
         changeBackground("feet", 19000);
-        changeBackground("empty", 28000);
-
-        // RE-SHOW BUTTON/HIDE AUDIO ICON
-        $('.btn-body-scan').show()
-        $('#audio-icon').hide()
+        changeBackground("empty", 28000, 'end');
     }
 
     function getMediaUrl(sound) {
@@ -82,10 +74,22 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
         );
     }
 
-    function changeBackground(image, delayTime) {
+    function changeBackground(image, delayTime, status=null) {
+        if (status == 'start') {
+            // HIDE BUTTON, SHOW AUDIO ICON
+            $('.btn-body-scan').hide();
+            $('#audio-icon').show();
+        }
+
         background.delay(delayTime).fadeTo(1000, 0, function() {
             background.css("background", "url('bodyscan/" + image + ".png') no-repeat center");
             background.css("background-size", "75% 85%");
-        }).fadeTo(1000, 1);
+        }).fadeTo(1000, 1, function() {
+            if (status == 'end') {
+                // RE-SHOW BUTTON/HIDE AUDIO ICON
+                $('.btn-body-scan').show();
+                $('#audio-icon').hide();
+            }
+        });
     }
 }]);
