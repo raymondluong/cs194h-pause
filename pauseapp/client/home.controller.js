@@ -1,4 +1,4 @@
-angular.module('pauseApp').controller('HomeCtrl', ['$scope', function ($scope) {
+angular.module('pauseApp').controller('HomeCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
 
 	$('#home-menu').circleMenu({
 		direction: 'full', 
@@ -6,5 +6,7 @@ angular.module('pauseApp').controller('HomeCtrl', ['$scope', function ($scope) {
 	});
 
 	$('#home-menu').circleMenu('open');
+
+	$scope.renderGradient();
 
 }]);
