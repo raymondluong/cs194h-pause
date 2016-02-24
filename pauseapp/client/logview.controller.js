@@ -16,7 +16,7 @@ angular.module('pauseApp').controller('LogViewCtrl', ['$scope', function ($scope
 
 
 	var d = new Date();
-	$scope.logColor = function(emotion) {
+	$scope.logEmotion = function(emotion) {
 		if (confirm("")) {
 			window.location.href = "home";
 		}

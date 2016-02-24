@@ -316,10 +316,11 @@ h1, h2, h3, h4 {
  * ===========
  */
 .log-emotions {
-	width: 85%;
+	width: 95%;
+	padding: 0em 1.5em;
 }
 .log-emotion-block {
-	height: 6.1em;
+	height: 6em;
 	opacity: 0.95;
 	filter: alpha(opacity=95);
 	border-radius: 1px;
