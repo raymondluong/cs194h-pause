@@ -1,4 +1,4 @@
-Colors = new Mongo.Collection('colors');
+Emotions = new Mongo.Collection('colors');
 
 angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
 
@@ -35,7 +35,7 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 
 	};
 
-	$scope.colorLogs = $meteor.collection(Colors);
+	$scope.colorLogs = $meteor.collection(Emotions);
 
     console.log($scope.colorLogs);
 
