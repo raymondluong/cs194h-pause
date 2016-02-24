@@ -304,10 +304,10 @@ h1, h2, h3, h4, h5, h6 {
  *  LOG PAGE
  * ===========
  */
-.log-colors {
+.log-emotions {
 	width: 85%;
 }
-.log-color-block {
+.log-emotion-block {
 	height: 6em;
 	opacity: 0.95;
 	filter: alpha(opacity=95);

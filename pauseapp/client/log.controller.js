@@ -1,4 +1,4 @@
-Emotions = new Mongo.Collection('colors');
+Emotions = new Mongo.Collection('emotions');
 
 angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
 
@@ -15,20 +15,20 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 		"black": "#272727"
 	}
 
-	$scope.colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'white', 'black'];
+	$scope.emotions = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'white', 'black'];
 	var d = new Date();
-	$scope.logColor = function(color) {
-		if (confirm("Log color as " + color + "?")) {
-			alert("You logged " + color + " at " + d.getHours() + ":" + d.getMinutes());
+	$scope.logColor = function(emotion) {
+		if (confirm("Log color as " + emotion + "?")) {
+			alert("You logged " + emotion + " at " + d.getHours() + ":" + d.getMinutes());
 
-			moods.unshift(colorMap[color]);
+			moods.unshift(colorMap[emotion]);
 			renderGradient();
 
 
 			//window.location.href = "home";
 		}
 		$scope.colorLogs.push({
-			'color': color,
+			'color': emotion,
 			'date': new Date()
 		});
 		console.log($scope.colorLogs);
