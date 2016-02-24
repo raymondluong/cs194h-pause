@@ -2,10 +2,10 @@ Emotions = new Mongo.Collection('emotions');
 
 angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
 
-	var moods = ["#22A7F0","#8E44AD","#AEA8D3","#F62459","#DB0A5B","#D64541"];
+	var moods = ["#800000","#FF6347","#000080","#F62459","#4169E1","#C71585"];
 
 	var emotionMap = {
-		"afraid": "800000", /*maroon*/
+		"afraid": "#800000", /*maroon*/
 		"tense": "#8B0000", /*darkred*/
 		"excited": "#DC143C", /*crimson*/
 		"delighted": "#C71585", /*mediumvioletred*/
