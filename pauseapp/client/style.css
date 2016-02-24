@@ -309,6 +309,8 @@ h1, h2, h3, h4 {
 }
 
 
+
+
 /* ===========
  *  LOG PAGE
  * ===========
@@ -317,7 +319,7 @@ h1, h2, h3, h4 {
 	width: 85%;
 }
 .log-emotion-block {
-	height: 6em;
+	height: 6.1em;
 	opacity: 0.95;
 	filter: alpha(opacity=95);
 	border-radius: 1px;
@@ -325,22 +327,117 @@ h1, h2, h3, h4 {
 	margin: 1px;
 }
 #afraid-block {
-	background: maroon url("../public/emotions/afraid.jpg") no-repeat fixed center; }
-#tense-block { background-color: darkred; }
-#excited-block { background-color: crimson; }
-#delighted-block { background-color: mediumvioletred; }
-#frustrated-block { background-color: brown; }
-#angry-block { background-color: sienna; }
-#happy-block { background-color: tomato; }
-#glad-block { background-color: coral; }
-#miserable-block { background-color: #404080; }
-#sad-block { background-color: navy; }
-#calm-block { background-color: teal; }
-#satisfied-block { background-color: royalblue; }
-#gloomy-block { background-color: slategray; }
-#tired-block { background-color: midnightblue; }
-#sleepy-block { background-color: darkslateblue; }
-#serene-block { background-color: indigo; }
+	background: maroon url("emotions/afraid.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#tense-block {
+	background: darkred url("emotions/tense.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#excited-block {
+	background: crimson url("emotions/excited.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#delighted-block {
+	background: mediumvioletred url("emotions/delighted.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#frustrated-block {
+	background: brown url("emotions/frustrated.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#angry-block {
+	background: sienna url("emotions/angry.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#happy-block {
+	background: tomato url("emotions/happy.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#glad-block {
+	background: coral url("emotions/glad.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#miserable-block {
+	background: #404080 url("emotions/miserable.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sad-block {
+	background: navy url("emotions/sad.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#calm-block {
+	background: teal url("emotions/calm.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#satisfied-block {
+	background: royalblue url("emotions/satisfied.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#gloomy-block {
+	background: slategray url("emotions/gloomy.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#tired-block {
+	background: midnightblue url("emotions/tired.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sleepy-block {
+	background: darkslateblue url("emotions/sleepy.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#serene-block {
+	background: indigo url("emotions/serene.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
 
 
 /* ===========================
