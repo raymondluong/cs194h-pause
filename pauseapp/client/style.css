@@ -5,7 +5,7 @@
 
 body {
 	height: 100%;
-	line-height: 1.2em;
+	line-height: 1.5em;
 	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 400;
 	color: #373712;
@@ -315,9 +315,18 @@ h1, h2, h3, h4 {
  *  LOG PAGE
  * ===========
  */
+#log-text {
+	padding: 1.25em 1em;
+	width: 93.5%;
+	background-color: rgba(250, 250, 250, 0.6);
+	border-radius: 2px;
+}
 .log-emotions {
-	width: 95%;
-	padding: 0em 1.5em;
+	width: 100%;
+	padding: 0.5em 1.75em;
+	/*background-color: rgba(205, 205, 205, 0.25);
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px #7a7a7a;*/
 }
 .log-emotion-block {
 	height: 6em;
@@ -325,7 +334,8 @@ h1, h2, h3, h4 {
 	filter: alpha(opacity=95);
 	border-radius: 1px;
 	cursor: pointer;
-	margin: 1px;
+	margin: 2.5px;
+	box-shadow: 1px 1px 5px #7a7a7a;
 }
 #afraid-block {
 	background: maroon url("emotions/afraid.jpg") no-repeat center;
