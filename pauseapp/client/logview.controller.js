@@ -16,9 +16,8 @@ angular.module('pauseApp').controller('LogViewCtrl', ['$scope', function ($scope
 
 
 	var d = new Date();
-	$scope.logColor = function(color) {
-		if (confirm("Log color as " + color + "?")) {
-			alert("You logged " + color + " at " + d.getHours() + ":" + d.getMinutes());
+	$scope.logColor = function(emotion) {
+		if (confirm("")) {
 			window.location.href = "home";
 		}
 	}

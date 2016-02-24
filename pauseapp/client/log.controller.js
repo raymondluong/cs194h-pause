@@ -5,36 +5,44 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 	var moods = ["#22A7F0","#8E44AD","#AEA8D3","#F62459","#DB0A5B","#D64541","#D2527F","#2C3E50","#1E8BC3","#87D37C","#4ECDC4","#3FC380","#E87E04","#F9690E","#F9BF3B"];
 
 	var emotionMap = {
-		"red": "#B22222",
-		"orange": "#F4A460",
-		"yellow": "#f0e68c",
-		"green": "#3CB371",
-		"blue": "#4169E1",
-		"purple": "#9370D8",
-		"white": "#f9f9f9",
-		"black": "#272727"
+		"afraid": "#B22222", /*red*/
+		"tense": "#B22222", /*red*/
+		"excited": "#FF4500", /*red*/
+		"delighted": "#FF4500", /*red*/
+		"frustrated": "#FF4500", /*red-orange*/
+		"angry": "#FF4500", /*red-orange*/
+		"happy": "#f0e68c", /*yellow*/
+		"glad": "#f0e68c", /*yellow*/
+		"miserable": "#4169E1", /*blue*/
+		"sad": "#4169E1", /*blue*/
+		"calm": "#3CB371", /*green*/
+		"satisfied": "#3CB371", /*green*/
+		"gloomy": "#9370D8", /*purple*/
+		"tired": "#9370D8", /*purple*/
+		"sleepy": "#9370D8", /*purple*/
+		"serene": "#9370D8", /*purple*/
 	}
 
-	$scope.emotions = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'white', 'black'];
+	$scope.emotions = ['afraid', 'tense', 'excited', 'delighted', 'frustrated', 'angry', 'happy', 'glad', 'miserable', 'sad', 'calm', 'satisfied', 'gloomy', 'tired', 'sleepy', 'serene'];
 	var d = new Date();
 	$scope.logColor = function(emotion) {
-		if (confirm("Log color as " + emotion + "?")) {
+		if (confirm("")) {
 			moods.unshift(emotionMap[emotion]);
 			renderGradient();
 
 			//window.location.href = "home";
 		}
-		$scope.colorLogs.push({
+		$scope.emotionLogs.push({
 			'color': emotion,
 			'date': new Date()
 		});
-		console.log($scope.colorLogs);
+		console.log($scope.emotionLogs);
 
 	};
 
-	$scope.colorLogs = $meteor.collection(Emotions);
+	$scope.emotionLogs = $meteor.collection(Emotions);
 
-    console.log($scope.colorLogs);
+    console.log($scope.emotionLogs);
 
     // $scope.addTask = function(newTask) {
     //   $scope.tasks.push({

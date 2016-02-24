@@ -14,8 +14,11 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	padding: 5px 0 10px 0;
 	font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+	padding: 5px 0 10px 0;
 }
 
 .thin-text {
@@ -45,16 +48,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .pause-nav {
 	position: absolute;
-	top: 10px;
-	left: 10px;
+	top: 0px;
+	padding: 13px 0 15px 0;
+	width: 100%;
+	background-color: rgba(75, 75, 75, 0.15);
+	text-align: left;
 }
-
 .pause-nav a {
-	color: black;
+	/*color: #fff;*/
 }
-
 .pause-nav a:hover {
 	text-decoration: none
+}
+.pause-nav a i {
+	font-size: 1.5em;
 }
 
 .gradient-bkgrd {
@@ -70,11 +77,13 @@ h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 }
 
-.transparent-overlay {
-	margin: 5px;
-	background-color: #3f3f3f;
-	opacity: 0.75;
-	filter: alpha(opacity=75);
+.page-title {
+	text-align: center;
+	margin-bottom: 0;
+	font-weight: 700;
+	line-height: 1.5em;
+	letter-spacing: 0.5px;
+	font-size: 1.1em;
 }
 
 
@@ -315,15 +324,23 @@ h1, h2, h3, h4, h5, h6 {
 	cursor: pointer;
 	margin: 1px;
 }
-#black-block { background-color: #272727; }
-#purple-block { background-color: mediumpurple; }
-#blue-block { background-color: royalblue; }
-#green-block { background-color: mediumseagreen; }
-#yellow-block { background-color: khaki; }
-#orange-block { background-color: sandybrown; }
-#red-block { background-color: firebrick; }
-#pink-block { background-color: lightcoral; }
-#white-block { background-color: #f9f9f9; }
+#afraid-block {
+	background: maroon url("../public/emotions/afraid.jpg") no-repeat fixed center; }
+#tense-block { background-color: darkred; }
+#excited-block { background-color: crimson; }
+#delighted-block { background-color: mediumvioletred; }
+#frustrated-block { background-color: brown; }
+#angry-block { background-color: sienna; }
+#happy-block { background-color: tomato; }
+#glad-block { background-color: coral; }
+#miserable-block { background-color: #404080; }
+#sad-block { background-color: navy; }
+#calm-block { background-color: teal; }
+#satisfied-block { background-color: royalblue; }
+#gloomy-block { background-color: slategray; }
+#tired-block { background-color: midnightblue; }
+#sleepy-block { background-color: darkslateblue; }
+#serene-block { background-color: indigo; }
 
 
 /* ===========================
