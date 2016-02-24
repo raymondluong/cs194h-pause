@@ -4,7 +4,7 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 
 	var moods = ["#22A7F0","#8E44AD","#AEA8D3","#F62459","#DB0A5B","#D64541","#D2527F","#2C3E50","#1E8BC3","#87D37C","#4ECDC4","#3FC380","#E87E04","#F9690E","#F9BF3B"];
 
-	var colorMap = {
+	var emotionMap = {
 		"red": "#B22222",
 		"orange": "#F4A460",
 		"yellow": "#f0e68c",
@@ -19,11 +19,8 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 	var d = new Date();
 	$scope.logColor = function(emotion) {
 		if (confirm("Log color as " + emotion + "?")) {
-			alert("You logged " + emotion + " at " + d.getHours() + ":" + d.getMinutes());
-
-			moods.unshift(colorMap[emotion]);
+			moods.unshift(emotionMap[emotion]);
 			renderGradient();
-
 
 			//window.location.href = "home";
 		}
