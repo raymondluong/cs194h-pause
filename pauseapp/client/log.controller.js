@@ -26,7 +26,7 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 
 	var d = new Date();
 	$scope.logEmotion = function(emotion) {
-		if (confirm("")) {
+		if (confirm('You are currently feeling ' + emotion + '. Log this emotion?')) {
 			// moods.unshift(emotionMap[emotion]);
 			// renderGradient();
 			$scope.emotionLogs.push({
