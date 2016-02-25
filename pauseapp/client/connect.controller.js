@@ -25,7 +25,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 			$('#connect-thumb-print').show();
 			$scope.locationFound = true;
 			$scope.$apply(function() {
-				$scope.statusText = 'Connection found';
+				$scope.statusText = 'Connection found in';
 				$scope.locationText = getRandomLocation();
 			});
 		}, 4500)
@@ -42,7 +42,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 
 	function stopPulse() {
 		$scope.$apply(function() {
-			$scope.statusText = "Moment Completed";
+			$scope.statusText = "Thank you for sharing.";
 			$scope.momentCompleted = true;
 		})
 	}
@@ -54,7 +54,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 		$scope.$apply(function () {
 			$scope.firstTap = false;
 			$scope.inMoment = true;
-			$scope.statusText = "Sharing a moment";
+			$scope.statusText = "Sharing a moment with someone in";
 		});
 		var intervalID;
 		intervalID = setInterval(function() {
