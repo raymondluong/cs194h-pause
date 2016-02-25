@@ -16,6 +16,33 @@ angular.module('pauseApp').controller('LogviewCtrl', ['$scope', '$meteor', funct
         "jul", "aug", "sep", "oct", "nov", "dec"
     ];
 
+    $scope.quotes = {
+        "tense": {
+            "quote": "The greatest weapon against stress is our ability to choose one thought over another.",
+            "author": "William James"
+        },
+        "angry": {
+            "quote": "You will not be punished for your anger, you will be punished by your anger.",
+            "author": "Buddha"
+        },
+        "frustrated": {
+            "quote": "Expectation is the mother of all frustration.",
+            "author": "Antonio Banderas"
+        },
+        "delighted": {
+            "quote": "Right now I'm just delighted to be alive and to have had a nice long bath.",
+            "author": "Richard Branson"
+        },
+        "excited": {
+            "quote": "Focus on the excitement and it will lead you through the obstacles.",
+            "author": "Piya Sarcar"
+        },
+        "afraid": {
+            "quote": "The only thing we have to fear is fear itself.",
+            "author": "Franklin D. Roosevelt"
+        }
+    };
+
     $scope.slickConfigTop = {
         adaptiveHeight: true,
         initialSlide: $scope.emotionLogs.length - 1,
