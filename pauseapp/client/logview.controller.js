@@ -6,22 +6,21 @@ angular.module('pauseApp').controller('LogviewCtrl', ['$scope', function ($scope
     $scope.slickItems = [{color: 'green', time: 1}, {color: 'red', time: 2}, {color: 'purple', time: 3}, {color: 'blue', time: 4}, {color: 'yellow', time: 5}];
 
     $scope.slickConfigTop = {
-        'adaptive-height': true,
+        adaptiveHeight: true,
+        initialSlide: $scope.slickItems.length - 1,
         mobileFirst: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
-        asNavFor: '.slick-bot',
-        initialSlide: $scope.slickItems.length - 1
+        asNavFor: '.slick-bot'
     }
 
     $scope.slickConfigBot = {
-        adaptiveHeight: true,
         // rtl: true,
+        centerMode: true,
+        adaptiveHeight: true,
         initialSlide: $scope.slickItems.length - 1,
         mobileFirst: true,
-        centerMode: true,
-        centerPadding: '60px',
         slidesToShow: 3,
         swipeToSlide: true,
         infinite: false,
