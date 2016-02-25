@@ -1,8 +1,31 @@
-<div ng-controller="LogViewCtrl" class="gradient-bkgrd text-center">	
-	<div class="main-wrapper">
-		<div class="pause-nav">
-			<a href="/"><i class="fa fa-home"></i> Home</a>
+<div ng-controller="LogviewCtrl" class="gradient-bkgrd text-center bodyscan-wrapper">
+	<div class="pause-nav">
+		<div class="col-xs-4">
+			<a href="home"><i class="fa fa-angle-left"></i></a>
 		</div>
-		<canvas id="canvas" width="375" height="300"></canvas>
+		<div class="col-xs-4">
+			<h5 class="page-title">View Moments</h5>
+		</div>
+		<div class="col-xs-4"></div>
 	</div>
+
+	<slick class="slick-top" settings="slickConfigTop">
+		<div ng-repeat="item in emotionLogs">
+			<div class="slick-item-top slick-item ng-binding ng-scope" style="background: {{ item.color }};">
+				<p class="item-emotion">{{ item.emotion }}</p>
+				<p class="item-date">{{ item.date.toLocaleString() }}</p>
+				<p class="item-quote"><i>"{{ quotes[item.emotion]["quote"] }}" — {{ quotes[item.emotion]["author"] }}</i></p>
+			</div>
+		</div>
+	</slick>
+
+	<slick class="slick-bot" settings="slickConfigBot">
+		<div ng-repeat="item in emotionLogs">
+			<div class="slick-item-bot slick-item ng-binding ng-scope" style="background: {{ item.color }};">
+				<p class="item-small-month-day">{{ monthNames[item.date.getMonth()] }} {{ item.date.getDate() }}</p>
+				<p class="item-small-year">{{ item.date.getFullYear() }}</p>
+			</div>
+		</div>
+	</slick>
+
 </div>

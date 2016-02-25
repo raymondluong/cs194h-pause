@@ -26,7 +26,7 @@ angular.module('pauseApp').config(function($urlRouterProvider, $stateProvider, $
 			url: '/log',
 			templateUrl: 'log.html'
 		})
-		.state('viewLog', {
+		.state('logView', {
 			url: '/log/view',
 			templateUrl: 'logview.html'
 		});

@@ -16,6 +16,10 @@ p {
 	line-height: 1.5em;
 }
 
+a:hover {
+	text-decoration: none;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	font-weight: 400;
@@ -331,6 +335,73 @@ h5 {
 	color: #cacaca;
 }
 
+/* ===========================
+ *  VIEW MOMENTS PAGE
+ * ===========================
+ */
+
+.slick-top {
+	padding-top: 35%;
+}
+
+.slick-item {
+  color: #fff;
+  font-size: 36px;
+  line-height: 65px;
+  margin: 6px;
+  text-align: center;
+}
+
+.slick-item-top {
+	border-radius: 10px;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	z-index: 1000;
+	box-shadow: 2px 2px 2px rgba(34,34,34,0.6);
+	width: 75%;
+	margin: 0 auto;
+	height: 350px;
+}
+
+.item-date {
+	font-size: 15px;
+	opacity: 0.5;
+}
+
+.slick-item-bot {
+	opacity: 0.2;
+	border-radius: 50px;
+	padding-top: 25%;
+	padding-bottom: 15%;
+}
+
+.slick-bot .slick-current .slick-item {
+	opacity: 1;
+	box-shadow: 2px 2px 2px rgba(34,34,34,0.7);
+}
+
+.slick-bot {
+	background-color: rgba(250,250,250,0.5);
+	padding-bottom: 50px;
+	padding-top: 20px;
+	top: 15px;
+}
+
+.item-small-month-day {
+	font-size: 14px;
+	margin-bottom: -2px;
+}
+
+.item-small-year {
+	font-size: 12px;
+	opacity: 0.6;
+}
+
+.item-quote {
+	font-size: 15px;
+	opacity: 0.8;
+	padding: 20px;
+}
 
 
 /* ===========
