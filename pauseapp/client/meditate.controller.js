@@ -44,7 +44,6 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
         } else {
             console.log("FATAL ERROR AUDIO PLAYBACK");
         }
-
         changeBackground("head2", 0, 'start');
         changeBackground("shoulders", 46000);
         changeBackground("stomach", 16000);
@@ -57,6 +56,7 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
         changeBackground("feet", 19000);
         changeBackground("empty", 28000, 'end');
     }
+    $scope.beginScan();
 
     function getMediaUrl(sound) {
         return cordova.file.applicationDirectory.replace('file://', '') + 'www/application/app/' + sound;
@@ -75,20 +75,14 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
     }
 
     function changeBackground(image, delayTime, status=null) {
-        if (status == 'start') {
-            // HIDE BUTTON, SHOW AUDIO ICON
-            $('.btn-body-scan').hide();
-            $('#audio-icon').show();
-        }
-
         background.delay(delayTime).fadeTo(1000, 0, function() {
             background.css("background", "url('bodyscan/" + image + ".png') no-repeat center");
             background.css("background-size", "75% 85%");
+            $('#audio-icon').show();
         }).fadeTo(1000, 1, function() {
-            if (status == 'end') {
-                // RE-SHOW BUTTON/HIDE AUDIO ICON
+            if (status === 'end') {
                 $('.btn-body-scan').show();
-                $('#audio-icon').hide();
+                $('#audio-icon').show();
             }
         });
     }

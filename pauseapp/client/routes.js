@@ -6,13 +6,17 @@ angular.module('pauseApp').config(function($urlRouterProvider, $stateProvider, $
 			url: '/home',
 			templateUrl: 'home.html'
 		})
+		.state('connect-instructions', {
+			url: '/connect-instructions',
+			templateUrl: 'connect-instructions.html'
+		})
 		.state('connect', {
 			url: '/connect',
 			templateUrl: 'connect.html'
 		})
-		.state('connect-instructions', {
-			url: '/connect-instructions',
-			templateUrl: 'connect-instructions.html'
+		.state('meditate-instructions', {
+			url: '/meditate-instructions',
+			templateUrl: 'meditate-instructions.html'
 		})
 		.state('meditate', {
 			url: '/meditate',
