@@ -1,4 +1,4 @@
-angular.module('pauseApp').controller('HomeCtrl', ['$scope', '$location', function ($scope, $location) {
+angular.module('pauseApp').controller('HomeCtrl', ['$scope', '$location', '$timeout', function ($scope, $location, $timeout) {
 
 	$('#home-menu').circleMenu({
 		direction: 'full', 
@@ -14,5 +14,7 @@ angular.module('pauseApp').controller('HomeCtrl', ['$scope', '$location', functi
 			});
 		}, 700);
 	};
+
+
 
 }]);
