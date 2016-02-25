@@ -31,7 +31,7 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 			// renderGradient();
 			$scope.emotionLogs.push({
 				'emotion': emotion,
-				'color': emotionMap[color],
+				'color': emotionMap[emotion],
 				'date': new Date()
 			});
 			console.log($scope.emotionLogs);
