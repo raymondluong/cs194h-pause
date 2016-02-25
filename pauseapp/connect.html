@@ -1,20 +1,20 @@
 <div ng-controller="ConnectCtrl" class="text-center gradient-bkgrd">
+	<div class="pause-nav">
+		<div class="col-xs-4">
+			<a href="/home"><i class="fa fa-angle-left"></i></a>
+		</div>
+		<div class="col-xs-4">
+			<h5 class="page-title">Connect</h5>
+		</div>
+		<div class="col-xs-4">
+		</div>
+	</div>
+	<div id="connect-status">
+		<h4 class="thin-text">{{statusText}}</h4>
+		<h3 ng-if="locationFound && !momentCompleted"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{locationText}}</h3>
+	</div>
 	<div class="main-wrapper">
 		<div class="connect-overlay fade-pulse" ng-show="inMoment && !momentCompleted"></div>
-		<div class="pause-nav">
-			<div class="col-xs-4">
-				<a href="/home"><i class="fa fa-angle-left"></i></a>
-			</div>
-			<div class="col-xs-4">
-				<h5 class="page-title">Connect</h5>
-			</div>
-			<div class="col-xs-4">
-			</div>
-		</div>
-		<div id="connect-status">
-			<h3 class="thin-text">{{statusText}}</h3>
-			<h4 ng-if="locationFound && !momentCompleted"><i class="fa fa-map-marker"></i> {{locationText}}</h4>
-		</div>
 		<div id="connect-flower-wrapper">
 			<img ng-if="!inMoment && !momentCompleted" src="flower-static.gif" />
 			<img ng-if="inMoment" src="flower.gif" />
