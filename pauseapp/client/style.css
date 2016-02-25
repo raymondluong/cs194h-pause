@@ -99,6 +99,8 @@ h5 {
 #login-button {
   z-index: 99;
   position: relative;
+  float: left;
+  padding-left: 15px;
 }
 
 .page-title {
