@@ -199,11 +199,11 @@ h5 {
 }
 
 #connect-thumb-print {
-    background-image: url('thumb.png');
+    background-image: url('thumbprint.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 60px 90px;
-    width: 60px;
+    background-size: 80px 90px;
+    width: 80px;
     height: 90px;
     margin: 0 auto 1em auto;
 }
