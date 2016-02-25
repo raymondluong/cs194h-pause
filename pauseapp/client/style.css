@@ -56,7 +56,7 @@ h5 {
 
 .pause-nav {
 	position: absolute;
-	z-index: 9999;
+	z-index: 5;
 	top: 0px;
 	padding: 13px 0 15px 0;
 	width: 100%;
@@ -101,7 +101,7 @@ h5 {
 	margin-bottom: 0;
 	font-weight: 400;
 	letter-spacing: 0.5px;
-	font-size: 1.1em;
+	font-size: 1.2em;
 }
 
 
@@ -170,53 +170,38 @@ h5 {
  */
 #connect-status {
 	position: absolute;
-	top: 50px;
+	top: 80px;
+	margin: 0 3% 20px 3%;
+	padding: 1.25em 1em;
+	width: 93.5%;
+	background-color: rgba(250, 250, 250, 0.7);
+	border-radius: 2px;
+}
+
+#connect-flower {
 	width: 100%;
-}
-
-#connect-thumb-outer {
-	background-color: #fff;
-    width: 300px;
-    height: 300px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    /*border: .5vh solid orange;*/
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-
-#connect-thumb-inner {
-	position: absolute;
-	background-color: orange;
-    right: 150px;
-    left: 150px;
-    top: 150px;
-    bottom: 150px;
 }
 
 #connect-thumb-print {
     background-image: url('thumb.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 150px 225px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 1vw;
-    right: 1vw;
-    z-index: 1;
+    background-size: 60px 90px;
+    width: 60px;
+    height: 90px;
+    margin: 0 auto 1em auto;
 }
 
 #connect-loading-wrapper {
 	position: absolute;
 	width: 100%;
-	top: 550px;
+	top: 500px;
+	text-align: center;
 }
 
 .connect-loading-circle {
     background-color: orange;
+    background-color: rgba(250, 250, 250, 0.7);
 }
 
 .connect-overlay {
@@ -225,8 +210,37 @@ h5 {
 	left: 0;
 	width: 375px;
 	height: 667px;
-	background-color: orange;
-	z-index: 1;
+	background-color: #fff;
+	z-index: 9999;
+}
+
+#connect-instructions, #connect-finish-buttons {
+	padding: 1.25em 1em;
+	width: 93.5%;
+	background-color: rgba(250, 250, 250, 0.7);
+	border-radius: 2px;
+}
+
+#connect-instructions > *:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+.connect-button {
+	color: black;
+	width: 93.5%;
+	margin: 1em auto;
+	padding: 1em .75em;
+	background-color: rgba(250, 250, 250, 0.7);
+	border-radius: 2px;
+	font-size: 1.25em;
+}
+
+.connect-button--faded {
+	background-color: rgba(250, 250, 250, 0.3);
+}
+
+#connect-begin-button {
+	margin-top: 2em;
 }
 
 
