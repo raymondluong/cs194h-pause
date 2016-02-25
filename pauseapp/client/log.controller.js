@@ -1,54 +1,44 @@
-Colors = new Mongo.Collection('colors');
-
 angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
 
-	var moods = ["#22A7F0","#8E44AD","#AEA8D3","#F62459","#DB0A5B","#D64541","#D2527F","#2C3E50","#1E8BC3","#87D37C","#4ECDC4","#3FC380","#E87E04","#F9690E","#F9BF3B"];
+	var moods = ["#800000","#FF6347","#000080","#F62459","#4169E1","#C71585"];
 
-	var colorMap = {
-		"red": "#B22222",
-		"orange": "#F4A460",
-		"yellow": "#f0e68c",
-		"green": "#3CB371",
-		"blue": "#4169E1",
-		"purple": "#9370D8",
-		"white": "#f9f9f9",
-		"black": "#272727"
-	}
-
-	$scope.colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'white', 'black'];
-	var d = new Date();
-	$scope.logColor = function(color) {
-		if (confirm("Log color as " + color + "?")) {
-			alert("You logged " + color + " at " + d.getHours() + ":" + d.getMinutes());
-
-			moods.unshift(colorMap[color]);
-			renderGradient();
-
-
-			//window.location.href = "home";
-		}
-		$scope.colorLogs.push({
-			'color': color,
-			'date': new Date()
-		});
-		console.log($scope.colorLogs);
-
+	var emotionMap = {
+		"afraid": "#800000", /*maroon*/
+		"tense": "#8B0000", /*darkred*/
+		"excited": "#DC143C", /*crimson*/
+		"delighted": "#C71585", /*mediumvioletred*/
+		"frustrated": "#A52A2A", /*brown*/
+		"angry": "#A0522D", /*sienna*/
+		"happy": "#FF6347", /*tomato*/
+		"glad": "#FF7F50", /*coral*/
+		"miserable": "#404080", /**/
+		"sad": "#000080", /*navy*/
+		"calm": "#008080", /*teal*/
+		"satisfied": "#4169E1", /*royalblue*/
+		"gloomy": "#708090", /*slategray*/
+		"tired": "#191970", /*midnightblue*/
+		"sleepy": "#483D8B", /*darkslateblue*/
+		"serene": "#4B0082", /*indigo*/
 	};
 
-	$scope.colorLogs = $meteor.collection(Colors);
+	$scope.emotions = ['afraid', 'tense', 'excited', 'delighted', 'frustrated', 'angry', 'happy', 'glad', 'miserable', 'sad', 'calm', 'satisfied', 'gloomy', 'tired', 'sleepy', 'serene'];
+	$scope.emotionLogs = $meteor.collection(Logs);
 
-    console.log($scope.colorLogs);
+	var d = new Date();
+	$scope.logEmotion = function(emotion) {
+		if (confirm("")) {
+			// moods.unshift(emotionMap[emotion]);
+			// renderGradient();
+			$scope.emotionLogs.push({
+				'emotion': emotion,
+				'color': emotionMap[emotion],
+				'date': new Date()
+			});
+			console.log($scope.emotionLogs);
+		}
+	};
 
-    // $scope.addTask = function(newTask) {
-    //   $scope.tasks.push({
-    //     text: newTask,
-    //     createdAt: new Date() 
-    //   });
-    // };
-
-    // Define variable colors
-	//var moods = ["#22A7F0","#8E44AD","#AEA8D3","#F62459","#DB0A5B","#D64541","#D2527F","#2C3E50","#1E8BC3","#87D37C","#4ECDC4","#3FC380","#E87E04","#F9690E","#F9BF3B"];
-
+	
 
 	function renderGradient() {
 		$('.gradient-bkgrd').each(function() {
@@ -69,10 +59,10 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 			// Gradient rules
 			//grad.css('background-color', convertHex(moods[0],40) );
 			//grad.css("background-image", "-webkit-gradient(linear, left top, left bottom, color-stop(0%,"+ convertHex(moods[0],40) +"), color-stop(100%,"+ convertHex(moods[1],40) +"))");
-			grad.css("background-image", "-webkit-linear-gradient(top, "+ convertHex(moods[0],40) +","+ convertHex(moods[1],40) +","+ convertHex(moods[2],40) +","+ convertHex(moods[3],40) +","+ convertHex(moods[4],40) +","+ convertHex(moods[5],40) + /*","+ convertHex(moods[6],40) +","+ convertHex(moods[7],40) +","+ convertHex(moods[8],40) +","+ convertHex(moods[9],40) + */")");
-			grad.css("background-image", "-o-linear-gradient(top, "+ convertHex(moods[0],40) +","+ convertHex(moods[1],40) +","+ convertHex(moods[2],40) +","+ convertHex(moods[3],40) +","+ convertHex(moods[4],40) +","+ convertHex(moods[5],40) + /*","+ convertHex(moods[6],40) +","+ convertHex(moods[7],40) +","+ convertHex(moods[8],40) +","+ convertHex(moods[9],40) + */")");
-			grad.css("background-image", "-ms-linear-gradient(top, "+ convertHex(moods[0],40) +","+ convertHex(moods[1],40) +","+ convertHex(moods[2],40) +","+ convertHex(moods[3],40) +","+ convertHex(moods[4],40) +","+ convertHex(moods[5],40) + /*","+ convertHex(moods[6],40) +","+ convertHex(moods[7],40) +","+ convertHex(moods[8],40) +","+ convertHex(moods[9],40) + */")");
-			grad.css("background-image", "linear--linear-gradient(to bottom, "+ convertHex(moods[0],40) +","+ convertHex(moods[1],40) +","+ convertHex(moods[2],40) +","+ convertHex(moods[3],40) +","+ convertHex(moods[4],40) +","+ convertHex(moods[5],40) + /*","+ convertHex(moods[6],40) +","+ convertHex(moods[7],40) +","+ convertHex(moods[8],40) +","+ convertHex(moods[9],40) + */")");
+			grad.css("background-image", "-webkit-linear-gradient(top, "+ convertHex(moods[0],40) +","+ convertHex(moods[1],40) +","+ convertHex(moods[2],40) +","+ convertHex(moods[3],40) +","+ convertHex(moods[4],40) +","+ convertHex(moods[5],40) + ")");
+			grad.css("background-image", "-o-linear-gradient(top, "+ convertHex(moods[0],40) +","+ convertHex(moods[1],40) +","+ convertHex(moods[2],40) +","+ convertHex(moods[3],40) +","+ convertHex(moods[4],40) +","+ convertHex(moods[5],40) + ")");
+			grad.css("background-image", "-ms-linear-gradient(top, "+ convertHex(moods[0],40) +","+ convertHex(moods[1],40) +","+ convertHex(moods[2],40) +","+ convertHex(moods[3],40) +","+ convertHex(moods[4],40) +","+ convertHex(moods[5],40) + ")");
+			grad.css("background-image", "linear--linear-gradient(to bottom, "+ convertHex(moods[0],40) +","+ convertHex(moods[1],40) +","+ convertHex(moods[2],40) +","+ convertHex(moods[3],40) +","+ convertHex(moods[4],40) +","+ convertHex(moods[5],40) + ")");
 			//grad.css("filter", "progid:DXImageTransform.Microsoft.gradient( startColorstr='"+ moods[0] +"', endColorstr='"+ moods[1] +"',GradientType=0 )");
 		});		
 	}

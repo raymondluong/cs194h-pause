@@ -1,21 +1,29 @@
 <div ng-controller="MeditateCtrl" class="gradient-bkgrd text-center bodyscan-wrapper">
 	<div class="pause-nav">
-		<a ng-click="stopAudio()" href="home"><i class="fa fa-home"></i> Home</a>
+		<div class="col-xs-4">
+			<a ng-click="stopAudio()" href="home"><i class="fa fa-angle-left"></i></a>
+		</div>
+		<div class="col-xs-4">
+			<h5 class="page-title">Meditate</h5>
+		</div>
+		<div class="col-xs-4">
+		</div>
 	</div>
-	<div ng-click="openInstructions()" class="btn btn-info btn-body-scan">Ready?</div>
+	<div class="main-wrapper">
+		<div ng-click="openInstructions()" class="btn btn-info btn-body-scan">Ready?</div>
+	</div>
 	<img id="audio-icon" src="audio-icon.png">
-	<!-- <div id="scanner"></div> -->
 	<div id="body-scan-screen"></div>
 	<div id="body-scan-overlay"></div>
 
 	<!-- Popup instructions -->
 	<div id="openModal" class="modalDialog">
 		<div>
+			<a href="#close" id="modal-x"><i class="fa fa-times"></i></a>
 			<p>Put on headphones to follow the audio guided body scan exercise.</p>
-			<p>Relax, and take full breaths.</p>
+			<p>Relax and take deep, full breaths.</p>
+			<p></p>
 			<a href="#close" ng-click="beginScan()" id="close-scan-text" class="btn btn-primary">Begin</a>
 		</div>
 	</div>
-
-	<!-- <div id="black-layer"></div> -->
 </div>

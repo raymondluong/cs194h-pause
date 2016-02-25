@@ -1,19 +1,30 @@
 <div ng-controller="HomeCtrl" class="text-center gradient-bkgrd">
-	<div id="home-title-wrapper">
-		<h1 class="thin-text" id="home-title">pause</h1>
-		<h4 class="thin-text" id="home-subtitle">life is fast, let's pause together</h4>
-	</div>
-  <div id="login-button">
-       <login-buttons></login-buttons>
-  </div>
-	<div class="main-wrapper">
-		<div>
-			<ul id="home-menu">
-				<li><a href="#"></a></li>
-				<li><a alt="Item 1">meditate</a></li>
-				<li><a alt="Item 2">connect</a></li>
-				<li><a alt="Item 3">log</a></li>
-			</ul>
+	<div>
+		<div class="pause-nav">
+			<div class="col-xs-4">
+			</div>
+			<div class="col-xs-4">
+				<h5 class="page-title">Home</h5>
+			</div>
+			<div class="col-xs-4" id="profile">
+				<a href=""><i class="fa fa-user"></i></a>
+			</div>
+		</div>
+		<div id="home-title-wrapper">
+			<p id="home-subtitle">Life is fast. Let's <em class="thin-text">pause</em> together.</p>
+		</div>
+    <div id="login-button">
+         <login-buttons></login-buttons>
+    </div>
+		<div class="main-wrapper">
+			<div>
+				<ul id="home-menu">
+					<li><a href="#"></a></li>
+					<li ng-click="changePath('meditate')"><a>meditate</a></li>
+					<li ng-click="changePath('connect-instructions')"><a>connect</a></li>
+					<li ng-click="changePath('log')"><a>log</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>

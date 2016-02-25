@@ -5,20 +5,32 @@
 
 body {
 	height: 100%;
-	letter-spacing: 1px;
-	line-height: 1.2em;
-	font-weight: 200;
+	line-height: 1.5em;
+	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 400;
 	color: #373712;
 	padding: 0;
 }
 
+p {
+	line-height: 1.5em;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	padding: 5px 0;
+	font-weight: 400;
+}
+
+h2, h3, h4 {
+	padding: 5px 0 10px 0;
+}
+
+h5 {
+	line-height: 1.5em;
 }
 
 .thin-text {
-	font-weight: 100;
+	font-weight: 300;
 }
 
 /* vertically aligning a div inside another div using flex */
@@ -44,16 +56,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .pause-nav {
 	position: absolute;
-	top: 10px;
-	left: 10px;
+	z-index: 5;
+	top: 0px;
+	padding: 13px 0 15px 0;
+	width: 100%;
+	background-color: rgba(75, 75, 75, 0.15);
+	text-align: left;
 }
-
 .pause-nav a {
-	color: black;
+	/*color: #fff;*/
 }
-
 .pause-nav a:hover {
 	text-decoration: none
+}
+.pause-nav a i {
+	font-size: 1.5em;
+}
+.pause-nav #profile {
+	text-align: right;
+}
+.pause-nav #profile a {
+	color: #efefef;
 }
 
 .gradient-bkgrd {
@@ -61,17 +84,29 @@ h1, h2, h3, h4, h5, h6 {
 	background-size: 100% 100%;
 	-webkit-background-size: 100% 100%;
 	-moz-background-size: 100% 100%;
+	background: -webkit-linear-gradient(rgba(128,0,0,0.4), rgba(255,91,71,0.4), rgba(0,0,128,0.4), rgba(65,105,225,0.4), rgba(199,21,133,0.4));
+	background: -o-linear-gradient(rgba(128,0,0,0.4), rgba(255,91,71,0.4), rgba(0,0,128,0.4), rgba(65,105,225,0.4), rgba(199,21,133,0.4));
+	background: -moz-linear-gradient(rgba(128,0,0,0.4), rgba(255,91,71,0.4), rgba(0,0,128,0.4), rgba(65,105,225,0.4), rgba(199,21,133,0.4));
+	background: linear-gradient(rgba(128,0,0,0.4), rgba(255,91,71,0.4), rgba(0,0,128,0.4), rgba(65,105,225,0.4), rgba(199,21,133,0.4));
 	width: 100%;
 	height: 100%;
 }
 
-.col-xs-6 {
+.col-xs-3 {
 	padding: 0;
 }
 
 #login-button {
   z-index: 99;
   position: relative;
+}
+
+.page-title {
+	text-align: center;
+	margin-bottom: 0;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	font-size: 1.2em;
 }
 
 /* =========================
@@ -81,11 +116,16 @@ h1, h2, h3, h4, h5, h6 {
 #home-title-wrapper {
 	position: relative;
 	top: 15vh;
-	width: 100%;
+	margin: 0 3em 20px 3em;
+	padding: 15px 0 7px 0;
+	background-color: rgba(250,250,250,0.5);
+	border-radius: 100px;
 }
-
-#home-title {
-	letter-spacing: 5px;
+#home-subtitle {
+	font-size: 1.1em;
+}
+#home-subtitle em {
+	letter-spacing: 2px;
 }
 
 #home-menu {
@@ -96,20 +136,27 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	box-shadow: 2px 2px 2px;
 }
-#home-menu li:first-child {
-	background: #323232 url("hand.png") no-repeat center;
-	background-size: 4.5em 4.5em;
-	-webkit-background-size: 4.5em 4.5em;
-	-moz-background-size: 4.5em 4.5em;
-	box-shadow: 1px 1px 7px #797979;
-}
 #home-menu li {
-	background: #F49230;
-	font-family: 'Raleway';
+	background-color: #4E78A0;
+	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #323232;
 	font-size: 1.5em;
 	opacity: 0.9;
 	filter: alpha(opacity=90);
+	font-weight: 300;
+	box-shadow: 1px 1px 3px #708090;
+}
+#home-menu li:first-child {
+	background: #fafafa url("lotus.png") no-repeat center;
+	background-size: 4.5em 3em;
+	-webkit-background-size: 4.5em 3em;
+	-moz-background-size: 4.5em 3em;
+	box-shadow: 2px 2px 7px #797979;
+}
+#home-menu li a {
+	font-size: 0.8em;
+	font-style: italic;
+	letter-spacing: 0.5px;
 }
 
 #home-menu li:hover {
@@ -126,54 +173,45 @@ h1, h2, h3, h4, h5, h6 {
  * =========================
  */
 #connect-status {
-	position: absolute;
-	top: 50px;
+	position: relative;
+	top: 15vh;
+	margin: 0 2em;
+	background-color: rgba(250, 250, 250, 0.5);
+	border-radius: 100px;
+	padding: 0.75em 0 0.5em 0;
+}
+#connect-status h3 {
+	font-size: 1.5em;
+}
+#connect-status h4 {
+	font-size: 1.2em;
+	font-style: italic;
+}
+
+#connect-flower {
 	width: 100%;
-}
-
-#connect-thumb-outer {
-	background-color: #fff;
-    width: 300px;
-    height: 300px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    /*border: .5vh solid orange;*/
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-}
-
-#connect-thumb-inner {
-	position: absolute;
-	background-color: orange;
-    right: 150px;
-    left: 150px;
-    top: 150px;
-    bottom: 150px;
 }
 
 #connect-thumb-print {
     background-image: url('thumb.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 150px 225px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 1vw;
-    right: 1vw;
-    z-index: 1;
+    background-size: 60px 90px;
+    width: 60px;
+    height: 90px;
+    margin: 0 auto 1em auto;
 }
 
 #connect-loading-wrapper {
 	position: absolute;
 	width: 100%;
-	top: 550px;
+	top: 500px;
+	text-align: center;
 }
 
 .connect-loading-circle {
     background-color: orange;
+    background-color: rgba(250, 250, 250, 0.7);
 }
 
 .connect-overlay {
@@ -182,33 +220,52 @@ h1, h2, h3, h4, h5, h6 {
 	left: 0;
 	width: 375px;
 	height: 667px;
-	background-color: orange;
-	z-index: 1;
+	background-color: #fff;
+	z-index: 9999;
+}
+
+#connect-instructions, #connect-finish-buttons {
+	padding: 1.25em 1em;
+	width: 93.5%;
+	background-color: rgba(250, 250, 250, 0.7);
+	border-radius: 2px;
+}
+
+#connect-instructions > *:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+.connect-button {
+	color: black;
+	width: 93.5%;
+	margin: 1em auto;
+	padding: 1em .75em;
+	background-color: rgba(250, 250, 250, 0.7);
+	border-radius: 2px;
+	font-size: 1.25em;
+}
+
+.connect-button--faded {
+	background-color: rgba(250, 250, 250, 0.3);
+}
+
+#connect-begin-button {
+	margin-top: 2em;
 }
 
 
 
 /* ======================
- *  BODY SCANNING SCREEN
+ *  MEDITATE SCREEN
  * ======================
  */
-
-#scanner {
-	border: 3px solid red;
-	width: 50%;
-	margin: 0 auto;
-	position: relative;
-	top: 50px;
-	visibility: hidden;
-}
-
 #body-scan-screen {
 	z-index: 2;
 	position: absolute;
 	width: 100%;
 	height: 100vh;
 	background: url("bodyscan/empty.png") no-repeat center;
-	background-size: 75% 85%;
+	background-size: 85% 85%;
 }
 
 #body-scan-overlay {
@@ -217,11 +274,7 @@ h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 	height: 100vh;
 	background: url("bodyscan/empty.png") no-repeat center;
-	background-size: 75% 85%;
-}
-
-.bodyscan-wrapper {
-	position: absolute;
+	background-size: 85% 85%;
 }
 
 .btn-body-scan {
@@ -241,24 +294,9 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
 }
 
-#black-layer {
-	width: 100%;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	background: #a0a9a9 url('blueyellowbkgrd.png') no-repeat center;/*
-	background-color: #a0a0a0;
-	background-image: url(img/blueyellowbkgrd.png);
-	background-repeat: no-repeat;
-	background-position: center;*/
-	opacity: 0.6;
-	filter: alpha(opacity=60);
-	pointer-events: none;
-}
-
 .modalDialog {
 	position: fixed;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	top: 0;
 	right: 0;
 	bottom: 0;
@@ -271,47 +309,164 @@ h1, h2, h3, h4, h5, h6 {
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
 }
-
 .modalDialog:target {
 	opacity: 1;
 	pointer-events: auto;
 }
-
 .modalDialog > div {
 	width: 300px;
 	position: relative;
 	margin: 10% auto;
-	padding: 30px 20px 13px 20px;
-	border-radius: 10px;
+	padding: 10px 20px 13px 20px;
+	border-radius: 7px;
 	background: #fff;
 }
+.modalDialog #modal-x {
+	display: block;
+	text-align: right;
+	color: #cacaca;
+}
+
 
 
 /* ===========
  *  LOG PAGE
  * ===========
  */
-.log-colors {
-	width: 90%;
+#log-text {
+	padding: 1.25em 1em;
+	width: 93.5%;
+	background-color: rgba(250, 250, 250, 0.5);
+	border-radius: 100px;
 }
-
-.log-color-block {
-	height: 7em;
+.log-emotions {
+	width: 100%;
+	padding: 0.5em 1.75em;
+	/*background-color: rgba(205, 205, 205, 0.25);
+	border-radius: 3px;
+	box-shadow: 1px 1px 2px #7a7a7a;*/
+}
+.log-emotion-block {
+	height: 6em;
 	opacity: 0.95;
 	filter: alpha(opacity=95);
-	border-radius: 3px;
+	border-radius: 1px;
 	cursor: pointer;
-	margin: 5px;
+	margin: 2.5px;
+	box-shadow: 1px 1px 5px #7a7a7a;
 }
-#black-block { background-color: #272727; }
-#purple-block { background-color: mediumpurple; }
-#blue-block { background-color: royalblue; }
-#green-block { background-color: mediumseagreen; }
-#yellow-block { background-color: khaki; }
-#orange-block { background-color: sandybrown; }
-#red-block { background-color: firebrick; }
-#pink-block { background-color: lightcoral; }
-#white-block { background-color: #f9f9f9; }
+#afraid-block {
+	background: maroon url("emotions/afraid.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#tense-block {
+	background: darkred url("emotions/tense.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#excited-block {
+	background: crimson url("emotions/excited.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#delighted-block {
+	background: mediumvioletred url("emotions/delighted.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#frustrated-block {
+	background: brown url("emotions/frustrated.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#angry-block {
+	background: sienna url("emotions/angry.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#happy-block {
+	background: tomato url("emotions/happy.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#glad-block {
+	background: coral url("emotions/glad.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#miserable-block {
+	background: #404080 url("emotions/miserable.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sad-block {
+	background: navy url("emotions/sad.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#calm-block {
+	background: teal url("emotions/calm.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#satisfied-block {
+	background: royalblue url("emotions/satisfied.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#gloomy-block {
+	background: slategray url("emotions/gloomy.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#tired-block {
+	background: midnightblue url("emotions/tired.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sleepy-block {
+	background: darkslateblue url("emotions/sleepy.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#serene-block {
+	background: indigo url("emotions/serene.jpg") no-repeat center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
 
 
 /* ===========================

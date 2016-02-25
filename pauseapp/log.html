@@ -1,13 +1,20 @@
 <div ng-controller="LogCtrl" class="gradient-bkgrd text-center">	
 	<div class="main-wrapper">
 		<div class="pause-nav">
-			<a href="/"><i class="fa fa-home"></i> Home</a>
+			<div class="col-xs-4">
+				<a href="/"><i class="fa fa-angle-left"></i></a>
+			</div>
+			<div class="col-xs-4">
+				<h5 class="page-title">Log</h5>
+			</div>
+			<div class="col-xs-4">
+			</div>
 		</div>
-		<h3 class="thin-text">I'm feeling...</h3>
-		<div class="log-colors">
+		<p class="thin-text" id="log-text">Which photo <em style="font-weight:400">best</em> captures how you feel right now?</p>
+		<div class="log-emotions">
 			<div class="row">
-				<div class="col-xs-6" ng-repeat="color in colors">
-					<div class="log-color-block" ng-attr-id="{{color}}-block" ng-click="logColor(color)"></div>
+				<div class="col-xs-3" ng-repeat="emotion in emotions">
+					<div class="log-emotion-block" ng-attr-id="{{emotion}}-block" ng-click="logEmotion(emotion)"></div>
 				</div>
 			</div>
 		</div>
