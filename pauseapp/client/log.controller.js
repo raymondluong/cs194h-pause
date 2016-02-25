@@ -1,5 +1,3 @@
-Emotions = new Mongo.Collection('emotions');
-
 angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
 
 	var moods = ["#800000","#FF6347","#000080","#F62459","#4169E1","#C71585"];
@@ -21,39 +19,26 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 		"tired": "#191970", /*midnightblue*/
 		"sleepy": "#483D8B", /*darkslateblue*/
 		"serene": "#4B0082", /*indigo*/
-	}
+	};
 
 	$scope.emotions = ['afraid', 'tense', 'excited', 'delighted', 'frustrated', 'angry', 'happy', 'glad', 'miserable', 'sad', 'calm', 'satisfied', 'gloomy', 'tired', 'sleepy', 'serene'];
+	$scope.emotionLogs = $meteor.collection(Logs);
+
 	var d = new Date();
 	$scope.logEmotion = function(emotion) {
 		if (confirm("")) {
-			moods.unshift(emotionMap[emotion]);
-			renderGradient();
-
-			//window.location.href = "home";
+			// moods.unshift(emotionMap[emotion]);
+			// renderGradient();
+			$scope.emotionLogs.push({
+				'emotion': emotion,
+				'color': emotionMap[color],
+				'date': new Date()
+			});
+			console.log($scope.emotionLogs);
 		}
-		$scope.emotionLogs.push({
-			'emotion': emotion,
-			'date': new Date()
-		});
-		console.log($scope.emotionLogs);
-
 	};
 
-	$scope.emotionLogs = $meteor.collection(Emotions);
-
-    console.log($scope.emotionLogs);
-
-    // $scope.addTask = function(newTask) {
-    //   $scope.tasks.push({
-    //     text: newTask,
-    //     createdAt: new Date() 
-    //   });
-    // };
-
-    // Define variable colors
-	//var moods = ["#22A7F0","#8E44AD","#AEA8D3","#F62459","#DB0A5B","#D64541","#D2527F","#2C3E50","#1E8BC3","#87D37C","#4ECDC4","#3FC380","#E87E04","#F9690E","#F9BF3B"];
-
+	
 
 	function renderGradient() {
 		$('.gradient-bkgrd').each(function() {
