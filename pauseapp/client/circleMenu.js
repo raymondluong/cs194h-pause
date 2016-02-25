@@ -223,22 +223,22 @@
             selected.css('opacity','0');
             set_other.css('opacity','0');
             self.element.removeClass(pluginName+'-open');
-            if (index == 2) {
-                console.log("I should have clicked on meditate!");
-                setTimeout(function(){
-                    window.location.href="meditate";
-                }, 700);
-            } else if (index == 3) {
-                console.log("I should have clicked on connect!");
-                setTimeout(function(){
-                    window.location.href="connect";
-                }, 700);
-            } else {
-                console.log("I should have clicked on log!");
-                setTimeout(function(){
-                    window.location.href="log";
-                }, 700);
-            }
+            // if (index == 2) {
+            //     console.log("I should have clicked on meditate!");
+            //     setTimeout(function(){
+            //         window.location.href="meditate";
+            //     }, 700);
+            // } else if (index == 3) {
+            //     console.log("I should have clicked on connect!");
+            //     setTimeout(function(){
+            //         window.location.href="connect-instructions";
+            //     }, 700);
+            // } else {
+            //     console.log("I should have clicked on log!");
+            //     setTimeout(function(){
+            //         window.location.href="log";
+            //     }, 700);
+            // }
             setTimeout(function(){self.initCss();}, 500);
         }
     };

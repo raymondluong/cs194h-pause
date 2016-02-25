@@ -1,30 +1,23 @@
 <div ng-controller="ConnectCtrl" class="text-center gradient-bkgrd">
 	<div class="main-wrapper">
-		<div class="connect-overlay fade-pulse" ng-show="connecting"></div>
+		<div class="connect-overlay fade-pulse" ng-show="inMoment && !momentCompleted"></div>
 		<div class="pause-nav">
-			<a href="home"><i class="fa fa-home"></i> Home</a>
+			<div class="col-xs-4">
+				<a href="/home"><i class="fa fa-angle-left"></i></a>
+			</div>
+			<div class="col-xs-4">
+				<h5 class="page-title">Connect</h5>
+			</div>
+			<div class="col-xs-4">
+			</div>
 		</div>
 		<div id="connect-status">
 			<h3 class="thin-text">{{statusText}}</h3>
 			<h4 ng-if="locationFound && !momentCompleted"><i class="fa fa-map-marker"></i> {{locationText}}</h4>
 		</div>
-		<div id="connect-thumb-wrapper">
-			<div class="circle" id="connect-thumb-outer" >
-				<pie class="circle twentyfive" ng-if="pulseCount > 0"></pie>
-				<pie class="circle fifty" ng-if="pulseCount > 1"></pie>
-				<pie class="circle seventyfive" ng-if="pulseCount > 2"></pie>
-				<pie class="circle onehundred" ng-if="pulseCount > 3"></pie>
-				<!-- <div id="connect-thumb-inner" class="circle"></div> -->
-				<div id="connect-thumb-print"></div>
-				<!-- <div class="radial-load-inner">
-					<div class="radial-load-mask full">
-						<div class="radial-load-fill"></div>
-					</div>
-					<div class="radial-load-mask half">
-						<div class="radial-load-fill"></div>
-					</div>
-				</div> -->
-			</div>
+		<div id="connect-flower-wrapper">
+			<img ng-if="!inMoment && !momentCompleted" src="flower-static.gif" />
+			<img ng-if="inMoment" src="flower.gif" />
 		</div>
 
 		<div id="connect-loading-wrapper">
@@ -40,7 +33,12 @@
 				</div>
 			</div>
 			<div ng-show="locationFound && !momentCompleted">
+				<div id="connect-thumb-print"></div>
 				<h4 class="thin-text">Hold your thumb down to connect</h4>
+			</div>
+			<div ng-show="locationFound && momentCompleted">
+				<div><a href="/log"><div class="connect-button">Log my mood</div></a></div>
+				<div><a href="/home"><div class="connect-button connect-button--faded">Return home</div></a></div>
 			</div>
 		</div>
 	</div>
