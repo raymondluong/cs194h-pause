@@ -1,15 +1,15 @@
 angular.module('pauseApp').controller('LogviewCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
 	console.log('logview controller');
 
-    // $scope.emotionLogs = [
-    //     {color: 'green', emotion: 'happy', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
-    //     {color: 'red', emotion: 'happy', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
-    //     {color: 'purple', emotion: 'happy', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
-    //     {color: 'blue', emotion: 'happy', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
-    //     {color: 'yellow', emotion: 'happy', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
-    //     {color: 'orange', emotion: 'happy', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")}
-    // ];
-    $scope.emotionLogs = $meteor.collection(Logs);
+    $scope.emotionLogs = [
+        {color: "#8B0000", emotion: 'tense', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
+        {color: "#A0522D", emotion: 'angry', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
+        {color: "#A52A2A", emotion: 'frustrated', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
+        {color: "#C71585", emotion: 'delighted', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
+        {color: "#DC143C", emotion: 'excited', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
+        {color: "#800000", emotion: 'afraid', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")}
+    ];
+    // $scope.emotionLogs = $meteor.collection(Logs);
     console.log($scope.emotionLogs);
 
     $scope.monthNames = ["jan", "feb", "mar", "apr", "may", "jun",
