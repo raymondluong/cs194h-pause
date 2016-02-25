@@ -1,8 +1,16 @@
-var app = angular.module('pauseApp', ['angular-meteor', 'ui.router', 'slickCarousel']);
+var app = angular.module('pauseApp', [
+  'angular-meteor', 
+  'ui.router',
+  'accounts.ui',
+  'slickCarousel'
+]);
 
 function onReady() {
 	console.log ("on ready is called");
 	angular.bootstrap(document, ['pauseApp']);
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_ONLY"
+  });
 }
 
 if (Meteor.isCordova) {
