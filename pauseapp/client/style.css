@@ -205,14 +205,21 @@ h5 {
 	width: 100%;
 }
 
+#connect-thumb-print, #thumb-text {
+	position: relative;
+}
 #connect-thumb-print {
     background-image: url('thumbprint.png');
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: 80px 90px;
-    width: 80px;
-    height: 90px;
+    background-size: 90px 110px;
+    width: 90px;
+    height: 110px;
     margin: 0 auto 1em auto;
+    top: -3em;
+}
+#thumb-text {
+	top: -1.5em;
 }
 
 #connect-loading-wrapper {
