@@ -1,7 +1,8 @@
 var app = angular.module('pauseApp', [
   'angular-meteor', 
   'ui.router',
-  'accounts.ui'
+  'accounts.ui',
+  'slickCarousel'
 ]);
 
 function onReady() {
