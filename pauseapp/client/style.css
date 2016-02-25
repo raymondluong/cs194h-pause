@@ -285,6 +285,27 @@ h1, h2, h3, h4 {
 	color: #cacaca;
 }
 
+/* ===========================
+ *  VIEW MOMENTS PAGE
+ * ===========================
+ */
+
+.slick-top {
+	padding-top: 50%;
+}
+
+.slick-item {
+  color: #000;
+  font-size: 36px;
+  line-height: 65px;
+  margin: 4px;
+  position: relative;
+  text-align: center;
+}
+
+.slick-item-top {
+	line-height: 150px;
+}
 
 
 /* ===========

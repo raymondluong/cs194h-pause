@@ -1,8 +1,24 @@
-<div ng-controller="LogViewCtrl" class="gradient-bkgrd text-center">	
-	<div class="main-wrapper">
-		<div class="pause-nav">
-			<a href="/"><i class="fa fa-home"></i> Home</a>
+<div ng-controller="LogviewCtrl" class="gradient-bkgrd text-center bodyscan-wrapper">
+	<div class="pause-nav">
+		<div class="col-xs-4">
+			<a href="home"><i class="fa fa-angle-left"></i></a>
 		</div>
-		<canvas id="canvas" width="375" height="300"></canvas>
+		<div class="col-xs-4">
+			<h5 class="page-title">View Moments</h5>
+		</div>
+		<div class="col-xs-4"></div>
 	</div>
+
+	<slick class="slick-top" settings="slickConfigTop">
+		<div ng-repeat="item in slickItems">
+			<h3 class="slick-item-top slick-item ng-binding ng-scope" style="background: {{item.color }};">{{ $index }}</h3>
+		</div>
+	</slick>
+
+	<slick class="slick-bot" settings="slickConfigBot">
+		<div ng-repeat="item in slickItems">
+			<h3 class="slick-item-bot slick-item ng-binding ng-scope" style="background: {{ item.color }};">{{ item.time }}</h3>
+		</div>
+	</slick>
+
 </div>

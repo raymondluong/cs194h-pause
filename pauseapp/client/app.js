@@ -1,4 +1,4 @@
-var app = angular.module('pauseApp', ['angular-meteor', 'ui.router']);
+var app = angular.module('pauseApp', ['angular-meteor', 'ui.router', 'slickCarousel']);
 
 function onReady() {
 	console.log ("on ready is called");

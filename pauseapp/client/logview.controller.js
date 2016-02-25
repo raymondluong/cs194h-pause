@@ -1,24 +1,41 @@
-angular.module('pauseApp').controller('LogViewCtrl', ['$scope', function ($scope) {
-	console.log('log view controller');
+angular.module('pauseApp').controller('LogviewCtrl', ['$scope', function ($scope) {
+	console.log('logview controller');
 
-	var canvas = document.getElementById('canvas');
-	var context = canvas.getContext('2d');
-	context.rect(0, 0, canvas.width, canvas.height);
+    $scope.slickConfigLoaded = true;
 
-	// add linear gradient
-	var grd = context.createLinearGradient(0, 0, canvas.width, 0);
-	// light blue
-	grd.addColorStop(0, '#8ED6FF');   
-	// dark blue
-	grd.addColorStop(1, '#004CB3');
-	context.fillStyle = grd;
-	context.fill();
+    $scope.slickItems = [{color: 'green', time: 1}, {color: 'red', time: 2}, {color: 'purple', time: 3}, {color: 'blue', time: 4}, {color: 'yellow', time: 5}];
 
+    $scope.slickConfigTop = {
+        'adaptive-height': true,
+        mobileFirst: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        asNavFor: '.slick-bot',
+        initialSlide: $scope.slickItems.length - 1
+    }
 
-	var d = new Date();
-	$scope.logEmotion = function(emotion) {
-		if (confirm("")) {
-			window.location.href = "home";
-		}
-	}
+    $scope.slickConfigBot = {
+        adaptiveHeight: true,
+        // rtl: true,
+        initialSlide: $scope.slickItems.length - 1,
+        mobileFirst: true,
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 3,
+        swipeToSlide: true,
+        infinite: false,
+        focusOnSelect: true,
+        asNavFor: '.slick-top'
+    }
+
+    // $scope.slickUpdate = function () {
+    //   $scope.slickConfig2Loaded = false;
+    //   $scope.number2[2] = 'ggg';
+    //   $scope.number2.push(Math.floor((Math.random() * 10) + 100));
+    //   $timeout(function () {
+    //     $scope.slickConfig2Loaded = true;
+    //   });
+    // };
+
 }]);
