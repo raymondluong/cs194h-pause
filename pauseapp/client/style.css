@@ -329,32 +329,60 @@ h5 {
  */
 
 .slick-top {
-	padding-top: 50%;
+	padding-top: 85%;
 }
 
 .slick-item {
-  color: #000;
+  color: #fff;
   font-size: 36px;
   line-height: 65px;
   margin: 6px;
-  position: relative;
   text-align: center;
 }
 
 .slick-item-top {
-	line-height: 150px;
 	border-radius: 10px;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	z-index: 100;
+	box-shadow: 2px 2px 2px rgba(34,34,34,0.6);
+	width: 75%;
+	height: 75%;
+	margin: 0 auto;
+}
+
+.item-date {
+	font-size: 15px;
+	opacity: 0.5;
 }
 
 .slick-item-bot {
-	opacity: 0.5;
-	border-radius: 20px;
+	opacity: 0.2;
+	border-radius: 50px;
+	padding-top: 25%;
+	padding-bottom: 15%;
 }
 
-.slick-center .slick-item {
-	transform: scale(1.08);
-	color: #000;
+.slick-bot .slick-current .slick-item {
 	opacity: 1;
+	box-shadow: 2px 2px 2px rgba(34,34,34,0.7);
+}
+
+.slick-bot {
+	background-color: rgba(250,250,250,0.5);
+	margin-bottom: 0px;
+	padding-bottom: 50px;
+	padding-top: 20px;
+}
+
+.item-small-month-day {
+	font-size: 14px;
+	margin-bottom: -2px;
+}
+
+.item-small-year {
+	font-size: 12px;
+	opacity: 0.6;
 }
 
 

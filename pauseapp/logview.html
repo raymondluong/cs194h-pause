@@ -10,14 +10,20 @@
 	</div>
 
 	<slick class="slick-top" settings="slickConfigTop">
-		<div ng-repeat="item in slickItems">
-			<h3 class="slick-item-top slick-item ng-binding ng-scope" style="background: {{item.color }};">{{ $index }}</h3>
+		<div ng-repeat="item in emotionLogs">
+			<div class="slick-item-top slick-item ng-binding ng-scope" style="background: {{ item.color }};">
+				<p class="item-emotion">{{ item.emotion }}</p>
+				<p class="item-date">{{ item.date.toLocaleString() }}</p>
+			</div>
 		</div>
 	</slick>
 
 	<slick class="slick-bot" settings="slickConfigBot">
-		<div ng-repeat="item in slickItems">
-			<h3 class="slick-item-bot slick-item ng-binding ng-scope" style="background: {{ item.color }};">{{ item.time }}</h3>
+		<div ng-repeat="item in emotionLogs">
+			<div class="slick-item-bot slick-item ng-binding ng-scope" style="background: {{ item.color }};">
+				<p class="item-small-month-day">{{ monthNames[item.date.getMonth()] }} {{ item.date.getDate() }}</p>
+				<p class="item-small-year">{{ item.date.getFullYear() }}</p>
+			</div>
 		</div>
 	</slick>
 
