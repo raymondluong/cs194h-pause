@@ -13,7 +13,7 @@
 		<div ng-repeat="item in emotionLogs">
 			<div class="slick-item-top slick-item ng-binding ng-scope" style="background: {{ item.color }};">
 				<p class="item-emotion">{{ item.emotion }}</p>
-				<p class="item-date">{{ item.date.toLocaleString() }}</p>
+				<p class="item-date">{{ item.date.toDateString() }}</p>
 				<p class="item-quote"><i>"{{ quotes[item.emotion]["quote"] }}" — {{ quotes[item.emotion]["author"] }}</i></p>
 			</div>
 		</div>

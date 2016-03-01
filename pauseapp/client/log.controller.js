@@ -1,4 +1,4 @@
-angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
+angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', '$location', function ($scope, $meteor, $location) {
 
 	var moods = ["#800000","#FF6347","#000080","#F62459","#4169E1","#C71585"];
 
@@ -35,6 +35,7 @@ angular.module('pauseApp').controller('LogCtrl', ['$scope', '$meteor', function 
 				'date': new Date()
 			});
 			console.log($scope.emotionLogs);
+			$location.path('/log/view');
 		}
 	};
 
