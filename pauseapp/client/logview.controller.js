@@ -4,13 +4,12 @@ angular.module('pauseApp').controller('LogviewCtrl', ['$scope', '$meteor', funct
     $scope.emotionLogs = [
         {color: "#8B0000", emotion: 'tense', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
         {color: "#A0522D", emotion: 'angry', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
-        {color: "#A52A2A", emotion: 'frustrated', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
-        {color: "#C71585", emotion: 'delighted', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
+        {color: "#A52A2A", emotion: 'frustrated', date: new Date("Thu Feb 25 2016 23:46:38 GMT-0800")},
         {color: "#DC143C", emotion: 'excited', date: new Date("Wed Feb 24 2016 23:46:38 GMT-0800")},
-        {color: "#800000", emotion: 'afraid', date: new Date("Thu Feb 25 2016 11:46:38 GMT-0800")}
+        {color: "#800000", emotion: 'delighted', date: new Date("Tue Mar 1 2016 11:46:38 GMT-0800")}
     ];
     // $scope.emotionLogs = $meteor.collection(Logs);
-    console.log($scope.emotionLogs);
+    // console.log($scope.emotionLogs);
 
     $scope.monthNames = ["jan", "feb", "mar", "apr", "may", "jun",
         "jul", "aug", "sep", "oct", "nov", "dec"
