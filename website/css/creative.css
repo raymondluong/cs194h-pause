@@ -10,10 +10,6 @@ body {
     height: 100%;
 }
 
-body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
-}
-
 hr {
     max-width: 50px;
     border-color: #5AC686;
@@ -42,18 +38,19 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Lato','Helvetica Neue', Arial, sans-serif;
+    text-transform: lowercase;
 }
 
 p {
     margin-bottom: 20px;
-    font-size: 16px;
-    line-height: 1.5;
+    font-size: 1.5em;
+    line-height: 1.85;
 }
 
-.bg-primary {
+/*.bg-primary {
     background-color: #86C67C;
-}
+}*/
 
 .bg-dark {
     color: #fff;
@@ -61,7 +58,7 @@ p {
 }
 
 .text-faded {
-    color: rgba(255,255,255,.7);
+    color: rgba(255,255,255,.8);
 }
 
 section {
@@ -78,7 +75,7 @@ aside {
 
 .navbar-default {
     border-color: rgba(34,34,34,.05);
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Lato','Helvetica Neue',Arial,sans-serif;
     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -86,8 +83,8 @@ aside {
 }
 
 .navbar-default .navbar-header .navbar-brand {
-    text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    text-transform: lowercase;
+    font-family: 'Lato','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
     color: #f05f40;
 }
@@ -99,7 +96,7 @@ aside {
 
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 13px;
     font-weight: 700;
     color: #222;
@@ -138,7 +135,7 @@ aside {
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
+        /*color: rgba(255,255,255,.7);*/
     }
 
     .navbar-default .nav > li>a:hover,
@@ -172,18 +169,19 @@ aside {
     }
 }
 
+
+
 header {
     position: relative;
     width: 100%;
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/header.jpg);
-    background-position: center;
+    background: #e0e0e9 url(../img/header.jpg) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    background-size: cover;
     -o-background-size: cover;
+    background-size: cover;
 }
 
 header .header-content {
@@ -196,7 +194,6 @@ header .header-content {
 header .header-content .header-content-inner h1 {
     margin-top: 0;
     margin-bottom: 0;
-    text-transform: uppercase;
     font-weight: 700;
 }
 
@@ -206,9 +203,9 @@ header .header-content .header-content-inner hr {
 
 header .header-content .header-content-inner p {
     margin-bottom: 50px;
-    font-size: 16px;
+    font-size: 2em;
     font-weight: 300;
-    color: rgba(255,255,255,.7);
+    color: rgba(255,255,255,.85);
 }
 
 @media(min-width:768px) {
@@ -235,7 +232,7 @@ header .header-content .header-content-inner p {
         margin-right: auto;
         margin-left: auto;
         max-width: 80%;
-        font-size: 18px;
+        font-size: 2em;
     }
 }
 
@@ -273,8 +270,6 @@ header .header-content .header-content-inner p {
     height: 100%;
     text-align: center;
     color: #fff;
-    background: rgba(119,195,217,.9);
-    /*background: rgba(100,100,100,0.5);*/
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -291,13 +286,13 @@ header .header-content .header-content-inner p {
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     padding: 0 15px;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Lato','Helvetica Neue',Arial,sans-serif;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
@@ -329,7 +324,7 @@ header .header-content .header-content-inner p {
 }
 
 .btn-default {
-    border-color: #fff;
+    border-color: #555;
     color: #222;
     background-color: #fff;
     -webkit-transition: all .35s;
@@ -345,7 +340,7 @@ header .header-content .header-content-inner p {
 .open > .dropdown-toggle.btn-default {
     border-color: #ededed;
     color: #222;
-    background-color: #f2f2f2;
+    background-color: rgba(245, 245, 245, 0.7);
 }
 
 .btn-default:active,
@@ -437,10 +432,9 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn {
-    border: 0;
     border-radius: 300px;
-    text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    text-transform: lowercase;
+    font-family: 'Lato','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
 }
 
