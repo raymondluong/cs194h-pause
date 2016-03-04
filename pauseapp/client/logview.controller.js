@@ -1,6 +1,14 @@
 angular.module('pauseApp').controller('LogviewCtrl', ['$scope', '$meteor', function ($scope, $meteor) {
-  $scope.emotionLogs = $meteor.collection(Logs);
-  console.log($scope.emotionLogs);
+
+  $scope.emotionLogs = [];
+  $scope.currentUser = Meteor.userId();
+
+  if (Meteor.userId()) {
+    $scope.emotionLogs = $meteor.collection(function() {
+      return Logs.find({user: Meteor.userId()});
+    });
+  }
+  
 
   $scope.monthNames = ["jan", "feb", "mar", "apr", "may", "jun",
       "jul", "aug", "sep", "oct", "nov", "dec"
