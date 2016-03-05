@@ -8,8 +8,8 @@
 		</div>
 		<div class="col-xs-2"></div>
 	</div>
-	<div ng-if="!currentUser" class="message"><a href="/home"><div class="connect-button">Please sign in.</div></a></div>
-	<div ng-if="currentUser && emotionLogs.length === 0" class="message"><a href="/log"><div class="connect-button">No emotions logged. Please log an emotion.</div></a></div>
+	<div ng-if="!currentUser" class="middle-message"><a href="/home"><div class="connect-button">Please sign in.</div></a></div>
+	<div ng-if="currentUser && emotionLogs.length === 0" class="middle-message"><a href="/log"><div class="connect-button">No emotions logged. Please log an emotion.</div></a></div>
 
 	<slick class="slick-top" settings="slickConfigTop" ng-if="emotionLogs.length > 0">
 		<div ng-repeat="item in emotionLogs">
