@@ -122,6 +122,13 @@ h5 {
 	font-size: 1.2em;
 }
 
+.message {
+	position: absolute;
+	top: 300px;
+	right: 0;
+	left: 0;
+}
+
 /* =========================
  *  THE HOME PAGE
  * =========================
