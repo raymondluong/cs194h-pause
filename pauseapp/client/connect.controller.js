@@ -1,4 +1,4 @@
-angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope) {
+angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$meteor', function ($scope, $meteor, ){
 
 	$scope.locationFound = false;
 	$scope.pulseCount = 0;
@@ -15,6 +15,11 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 	$("#right_fill").hide();
 	$('#connect-thumb-inner').hide();
 	$('#connect-thumb-print').hide();
+  var currentId = Meteor.userId(); 
+  console.log(
+      $meteor.collection(function() {
+        return Meteor.users.find({_id:{$ne: currentId}},{limit:1});       
+  })); 
 	fillInLoadingCircles();
 
 	function fillInLoadingCircles() {
