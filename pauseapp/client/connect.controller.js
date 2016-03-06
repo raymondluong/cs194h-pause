@@ -1,10 +1,38 @@
-angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope) {
+angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteor', function ($scope, $http, $meteor) {
 
 	$scope.locationFound = false;
 	$scope.pulseCount = 0;
 	$scope.firstTap = true;
 	$scope.inMoment = false;
 	$scope.momentCompleted = false;
+	$scope.locations = $meteor.collection(Locations);
+	$scope.currentUser = Meteor.user();
+	
+
+	// Fetch the current location and update the locations database
+	var interval = setInterval(function() {
+		if (!$scope.currentUser) return;
+		var coords = Geolocation.latLng();
+		if (coords) {
+		  var queryURL = 'http://maps.googleapis.com/maps/api/geocode/json?latlng=' + coords.lat + ',' + coords.lng;
+		  $http.get(queryURL).then(function(result) {
+		  	var location = result.data.results[2]['formatted_address'];
+		  	var userExists = $scope.locations.find(function(element) {
+		  		return element.username === $scope.currentUser.username;
+		  	});
+		  	if (userExists) {
+		  		$scope.locations.remove(userExists);
+		  	}
+	  		$scope.locations.push({
+		  		username: $scope.currentUser.username,
+		  		user_id: $scope.currentUser._id,
+		  		location: location
+		  	});
+		  	console.log($scope.locations);
+		  	clearInterval(interval);
+		  })
+		}
+	}, 5000);
 	
 	$scope.statusText = 'Searching for a connection...';
 	var locations = ['Vinhedo, Brazil', 'Manhasset, New York', 'Austin, Texas', 'Reykjavik, Iceland', 
@@ -18,6 +46,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', function ($scope
 	fillInLoadingCircles();
 
 	function fillInLoadingCircles() {
+		if (!$scope.currentUser) return;
 		$("#left_fill").fadeIn(1500);
 		$("#center_fill").delay(1500).fadeIn(1500);
 		$("#right_fill").delay(3000).fadeIn(1500);
