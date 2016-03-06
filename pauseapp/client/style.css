@@ -90,7 +90,6 @@ h5 {
 	font-size: 0.9em;
 	letter-spacing: 0.5px;
 }
-.fa-user { color: white; }
 .page-title {
 	text-align: center;
 	margin-bottom: 0px;
@@ -112,7 +111,8 @@ h5 {
 
 .middle-message {
 	position: absolute;
-	top: 300px;
+	margin: auto;
+	top: 45%;
 	right: 0;
 	left: 0;
 }
@@ -124,6 +124,11 @@ h5 {
  *        SIGN IN STYLING
  * ===============================
  */
+
+#login-dropdown-list {
+	width: 370px;
+	border-radius: 2px;
+}
 
 /* sign in dialogue modal styling */
 .accounts-dialog * {
@@ -181,6 +186,43 @@ h5 {
 
 
 
+/* ===========================
+ *     GENERAL BUTTONS
+ * ===========================
+ */
+.pause-button {
+	color: #fefefe;
+	width: 100%;
+	margin: auto;
+	padding: 0.75em 2em;
+	border-radius: 2px;
+	font-size: 1.05em;
+	letter-spacing: 0.5px;
+	font-weight: 300;
+	line-height: 3em;
+	box-shadow: 2px 2px 2px 0px #afafaf;
+}
+.pause-button:hover {
+	color: #fefefe;
+}
+.pause-button-action {
+	background-color: rgba(242,138,93,1);
+}
+.pause-button-action:hover {
+	background-color: rgba(242,138,93,0.9);
+}
+.pause-button-fade {
+	background-color: rgba(210,210,210,0.55);
+	color: #272727;
+}
+.pause-button-fade:hover {
+	background-color: rgba(210,210,210,0.75);
+	color: #272727;
+}
+
+
+
+
 /* =========================
  *       THE HOME PAGE
  * =========================
@@ -189,7 +231,7 @@ h5 {
 /* upper title layer */
 #home-title-wrapper {
 	position: relative;
-	top: 22vh;
+	top: 12em;
 	margin: 0 3em 20px 3em;
 	padding: 15px 0 7px 0;
 	background-color: #fcf0e7;
@@ -244,19 +286,12 @@ h5 {
 	text-decoration: none;
 	color:#fff;
 }
-#home-menu a {
-	
-}
 
 
 
 
 
 
-#login-dropdown-list {
-	width: 370px;
-	border-radius: 2px;
-}
 
 /* =========================
  *  THUMB CONNECTION
@@ -354,9 +389,9 @@ h5 {
 
 
 
-/* ======================
- *  MEDITATE SCREEN
- * ======================
+/* ==============================
+ *         MEDITATE SCREEN
+ * ==============================
  */
 #body-scan-screen {
 	z-index: 2;
@@ -424,8 +459,13 @@ h5 {
 	color: #cacaca;
 }
 
+
+
+
+
+
 /* ===========================
- *  VIEW MOMENTS PAGE
+ *       VIEW MOMENTS PAGE
  * ===========================
  */
 
@@ -493,9 +533,12 @@ h5 {
 }
 
 
-/* ===========
- *  LOG PAGE
- * ===========
+
+
+
+/* ======================
+ *        LOG PAGE
+ * ======================
  */
 #log-text {
 	padding: 1.25em 1em;
@@ -633,6 +676,9 @@ h5 {
 }
 
 
+
+
+
 /* ===========================
  *   CIRCLES
  * ===========================
@@ -647,24 +693,21 @@ h5 {
 .small_circle {
     overflow: hidden;
     border-radius: 50%;
-    /*width: 7vw;
-    height: 7vw;*/
-    /*border: .2vh solid orange;*/
     height: 30px;
     width: 30px;
     display: inline-block;
 }
 
-pie {
+/*pie {
     width: 300px;
     height: 300px;
     display: block;
     border-radius: 50%;
     background-color: orange;
     position: absolute;
-}
+}*/
 
-.twentyfive {
+/*.twentyfive {
     background-image:
         linear-gradient(180deg, transparent 50%, white 50%),
         linear-gradient(90deg, white 50%, transparent 50%);
@@ -673,12 +716,12 @@ pie {
 .fifty {
     background-image:
         linear-gradient(90deg, white 50%, transparent 50%);
-}
+}/*
 
 /* Slices greater than 50% require first gradient
    to be transparent -> green */
 
-.seventyfive {
+/*.seventyfive {
     background-image:
         linear-gradient(180deg, transparent 50%, orange 50%),
         linear-gradient(90deg, white 50%, transparent 50%);
@@ -686,7 +729,7 @@ pie {
 
 .onehundred {
     background: orange;
-}
+}/*
 
 
 
