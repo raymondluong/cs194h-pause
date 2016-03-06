@@ -63,29 +63,37 @@ h5 {
 	position: absolute;
 	z-index: 5;
 	top: 0px;
-	padding: 20px 0 10px 0;
+	padding: 20px 0 7px 0;
 	width: 100%;
 	background-color: rgba(78,120,160, 0.9);
 	text-align: left;
-	color: #fafafa;
+	color: #fefefe;
 	-webkit-box-shadow: 0px 1px 2px 0px #999;
 	-moz-box-shadow: 0px 1px 2px 0px #999;
 	box-shadow: 0px 1px 2px 0px #999;
 }
 .pause-nav a:hover { text-decoration: none }
 .pause-nav--right { text-align: right; }
+.pause-nav a i {
+	color: #fefefe;
+	font-size: 1.25em;
+}
 #login {
 	position: absolute;
-	top: 3px;
+	top: 0;
 }
 #login-buttons a {
 	color: inherit;
 	text-decoration: none;
+	text-transform: lowercase;
+	font-weight: 300;
+	font-size: 0.9em;
+	letter-spacing: 0.5px;
 }
 .fa-user { color: white; }
 .page-title {
 	text-align: center;
-	margin-bottom: 0;
+	margin-bottom: 0px;
 	font-weight: 400;
 	letter-spacing: 0.5px;
 	font-size: 1em;
@@ -112,8 +120,69 @@ h5 {
 
 
 
+/* ===============================
+ *        SIGN IN STYLING
+ * ===============================
+ */
+
+/* sign in dialogue modal styling */
+.accounts-dialog * {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.5px;
+	text-transform: lowercase;
+}
+
+/* close text */
+#login-buttons .login-close-text {
+	font-size: 0.75em;
+	color: #707070;
+}
+
+.login-password-form {
+	padding: 10px 0;
+}
+
+/* Text above input forms */
+.accounts-dialog label, .accounts-dialog .title {
+	font-size: 90%;
+	font-weight: 300;
+}
+
+/* Actual input forms */
+#login-buttons input[type=text], .accounts-dialog input[type=text], #login-buttons input[type=email], .accounts-dialog input[type=email], #login-buttons input[type=password], .accounts-dialog input[type=password] {
+	padding: 10px;
+	border-radius: 2px;
+}
+
+/* sign in button */
+#login-buttons .login-button, .accounts-dialog .login-button {
+	padding: 4px 8px;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	padding: 10px 5px;
+	font-size: 100%;
+	font-weight: 300;
+	background-color: #f28a5d;
+	border: 0;
+	border-radius: 2px;
+}
+
+/* sign in button hover */
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+	background-color: #d97c53;
+}
+
+/* create account link */
+#login-buttons #signup-link, #login-buttons #back-to-login-link {
+	margin: 10px 0 5px 0;
+}
+
+
+
+
+
 /* =========================
- *  THE HOME PAGE
+ *       THE HOME PAGE
  * =========================
  */
 
