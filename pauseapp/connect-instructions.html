@@ -10,7 +10,8 @@
 			<div class="col-xs-4">
 			</div>
 		</div>
-		<div id="connect-instructions">
+		<div ng-if="!currentUser" class="middle-message"><a href="/home"><div class="connect-button">Please sign in.</div></a></div>
+		<div id="connect-instructions" ng-if="currentUser">
 			<h4 class="thin-text"><em>Life is fast, let's pause together</em></h4>
 			<p>Something about human touch, thumbs, etc</p>
 			<p>Pause will connect you to another person currently on the app. Together, you will have the ability to take a break and share a moment together.</p>

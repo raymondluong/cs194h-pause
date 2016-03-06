@@ -20,3 +20,4 @@ angularui:angular-ui-router
 bootstrap
 accounts-password
 dotansimha:accounts-ui-angular
+mdg:geolocation
