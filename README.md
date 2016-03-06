@@ -1,4 +1,4 @@
-# cs194h-pause
+# Pause
 Repo for CS194H: User Interface Design Project at Stanford University
 <br>Team members: Raymond Luong (raymondluong), Sukhi Gulati (sgulati3), Julie Ni (njulie), Kyle Qian (kyleqian)
 
@@ -16,3 +16,6 @@ contains our web page that details our progress
 
 ### Link
 http://pauseapp.meteor.com/
+
+### Citations
+Photographic Affect Meter: http://idl.cornell.edu/projects/pam/

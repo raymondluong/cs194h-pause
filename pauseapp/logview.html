@@ -1,4 +1,4 @@
-<div ng-controller="LogviewCtrl" class="gradient-bkgrd text-center bodyscan-wrapper">
+<div ng-controller="LogviewCtrl" class="gradient-bkgrd text-center">
 	<div class="pause-nav">
 		<div class="col-xs-2">
 			<a href="home"><i class="fa fa-angle-left"></i></a>
@@ -8,8 +8,10 @@
 		</div>
 		<div class="col-xs-2"></div>
 	</div>
+	<div ng-if="!currentUser" class="middle-message"><a href="/home"><div class="connect-button">Please sign in.</div></a></div>
+	<div ng-if="currentUser && emotionLogs.length === 0" class="middle-message"><a href="/log"><div class="connect-button">No emotions logged. Please log an emotion.</div></a></div>
 
-	<slick class="slick-top" settings="slickConfigTop">
+	<slick class="slick-top" settings="slickConfigTop" ng-if="emotionLogs.length > 0">
 		<div ng-repeat="item in emotionLogs">
 			<div class="slick-item-top slick-item ng-binding ng-scope" style="background: {{ item.color }};">
 				<p class="item-emotion">{{ item.emotion }}</p>
@@ -19,7 +21,7 @@
 		</div>
 	</slick>
 
-	<slick class="slick-bot" settings="slickConfigBot">
+	<slick class="slick-bot" settings="slickConfigBot" ng-if="emotionLogs.length > 0">
 		<div ng-repeat="item in emotionLogs">
 			<div class="slick-item-bot slick-item ng-binding ng-scope" style="background: {{ item.color }};">
 				<p class="item-small-month-day">{{ monthNames[item.date.getMonth()] }} {{ item.date.getDate() }}</p>
