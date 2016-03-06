@@ -58,68 +58,56 @@ h5 {
 	position: relative;
 }
 
+/* navigation */
 .pause-nav {
 	position: absolute;
 	z-index: 5;
 	top: 0px;
-	padding: 13px 0 15px 0;
+	padding: 20px 0 7px 0;
 	width: 100%;
-	background-color: rgba(75, 75, 75, 0.15);
+	background-color: rgba(78,120,160, 0.9);
 	text-align: left;
+	color: #fefefe;
+	-webkit-box-shadow: 0px 1px 2px 0px #999;
+	-moz-box-shadow: 0px 1px 2px 0px #999;
+	box-shadow: 0px 1px 2px 0px #999;
 }
-.pause-nav a {
-	color: black;
-}
-.pause-nav a:hover {
-	text-decoration: none
-}
+.pause-nav a:hover { text-decoration: none }
+.pause-nav--right { text-align: right; }
 .pause-nav a i {
-	font-size: 1.5em;
+	color: #fefefe;
+	font-size: 1.25em;
 }
-.pause-nav--right {
-	text-align: right;
-}
-.pause-nav #profile a {
-	color: #efefef;
-}
-
 #login {
 	position: absolute;
-	top: 3px;
+	top: 0;
 }
-
 #login-buttons a {
 	color: inherit;
 	text-decoration: none;
+	text-transform: lowercase;
+	font-weight: 300;
+	font-size: 0.9em;
+	letter-spacing: 0.5px;
+}
+.fa-user { color: white; }
+.page-title {
+	text-align: center;
+	margin-bottom: 0px;
+	font-weight: 400;
+	letter-spacing: 0.5px;
+	font-size: 1em;
 }
 
-.fa-user {
-	color: white;
-}
 
 .gradient-bkgrd {
-	background: url('blueyellowbkgrd.png') no-repeat fixed center center;
-	background-size: 100% 100%;
-	-webkit-background-size: 100% 100%;
-	-moz-background-size: 100% 100%;
-	background: -webkit-linear-gradient(rgba(128,0,0,0.4), rgba(255,91,71,0.4), rgba(0,0,128,0.4), rgba(65,105,225,0.4), rgba(199,21,133,0.4));
-	background: -o-linear-gradient(rgba(128,0,0,0.4), rgba(255,91,71,0.4), rgba(0,0,128,0.4), rgba(65,105,225,0.4), rgba(199,21,133,0.4));
-	background: -moz-linear-gradient(rgba(128,0,0,0.4), rgba(255,91,71,0.4), rgba(0,0,128,0.4), rgba(65,105,225,0.4), rgba(199,21,133,0.4));
-	background: linear-gradient(rgba(128,0,0,0.4), rgba(255,91,71,0.4), rgba(0,0,128,0.4), rgba(65,105,225,0.4), rgba(199,21,133,0.4));
+	background-color: #fdf7f3;
 	width: 100%;
 	height: 100%;
 }
 
 .col-xs-3 {
 	padding: 0;
-}
-
-.page-title {
-	text-align: center;
-	margin-bottom: 0;
-	font-weight: 400;
-	letter-spacing: 0.5px;
-	font-size: 1.2em;
 }
 
 .middle-message {
@@ -129,17 +117,84 @@ h5 {
 	left: 0;
 }
 
+
+
+
+/* ===============================
+ *        SIGN IN STYLING
+ * ===============================
+ */
+
+/* sign in dialogue modal styling */
+.accounts-dialog * {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	letter-spacing: 0.5px;
+	text-transform: lowercase;
+}
+
+/* close text */
+#login-buttons .login-close-text {
+	font-size: 0.75em;
+	color: #707070;
+}
+
+.login-password-form {
+	padding: 10px 0;
+}
+
+/* Text above input forms */
+.accounts-dialog label, .accounts-dialog .title {
+	font-size: 90%;
+	font-weight: 300;
+}
+
+/* Actual input forms */
+#login-buttons input[type=text], .accounts-dialog input[type=text], #login-buttons input[type=email], .accounts-dialog input[type=email], #login-buttons input[type=password], .accounts-dialog input[type=password] {
+	padding: 10px;
+	border-radius: 2px;
+}
+
+/* sign in button */
+#login-buttons .login-button, .accounts-dialog .login-button {
+	padding: 4px 8px;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	padding: 10px 5px;
+	font-size: 100%;
+	font-weight: 300;
+	background-color: #f28a5d;
+	border: 0;
+	border-radius: 2px;
+}
+
+/* sign in button hover */
+#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+	background-color: #d97c53;
+}
+
+/* create account link */
+#login-buttons #signup-link, #login-buttons #back-to-login-link {
+	margin: 10px 0 5px 0;
+}
+
+
+
+
+
 /* =========================
- *  THE HOME PAGE
+ *       THE HOME PAGE
  * =========================
  */
+
+/* upper title layer */
 #home-title-wrapper {
 	position: relative;
-	top: 15vh;
+	top: 22vh;
 	margin: 0 3em 20px 3em;
 	padding: 15px 0 7px 0;
-	background-color: rgba(250,250,250,0.5);
+	background-color: #fcf0e7;
 	border-radius: 100px;
+	box-shadow: inset 1px 1px 3px 0px #bababa;
 }
 #home-subtitle {
 	font-size: 1.1em;
@@ -148,45 +203,55 @@ h5 {
 	letter-spacing: 2px;
 }
 
+/* Menu */
 #home-menu {
 	position: relative;
 	margin: auto;
-	top: -3em;
+	top: 0em;
 	left: -1.25em;
 	height: 100%;
+	-webkit-box-shadow: 2px 2px 2px;
+	-moz-box-shadow: 2px 2px 2px;
 	box-shadow: 2px 2px 2px;
 }
 #home-menu li {
-	background-color: #4E78A0;
+	background-color: rgba(78,120,160, 0.9);
 	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #323232;
 	font-size: 1.5em;
-	opacity: 0.9;
-	filter: alpha(opacity=90);
 	font-weight: 300;
+	-webkit-box-shadow: 1px 1px 3px #708090;
+	-moz-box-shadow: 1px 1px 3px #708090;
 	box-shadow: 1px 1px 3px #708090;
+}
+#home-menu li:hover {
+	cursor: pointer;
 }
 #home-menu li:first-child {
 	background: #fafafa url("lotus.png") no-repeat center;
-	background-size: 4.5em 3em;
 	-webkit-background-size: 4.5em 3em;
 	-moz-background-size: 4.5em 3em;
+	background-size: 4.5em 3em;
+
+	-webkit-box-shadow: 2px 2px 7px #797979;
+	-moz-box-shadow: 2px 2px 7px #797979;
 	box-shadow: 2px 2px 7px #797979;
 }
 #home-menu li a {
 	font-size: 0.8em;
 	font-style: italic;
 	letter-spacing: 0.5px;
-}
-
-#home-menu li:hover {
-	cursor: pointer;
-}
-
-#home-menu a {
 	text-decoration: none;
 	color:#fff;
 }
+#home-menu a {
+	
+}
+
+
+
+
+
 
 #login-dropdown-list {
 	width: 370px;
@@ -224,6 +289,8 @@ h5 {
     background-image: url('thumbprint.png');
     background-repeat: no-repeat;
     background-position: center center;
+    -webkit-background-size: 90px 110px;
+    -moz-background-size: 90px 110px;
     background-size: 90px 110px;
     width: 90px;
     height: 110px;
@@ -297,7 +364,8 @@ h5 {
 	top: 25px;
 	width: 100%;
 	height: 100vh;
-	/*background: url("bodyscan/empty.png") no-repeat center;*/
+	-webkit-background-size: 85% 85%;
+	-moz-background-size: 85% 85%;
 	background-size: 85% 85%;
 }
 
@@ -307,6 +375,8 @@ h5 {
 	width: 100%;
 	height: 100vh;
 	background: url("bodyscan/empty.png") no-repeat center;
+	-webkit-background-size: 85% 85%;
+	-moz-background-size: 85% 85%;
 	background-size: 85% 85%;
 }
 
