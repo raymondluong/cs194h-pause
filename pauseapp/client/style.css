@@ -184,6 +184,11 @@ h5 {
 
 
 
+#login-dropdown-list {
+	width: 370px;
+	border-radius: 2px;
+}
+
 /* =========================
  *  THUMB CONNECTION
  * =========================
