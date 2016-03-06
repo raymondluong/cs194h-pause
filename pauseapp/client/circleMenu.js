@@ -272,10 +272,10 @@
             'text-align': 'center',
             'line-height': self.options.item_diameter+'em',
             'position': 'absolute',
-            'z-index': 1,
+            'z-index': 0,
             'opacity': ''
         });
-        self.element.children('li:first-child').css({'z-index': 1000-self.options.depth});
+        self.element.children('li:first-child').css({'z-index': 1-self.options.depth});
         self.menu_items.css({
             top:0,
             left:0
