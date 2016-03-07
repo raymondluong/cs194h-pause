@@ -352,8 +352,7 @@ h5 {
 }
 
 .connect-loading-circle {
-    background-color: orange;
-    background-color: rgba(250, 250, 250, 0.7);
+    background-color: #4e78a0;
 }
 
 .connect-overlay {
@@ -748,31 +747,3 @@ h5 {
 		opacity: 0; 
 	} 
 }
-
-/* Source: https://medium.com/@andsens */
-/*.radial-load-outer {
-	width: 300px;
-	height: 300px;
-	background-color: #fff;
-	border-radius: 50%;
-}
-.radial-load-outer .radial-load-inner .radial-load-mask,
-.radial-load-outer .radial-load-inner .radial-load-fill {
-	width: 300px;
-	height: 300px;
-	position: absolute;
-	border-radius: 50%;
-	transition: -webkit-transform 12s;
-	transition: -ms-transform 12s;
-	transition: transform 12s;
-	-webkit-backface-visibility: hidden;
-}
-.radial-load-outer .radial-load-inner .radial-load-mask {
-	clip: rect(0px,300px,300px,150px);
-	clip-path: inset(0px 300px 300px 150px);
-}
-.radial-load-outer .radial-load-inner .radial-load-mask .radial-load-fill {
-	clip: rect(0px,150px,300px,0px);
-	background-color: orange;
-}*/
-
