@@ -15,7 +15,7 @@
 		<h3 ng-if="locationFound && !momentCompleted"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{locationText}}</h3>
 	</div>
 	
-	<div class="main-wrapper" ng-if="currentUser">
+	<div class="main-wrapper" ng-show="currentUser">
 		<div class="connect-overlay fade-pulse" ng-show="inMoment && !momentCompleted"></div>
 		<div id="connect-flower-wrapper">
 			<img ng-if="!inMoment && !momentCompleted" src="flower-static.gif" />
