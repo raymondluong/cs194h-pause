@@ -7,7 +7,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 	$scope.momentCompleted = false;
 	$scope.locations = $meteor.collection(Locations);
 	$scope.currentUser = Meteor.user();
-	
+	$scope.currentId = Meteor.userId();
 
 	// Fetch the current location and update the locations database
 	var interval = setInterval(function() {
@@ -33,21 +33,22 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 		  })
 		}
 	}, 5000);
-	
+  
+  var locations = $scope.locations.filter(function(element) {
+    return element.user_id !== $scope.currentId; 
+  });	
+  
 	$scope.statusText = 'Searching for a connection...';
-	var locations = ['Vinhedo, Brazil', 'Manhasset, New York', 'Austin, Texas', 'Reykjavik, Iceland', 
-	'Kyoto, Japan', 'Vancouver, Canada'];
 
 	$("#left_fill").hide();
 	$("#center_fill").hide();
 	$("#right_fill").hide();
 	$('#connect-thumb-inner').hide();
 	$('#connect-thumb-print').hide();
-  var currentId = Meteor.userId(); 
-  console.log(
+  /*console.log(
       $meteor.collection(function() {
         return Meteor.users.find({_id:{$ne: currentId}},{limit:1});       
-  })); 
+  })); */
 	fillInLoadingCircles();
 
 	function fillInLoadingCircles() {
@@ -67,7 +68,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 
 	function getRandomLocation() {
 		var n = locations.length;
-		return locations[getRandomInt(0, n)];
+		return locations[getRandomInt(0, n)].location;
 	}
 
 	function getRandomInt(min, max) {
