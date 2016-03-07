@@ -1,15 +1,24 @@
 <div ng-controller="LogviewCtrl" class="gradient-bkgrd text-center">
 	<div class="pause-nav">
 		<div class="col-xs-2">
-			<a href="home"><i class="fa fa-angle-left"></i></a>
+			<a href="/log"><i class="fa fa-angle-left"></i></a>
 		</div>
 		<div class="col-xs-8">
-			<h5 class="page-title">View Moments</h5>
+			<h5 class="page-title">Past Moments</h5>
 		</div>
 		<div class="col-xs-2"></div>
 	</div>
-	<div ng-if="!currentUser" class="middle-message"><a href="/home"><div class="connect-button">Please sign in.</div></a></div>
-	<div ng-if="currentUser && emotionLogs.length === 0" class="middle-message"><a href="/log"><div class="connect-button">No emotions logged. Please log an emotion.</div></a></div>
+	<div ng-if="!currentUser" class="middle-message">
+		<a class="filler-msg-text" href="/home">Please return home and sign in.</a>
+	</div>
+	<div ng-if="currentUser && emotionLogs.length === 0" class="middle-message">
+		<p class="filler-msg-text">Hm, it looks like you haven't logged any emotions yet!</p>
+		<p class="filler-msg-text">How about logging one now so you can see your mood changes over time?</p>
+		<div>
+			<a class="pause-button pause-button-action" href="/log">log one now</a>&nbsp;&nbsp;
+			<a class="pause-button pause-button-fade" href="home">later</a>
+		</div>
+	</div>
 
 	<slick class="slick-top" settings="slickConfigTop" ng-if="emotionLogs.length > 0">
 		<div ng-repeat="item in emotionLogs">

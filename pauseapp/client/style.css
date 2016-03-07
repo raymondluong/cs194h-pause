@@ -90,7 +90,6 @@ h5 {
 	font-size: 0.9em;
 	letter-spacing: 0.5px;
 }
-.fa-user { color: white; }
 .page-title {
 	text-align: center;
 	margin-bottom: 0px;
@@ -112,9 +111,15 @@ h5 {
 
 .middle-message {
 	position: absolute;
-	top: 300px;
+	margin: auto;
+	padding: 0px 25px;
+	top: 40%;
 	right: 0;
 	left: 0;
+}
+.filler-msg-text {
+	font-size: 1.15em;
+	line-height: 1.7em;
 }
 
 
@@ -125,11 +130,15 @@ h5 {
  * ===============================
  */
 
+#login-dropdown-list {
+	width: 370px;
+	border-radius: 2px;
+}
+
 /* sign in dialogue modal styling */
 .accounts-dialog * {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	letter-spacing: 0.5px;
-	text-transform: lowercase;
 }
 
 /* close text */
@@ -146,6 +155,7 @@ h5 {
 .accounts-dialog label, .accounts-dialog .title {
 	font-size: 90%;
 	font-weight: 300;
+	text-transform: lowercase;
 }
 
 /* Actual input forms */
@@ -165,6 +175,7 @@ h5 {
 	background-color: #f28a5d;
 	border: 0;
 	border-radius: 2px;
+	text-transform: lowercase;
 }
 
 /* sign in button hover */
@@ -181,6 +192,43 @@ h5 {
 
 
 
+/* ===========================
+ *     GENERAL BUTTONS
+ * ===========================
+ */
+.pause-button {
+	color: #fefefe;
+	width: 100%;
+	margin: auto;
+	padding: 0.75em 2em;
+	border-radius: 2px;
+	font-size: 1.05em;
+	letter-spacing: 0.5px;
+	font-weight: 300;
+	line-height: 4em;
+	box-shadow: 2px 2px 2px 0px #afafaf;
+}
+.pause-button:hover {
+	color: #fefefe;
+}
+.pause-button-action {
+	background-color: rgba(242,138,93,1);
+}
+.pause-button-action:hover {
+	background-color: rgba(242,138,93,0.9);
+}
+.pause-button-fade {
+	background-color: rgba(210,210,210,0.55);
+	color: #272727;
+}
+.pause-button-fade:hover {
+	background-color: rgba(210,210,210,0.75);
+	color: #272727;
+}
+
+
+
+
 /* =========================
  *       THE HOME PAGE
  * =========================
@@ -189,7 +237,7 @@ h5 {
 /* upper title layer */
 #home-title-wrapper {
 	position: relative;
-	top: 22vh;
+	top: 12em;
 	margin: 0 3em 20px 3em;
 	padding: 15px 0 7px 0;
 	background-color: #fcf0e7;
@@ -244,19 +292,12 @@ h5 {
 	text-decoration: none;
 	color:#fff;
 }
-#home-menu a {
-	
-}
 
 
 
 
 
 
-#login-dropdown-list {
-	width: 370px;
-	border-radius: 2px;
-}
 
 /* =========================
  *  THUMB CONNECTION
@@ -354,9 +395,9 @@ h5 {
 
 
 
-/* ======================
- *  MEDITATE SCREEN
- * ======================
+/* ==============================
+ *         MEDITATE SCREEN
+ * ==============================
  */
 #body-scan-screen {
 	z-index: 2;
@@ -424,78 +465,83 @@ h5 {
 	color: #cacaca;
 }
 
+
+
+
+
+
 /* ===========================
- *  VIEW MOMENTS PAGE
+ *       VIEW MOMENTS PAGE
  * ===========================
  */
+ .slick-item {
+	color: #fff;
+	font-size: 2.25em;
+	line-height: 4em;
+	margin: 6px;
+	text-align: center;
+	opacity: 1;
+	box-shadow: 2px 2px 2px rgba(34,34,34,0.7);
+}
 
+/* card styling */
 .slick-top {
 	padding-top: 30%;
+	height: 77%;
 }
-
-.slick-item {
-  color: #fff;
-  font-size: 36px;
-  line-height: 65px;
-  margin: 6px;
-  text-align: center;
-}
-
 .slick-item-top {
 	border-radius: 10px;
 	padding-top: 10%;
 	padding-bottom: 10%;
 	z-index: 1000;
-	box-shadow: 2px 2px 2px rgba(34,34,34,0.6);
 	width: 75%;
 	margin: 0 auto;
 	height: 350px;
+	box-shadow: 2px 4px 2px 0px rgba(100,100,100,0.6);
+}
+.item-quote {
+	font-size: 0.8em;
+	opacity: 0.8;
+	padding: 20px;
+}
+
+/* scrolly bottom bar of multiple colors */
+.slick-bot {
+	background-color: rgba(78, 120, 160, 0.1);
+	box-shadow: inset 0px 1px 3px 0px #cacaca;
+	padding: 15px 0 15px 0;
+	margin-bottom: 0;
+	height: 23%;
+}
+.slick-item-bot {
+	opacity: 0.9;
+	border-radius: 50px;
+	width: 2.5em;
+	height: 2.5em;
+	padding-top: 25%;
+	padding-bottom: 15%;
 }
 
 .item-date {
 	font-size: 15px;
 	opacity: 0.5;
 }
-
-.slick-item-bot {
-	opacity: 0.2;
-	border-radius: 50px;
-	padding-top: 25%;
-	padding-bottom: 15%;
-}
-
-.slick-bot .slick-current .slick-item {
-	opacity: 1;
-	box-shadow: 2px 2px 2px rgba(34,34,34,0.7);
-}
-
-.slick-bot {
-	background-color: rgba(250,250,250,0.5);
-	padding-bottom: 50px;
-	padding-top: 20px;
-	top: 35px;
-}
-
 .item-small-month-day {
 	font-size: 14px;
 	margin-bottom: -2px;
 }
-
 .item-small-year {
 	font-size: 12px;
 	opacity: 0.6;
 }
 
-.item-quote {
-	font-size: 15px;
-	opacity: 0.8;
-	padding: 20px;
-}
 
 
-/* ===========
- *  LOG PAGE
- * ===========
+
+
+/* ======================
+ *        LOG PAGE
+ * ======================
  */
 #log-text {
 	padding: 1.25em 1em;
@@ -514,6 +560,7 @@ h5 {
 	height: 6em;
 	opacity: 0.95;
 	filter: alpha(opacity=95);
+	border: 3px solid white;
 	border-radius: 1px;
 	cursor: pointer;
 	margin: 2.5px;
@@ -525,8 +572,11 @@ h5 {
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain;
+
+	border-color: maroon;
 }
 #tense-block {
+	border-color: darkred;
 	background: darkred url("emotions/tense.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -534,6 +584,7 @@ h5 {
 	background-size: contain;
 }
 #excited-block {
+	border-color: crimson;
 	background: crimson url("emotions/excited.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -541,6 +592,7 @@ h5 {
 	background-size: contain;
 }
 #delighted-block {
+	border-color: mediumvioletred;
 	background: mediumvioletred url("emotions/delighted.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -548,6 +600,7 @@ h5 {
 	background-size: contain;
 }
 #frustrated-block {
+	border-color: brown;
 	background: brown url("emotions/frustrated.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -555,6 +608,7 @@ h5 {
 	background-size: contain;
 }
 #angry-block {
+	border-color: sienna;
 	background: sienna url("emotions/angry.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -562,6 +616,7 @@ h5 {
 	background-size: contain;
 }
 #happy-block {
+	border-color: tomato;
 	background: tomato url("emotions/happy.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -569,6 +624,7 @@ h5 {
 	background-size: contain;
 }
 #glad-block {
+	border-color: coral;
 	background: coral url("emotions/glad.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -576,6 +632,7 @@ h5 {
 	background-size: contain;
 }
 #miserable-block {
+	border-color: #404080;
 	background: #404080 url("emotions/miserable.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -583,6 +640,7 @@ h5 {
 	background-size: contain;
 }
 #sad-block {
+	border-color: navy;
 	background: navy url("emotions/sad.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -590,6 +648,7 @@ h5 {
 	background-size: contain;
 }
 #calm-block {
+	border-color: teal;
 	background: teal url("emotions/calm.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -597,6 +656,7 @@ h5 {
 	background-size: contain;
 }
 #satisfied-block {
+	border-color: royalblue;
 	background: royalblue url("emotions/satisfied.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -604,6 +664,7 @@ h5 {
 	background-size: contain;
 }
 #gloomy-block {
+	border-color: slategray;
 	background: slategray url("emotions/gloomy.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -611,6 +672,7 @@ h5 {
 	background-size: contain;
 }
 #tired-block {
+	border-color: midnightblue;
 	background: midnightblue url("emotions/tired.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -618,6 +680,7 @@ h5 {
 	background-size: contain;
 }
 #sleepy-block {
+	border-color: darkslateblue;
 	background: darkslateblue url("emotions/sleepy.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
@@ -625,12 +688,16 @@ h5 {
 	background-size: contain;
 }
 #serene-block {
+	border-color: indigo;
 	background: indigo url("emotions/serene.jpg") no-repeat center;
 	-webkit-background-size: contain;
 	-moz-background-size: contain;
 	-o-background-size: contain;
 	background-size: contain;
 }
+
+
+
 
 
 /* ===========================
@@ -647,24 +714,21 @@ h5 {
 .small_circle {
     overflow: hidden;
     border-radius: 50%;
-    /*width: 7vw;
-    height: 7vw;*/
-    /*border: .2vh solid orange;*/
     height: 30px;
     width: 30px;
     display: inline-block;
 }
 
-pie {
+/*pie {
     width: 300px;
     height: 300px;
     display: block;
     border-radius: 50%;
     background-color: orange;
     position: absolute;
-}
+}*/
 
-.twentyfive {
+/*.twentyfive {
     background-image:
         linear-gradient(180deg, transparent 50%, white 50%),
         linear-gradient(90deg, white 50%, transparent 50%);
@@ -673,12 +737,12 @@ pie {
 .fifty {
     background-image:
         linear-gradient(90deg, white 50%, transparent 50%);
-}
+}/*
 
 /* Slices greater than 50% require first gradient
    to be transparent -> green */
 
-.seventyfive {
+/*.seventyfive {
     background-image:
         linear-gradient(180deg, transparent 50%, orange 50%),
         linear-gradient(90deg, white 50%, transparent 50%);
@@ -686,7 +750,7 @@ pie {
 
 .onehundred {
     background: orange;
-}
+}/*
 
 
 
