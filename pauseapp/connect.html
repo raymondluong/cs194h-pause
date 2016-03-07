@@ -21,10 +21,10 @@
 	</div>
 	
 	<div class="main-wrapper" ng-show="currentUser">
-		<div class="overlay fade-pulse" ng-show="inMoment && !momentCompleted"></div>
+		<div class="connect-overlay fade-pulse" ng-show="inMoment && !momentCompleted"></div>
 		<div id="connect-flower-wrapper">
 			<img ng-if="!inMoment && !momentCompleted" src="flower-static.gif" />
-			<img ng-if="inMoment" src="flower.gif" />
+			<img id="flower-gif" ng-show="inMoment" src="flower.gif" />
 		</div>
 
 		<div id="connect-loading-wrapper">
