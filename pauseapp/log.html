@@ -8,11 +8,16 @@
 				<h5 class="page-title">Log</h5>
 			</div>
 			<div class="col-xs-4 pause-nav--right">
-				<a href="/log/view"><i class="fa fa-clock-o"></i></a>
+				<a ng-if="currentUser" href="/log/view"><i class="fa fa-clock-o"></i></a>
 			</div>
 		</div>
-		<div ng-if="!currentUser" class="middle-message"><a href="/home"><div class="connect-button">Please sign in.</div></a></div>
-		<p class="thin-text" id="log-text" ng-if="currentUser">Which photo <em style="font-weight:400">best</em> captures how you feel right now?</p>
+		<div ng-if="!currentUser" class="middle-message">
+			<p>Hey there! Glad to see you're using pause.</p>
+			<p class="thin-text">If you'd like access to these features, please sign in<br>or create an account on our homepage.</p>
+			<p>Take a breath and pause with us.</p>
+			<a class="pause-button pause-button-action" href="/home">return home</a>
+		</div>
+		<p class="thin-text page-prompt" id="log-text" ng-if="currentUser">Which photo <em style="font-weight:400">best</em> captures how you feel right now?</p>
 		<div class="log-emotions" ng-if="currentUser">
 			<div class="row">
 				<div class="col-xs-3" ng-repeat="emotion in emotions">
