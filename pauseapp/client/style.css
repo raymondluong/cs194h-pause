@@ -327,14 +327,14 @@ h5 {
 	position: relative;
 }
 #connect-thumb-print {
-    background-image: url('thumbprint.png');
+    background-image: url('thumb2.png');
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-background-size: 90px 110px;
     -moz-background-size: 90px 110px;
-    background-size: 90px 110px;
-    width: 90px;
-    height: 110px;
+    background-size: 70px 100px;
+    width: 70px;
+    height: 100px;
     margin: 0 auto 1em auto;
     top: -3em;
 }
