@@ -10,12 +10,17 @@
 			<div class="col-xs-4">
 			</div>
 		</div>
-		<div ng-if="!currentUser" class="middle-message"><a href="/home"><div class="connect-button">Please sign in.</div></a></div>
-		<div id="connect-instructions" ng-if="currentUser">
-			<h4 class="thin-text"><em>Life is fast, let's pause together</em></h4>
-			<p>Something about human touch, thumbs, etc</p>
-			<p>Pause will connect you to another person currently on the app. Together, you will have the ability to take a break and share a moment together.</p>
-			<div id="connect-begin-button"><a href="/connect"><div class="btn btn-info">Ready to connect</div></a></div>
+		<div ng-if="!currentUser" class="middle-message">
+			<p>Hey there! Glad to see you're using pause.</p>
+			<p class="thin-text">If you'd like access to these features, please sign in<br>or create an account on our homepage.</p>
+			<p>Take a breath and pause with us.</p>
+			<a class="pause-button pause-button-action" href="/home">return home</a>
+		</div>
+		<div ng-if="currentUser" class="middle-message">
+			<p class="filler-msg-text thin-text"><em>To us, mindfulness is best shared with others.</em></p>
+			<p class="filler-msg-text">Connect with another individual who is, right now, also seeking a few seconds of stillness.</p>
+			<p class="filler-msg-text thin-text">You'll touch and hold the same spot on your phones to make your devices vibrate synchronously in soothing, calming pulses.</p>
+			<a class="pause-button pause-button-action" href="/connect">ready to connect</a>
 		</div>
 	</div>
 </div>

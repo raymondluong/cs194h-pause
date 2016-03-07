@@ -65,7 +65,7 @@ h5 {
 	top: 0px;
 	padding: 20px 0 7px 0;
 	width: 100%;
-	background-color: rgba(78,120,160, 0.9);
+	background-color: rgb(78,120,160);
 	text-align: left;
 	color: #fefefe;
 	-webkit-box-shadow: 0px 1px 2px 0px #999;
@@ -122,6 +122,13 @@ h5 {
 	line-height: 1.7em;
 }
 
+.page-prompt {
+	margin: 0 3em 20px 3em;
+	padding: 15px 0 7px 0;
+	background-color: #fcf0e7;
+	border-radius: 100px;
+	box-shadow: inset 1px 1px 3px 0px #bababa;
+}
 
 
 
@@ -170,7 +177,7 @@ h5 {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	padding: 10px 5px;
-	font-size: 100%;
+	font-size: 95%;
 	font-weight: 300;
 	background-color: #f28a5d;
 	border: 0;
@@ -207,6 +214,7 @@ h5 {
 	font-weight: 300;
 	line-height: 4em;
 	box-shadow: 2px 2px 2px 0px #afafaf;
+	text-transform: lowercase;
 }
 .pause-button:hover {
 	color: #fefefe;
@@ -238,11 +246,6 @@ h5 {
 #home-title-wrapper {
 	position: relative;
 	top: 12em;
-	margin: 0 3em 20px 3em;
-	padding: 15px 0 7px 0;
-	background-color: #fcf0e7;
-	border-radius: 100px;
-	box-shadow: inset 1px 1px 3px 0px #bababa;
 }
 #home-subtitle {
 	font-size: 1.1em;
@@ -263,7 +266,7 @@ h5 {
 	box-shadow: 2px 2px 2px;
 }
 #home-menu li {
-	background-color: rgba(78,120,160, 0.9);
+	background-color: rgb(78,120,160);
 	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #323232;
 	font-size: 1.5em;
@@ -305,20 +308,15 @@ h5 {
  */
 #connect-status {
 	position: relative;
-	top: 15vh;
-	margin: 0 2em;
-	background-color: rgba(250, 250, 250, 0.5);
-	border-radius: 100px;
-	padding: 0.75em 0 0.5em 0;
+	top: 8em;
 }
 #connect-status h3 {
-	font-size: 1.5em;
+	font-size: 1.25em;
 }
 #connect-status h4 {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-style: italic;
 }
-
 #connect-flower {
 	width: 100%;
 }
@@ -330,13 +328,17 @@ h5 {
     background-image: url('thumb2.png');
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size: 90px 110px;
-    -moz-background-size: 90px 110px;
+
+    -webkit-background-size: 70px 100px;
+    -moz-background-size: 70px 100px;
     background-size: 70px 100px;
-    width: 70px;
-    height: 100px;
-    margin: 0 auto 1em auto;
-    top: -3em;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 0.5em auto;
+    top: -2.5em;
+	box-shadow: inset 1px 1px 3px 0px #999;
+	background-color: #fcf0e7;
+	border-radius: 75px;
 }
 #thumb-text {
 	top: -1.5em;
@@ -364,34 +366,11 @@ h5 {
 	z-index: 9999;
 }
 
-#connect-instructions, #connect-finish-buttons {
-	padding: 1.25em 1em;
-	width: 93.5%;
-	background-color: rgba(250, 250, 250, 0.7);
-	border-radius: 2px;
-}
-
 #connect-instructions > *:not(:last-child) {
 	margin-bottom: 1em;
 }
 
-.connect-button {
-	color: black;
-	width: 93.5%;
-	margin: 1em auto;
-	padding: 1em .75em;
-	background-color: rgba(250, 250, 250, 0.7);
-	border-radius: 2px;
-	font-size: 1.25em;
-}
 
-.connect-button--faded {
-	background-color: rgba(250, 250, 250, 0.3);
-}
-
-#connect-begin-button {
-	margin-top: 2em;
-}
 
 
 
@@ -399,6 +378,10 @@ h5 {
  *         MEDITATE SCREEN
  * ==============================
  */
+/*#scan-title {
+	padding-right: 30px;
+	padding-left: 30px;
+}*/
 #body-scan-screen {
 	z-index: 2;
 	position: absolute;
@@ -428,8 +411,14 @@ h5 {
 }
 
 #audio-icon {
-	height: 27px;
+	width: 23px;
 	display: none;
+	position: relative;
+	top: 4.6em;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	/*float: right;
+	margin-right: 10px;*/
 }
 
 .modalDialog {
@@ -500,9 +489,9 @@ h5 {
 	box-shadow: 2px 4px 2px 0px rgba(100,100,100,0.6);
 }
 .item-quote {
-	font-size: 0.8em;
-	opacity: 0.8;
-	padding: 20px;
+	font-size: 0.5em;
+	opacity: 0.9;
+	padding: 1.5em;
 }
 
 /* scrolly bottom bar of multiple colors */
@@ -525,6 +514,7 @@ h5 {
 .item-date {
 	font-size: 15px;
 	opacity: 0.5;
+	text-transform: lowercase;
 }
 .item-small-month-day {
 	font-size: 14px;
@@ -546,15 +536,12 @@ h5 {
 #log-text {
 	padding: 1.25em 1em;
 	width: 93.5%;
-	background-color: rgba(250, 250, 250, 0.5);
 	border-radius: 100px;
 }
 .log-emotions {
 	width: 100%;
-	padding: 0.5em 1.75em;
-	/*background-color: rgba(205, 205, 205, 0.25);
-	border-radius: 3px;
-	box-shadow: 1px 1px 2px #7a7a7a;*/
+	margin-top: 1.5em;
+	padding: 0.15em 1.75em;
 }
 .log-emotion-block {
 	height: 6em;
@@ -713,44 +700,13 @@ h5 {
 
 .small_circle {
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 48%;
     height: 30px;
     width: 30px;
     display: inline-block;
 }
 
-/*pie {
-    width: 300px;
-    height: 300px;
-    display: block;
-    border-radius: 50%;
-    background-color: orange;
-    position: absolute;
-}*/
 
-/*.twentyfive {
-    background-image:
-        linear-gradient(180deg, transparent 50%, white 50%),
-        linear-gradient(90deg, white 50%, transparent 50%);
-}
-
-.fifty {
-    background-image:
-        linear-gradient(90deg, white 50%, transparent 50%);
-}/*
-
-/* Slices greater than 50% require first gradient
-   to be transparent -> green */
-
-/*.seventyfive {
-    background-image:
-        linear-gradient(180deg, transparent 50%, orange 50%),
-        linear-gradient(90deg, white 50%, transparent 50%);
-}
-
-.onehundred {
-    background: orange;
-}/*
 
 
 
