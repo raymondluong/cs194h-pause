@@ -113,7 +113,7 @@ h5 {
 	position: absolute;
 	margin: auto;
 	padding: 0px 25px;
-	top: 40%;
+	top: 30%;
 	right: 0;
 	left: 0;
 }
@@ -124,7 +124,7 @@ h5 {
 
 .page-prompt {
 	margin: 0 3em 20px 3em;
-	padding: 15px 0 7px 0;
+	padding: 15px 0 15px 0;
 	background-color: #fcf0e7;
 	border-radius: 100px;
 	box-shadow: inset 1px 1px 3px 0px #bababa;
