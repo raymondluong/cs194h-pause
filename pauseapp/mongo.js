@@ -13,6 +13,6 @@ Locations.allow({
 });
 Locations.insert({
   user_id:'-1', 
-  location: 'Ojai,CA,USA',
+  location: 'Ojai, CA, USA',
   username: 'dummy_account',
 });
