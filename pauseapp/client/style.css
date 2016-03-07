@@ -29,6 +29,10 @@ h2, h3, h4 {
 	padding: 5px 0 10px 0;
 }
 
+h4 {
+	text-transform: lowercase;
+}
+
 h5 {
 	line-height: 1.5em;
 }
@@ -113,7 +117,7 @@ h5 {
 	position: absolute;
 	margin: auto;
 	padding: 0px 25px;
-	top: 40%;
+	top: 30%;
 	right: 0;
 	left: 0;
 }
@@ -123,8 +127,8 @@ h5 {
 }
 
 .page-prompt {
-	margin: 0 3em 20px 3em;
-	padding: 15px 0 7px 0;
+	margin: 0 4em 20px 4em;
+	padding: 15px 0 15px 0;
 	background-color: #fcf0e7;
 	border-radius: 100px;
 	box-shadow: inset 1px 1px 3px 0px #bababa;
@@ -249,6 +253,7 @@ h5 {
 }
 #home-subtitle {
 	font-size: 1.1em;
+	margin-bottom: 0;
 }
 #home-subtitle em {
 	letter-spacing: 2px;
@@ -474,8 +479,8 @@ h5 {
 
 /* card styling */
 .slick-top {
-	padding-top: 30%;
-	height: 77%;
+	padding-top: 25%;
+	height: 75%;
 }
 .slick-item-top {
 	border-radius: 10px;
@@ -497,18 +502,23 @@ h5 {
 .slick-bot {
 	background-color: rgba(78, 120, 160, 0.1);
 	box-shadow: inset 0px 1px 3px 0px #cacaca;
-	padding: 15px 0 15px 0;
+	padding: 20px 0 15px 0;
 	margin-bottom: 0;
-	height: 23%;
+	height: 25%;
 }
 .slick-item-bot {
 	opacity: 0.9;
 	border-radius: 50px;
 	width: 2.5em;
 	height: 2.5em;
-	padding-top: 25%;
-	padding-bottom: 15%;
+	padding-top: 0.65em;
+	padding-bottom: 0.25em;
 }
+.slick-bot .slick-current {
+	border-bottom: 1px groove #fff;
+	box-shadow: 0px 1px 5px 1px #a0a0a0;
+}
+
 
 .item-date {
 	font-size: 15px;
@@ -692,16 +702,16 @@ h5 {
  */
 .circle {
 	overflow: hidden;
-	border-radius: 50%;
+	border-radius: 45%;
     margin-left: auto;
     margin-right: auto;
 }
 
 .small_circle {
     overflow: hidden;
-    border-radius: 48%;
-    height: 30px;
-    width: 30px;
+    border-radius: 45%;
+    height: 20px;
+    width: 20px;
     display: inline-block;
 }
 

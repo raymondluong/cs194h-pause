@@ -55,7 +55,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 		if (!$scope.currentUser) return;
 		$("#left_fill").fadeIn(1500);
 		$("#center_fill").delay(1500).fadeIn(1500);
-		$("#right_fill").delay(3000).fadeIn(1500);
+		$("#right_fill").delay(3000).fadeIn(2500);
 		setTimeout(function() {
 			$('#connect-thumb-print').show();
 			$scope.locationFound = true;
@@ -63,7 +63,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 				$scope.statusText = 'Connection found in';
 				$scope.locationText = getRandomLocation();
 			});
-		}, 4500)
+		}, 6500)
 	}
 
 	function getRandomLocation() {
@@ -77,7 +77,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 
 	function stopPulse() {
 		$scope.$apply(function() {
-			$scope.statusText = "Thank you for sharing.";
+			$scope.statusText = "thanks for sharing.";
 			$scope.momentCompleted = true;
 		})
 	}
@@ -89,7 +89,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 		$scope.$apply(function () {
 			$scope.firstTap = false;
 			$scope.inMoment = true;
-			$scope.statusText = "Sharing a moment with someone in";
+			$scope.statusText = "sharing a moment with someone in";
 		});
 		var intervalID;
 		intervalID = setInterval(function() {
