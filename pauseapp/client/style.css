@@ -121,6 +121,10 @@ h5 {
 	right: 0;
 	left: 0;
 }
+.middle-message p {
+	font-size: 1.15em;
+	line-height: 1.7em;
+}
 .filler-msg-text {
 	font-size: 1.15em;
 	line-height: 1.7em;
