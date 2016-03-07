@@ -15,7 +15,7 @@
 		<p>Take a breath and pause with us.</p>
 		<a class="pause-button pause-button-action" href="/home">return home</a>
 	</div>
-	<div id="connect-status" ng-if="currentUser">
+	<div class="page-prompt" id="connect-status" ng-if="currentUser">
 		<h4 class="thin-text">{{statusText}}</h4>
 		<h3 ng-if="locationFound && !momentCompleted"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{locationText}}</h3>
 	</div>
@@ -41,11 +41,11 @@
 			</div>
 			<div ng-show="locationFound && !momentCompleted">
 				<div id="connect-thumb-print"></div>
-				<h4 class="thin-text" id="thumb-text">Hold your thumb down to connect</h4>
+				<p class="thin-text text-muted" id="thumb-text">Hold your thumb down to connect</p>
 			</div>
 			<div ng-show="locationFound && momentCompleted">
-				<div><a href="/log"><div class="connect-button">Log my mood</div></a></div>
-				<div><a href="/home"><div class="connect-button connect-button--faded">Return home</div></a></div>
+				<a class="pause-button pause-button-action" href="/log">Log my mood</a>&nbsp; &nbsp;
+				<a class="pause-button pause-button-fade" href="/home">Return home</a>
 			</div>
 		</div>
 	</div>

@@ -308,20 +308,15 @@ h5 {
  */
 #connect-status {
 	position: relative;
-	top: 15vh;
-	margin: 0 2em;
-	background-color: rgba(250, 250, 250, 0.5);
-	border-radius: 100px;
-	padding: 0.75em 0 0.5em 0;
+	top: 8em;
 }
 #connect-status h3 {
-	font-size: 1.5em;
+	font-size: 1.25em;
 }
 #connect-status h4 {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-style: italic;
 }
-
 #connect-flower {
 	width: 100%;
 }
@@ -333,13 +328,17 @@ h5 {
     background-image: url('thumb2.png');
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-background-size: 90px 110px;
-    -moz-background-size: 90px 110px;
+
+    -webkit-background-size: 70px 100px;
+    -moz-background-size: 70px 100px;
     background-size: 70px 100px;
-    width: 70px;
-    height: 100px;
-    margin: 0 auto 1em auto;
-    top: -3em;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 0.5em auto;
+    top: -2.5em;
+	box-shadow: inset 1px 1px 3px 0px #999;
+	background-color: #fcf0e7;
+	border-radius: 75px;
 }
 #thumb-text {
 	top: -1.5em;
@@ -367,34 +366,11 @@ h5 {
 	z-index: 9999;
 }
 
-#connect-instructions, #connect-finish-buttons {
-	padding: 1.25em 1em;
-	width: 93.5%;
-	background-color: rgba(250, 250, 250, 0.7);
-	border-radius: 2px;
-}
-
 #connect-instructions > *:not(:last-child) {
 	margin-bottom: 1em;
 }
 
-.connect-button {
-	color: black;
-	width: 93.5%;
-	margin: 1em auto;
-	padding: 1em .75em;
-	background-color: rgba(250, 250, 250, 0.7);
-	border-radius: 2px;
-	font-size: 1.25em;
-}
 
-.connect-button--faded {
-	background-color: rgba(250, 250, 250, 0.3);
-}
-
-#connect-begin-button {
-	margin-top: 2em;
-}
 
 
 
