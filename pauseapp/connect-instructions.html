@@ -2,7 +2,7 @@
 	<div class="main-wrapper">
 		<div class="pause-nav">
 			<div class="col-xs-4">
-				<a href="/home"><i class="fa fa-angle-left"></i></a>
+				<a id="back-link" href="/home"><i class="fa fa-angle-left"></i></a>
 			</div>
 			<div class="col-xs-4">
 				<h5 class="page-title">Connect</h5>
@@ -11,17 +11,21 @@
 			</div>
 		</div>
 		<div ng-if="!currentUser" class="middle-message">
-			<p>Hey there! Glad to see you're using pause.</p>
-			<p class="thin-text">To connect and share moments, please sign in<br>or create an account on our homepage.</p>
-			<p>Take a breath and pause with us.</p>
+			<p>Hey there!</p>
+			<br>
+			<p class="thin-text">To connect and share moments, please sign in or create an account on our homepage.</p>
+			<br>
 			<a class="pause-button pause-button-action" href="/home">return home</a>
 		</div>
 		<div ng-if="currentUser" class="middle-message">
-			<h4 class="page-prompt thin-text"><em>share a moment.</em>
-			</h4>
-			<p class="thin-text">To us, mindfulness is best shared with others.</p>
-			<p>Connect with another individual who has also searched for a few seconds of stillness.</p>
-			<p class="thin-text text-muted" style="line-height: 1.2em"><small><em>You'll touch and hold a spot on your phone<br>to make your device vibrate in calming pulses.</em></small></p>
+			<div class="tip thin-text" id="connect-tip">
+				<i class="fa fa-heart-o"></i>
+				<br><em>de-stress</em>
+			</div>
+			<p>Spread the health and love!</p>
+			<p class="thin-text">Join the anonymous community of pausers and connect with another.</p>
+			<!--<p>Connect with another individual who has also searched for a few seconds of stillness.</p>-->
+			<br>
 			<a class="pause-button pause-button-action" href="/connect">ready to connect</a>
 		</div>
 	</div>

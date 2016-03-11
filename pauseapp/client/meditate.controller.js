@@ -76,8 +76,8 @@ angular.module('pauseApp').controller('MeditateCtrl', ['$scope', function ($scop
 
     function changeBackground(image, delayTime, status=null) {
         background.delay(delayTime).fadeTo(1000, 0, function() {
-            background.css("background", "url('bodyscan/" + image + ".png') no-repeat center");
-            background.css("background-size", "75% 85%");
+            background.css("background", "url('bodyscan/" + image + ".png') no-repeat center 90%");
+            background.css("background-size", "85% 85%");
             $('#audio-icon').show();
         }).fadeTo(1000, 1, function() {
             if (status === 'end') {

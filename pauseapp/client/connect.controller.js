@@ -38,7 +38,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
     return element.user_id !== $scope.currentId; 
   });	
   
-	$scope.statusText = 'Searching for a connection...';
+	$scope.statusText = 'searching for a connection...';
 
 	$("#left_fill").hide();
 	$("#center_fill").hide();
@@ -60,7 +60,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 			$('#connect-thumb-print').show();
 			$scope.locationFound = true;
 			$scope.$apply(function() {
-				$scope.statusText = 'Connection found in';
+				$scope.statusText = 'connected with someone in';
 				$scope.locationText = getRandomLocation();
 			});
 		}, 6500)
@@ -77,7 +77,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 
 	function stopPulse() {
 		$scope.$apply(function() {
-			$scope.statusText = "thanks for sharing.";
+			$scope.statusText = "thank you for sharing!";
 			$scope.momentCompleted = true;
 		})
 	}

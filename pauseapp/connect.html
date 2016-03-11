@@ -1,7 +1,7 @@
 <div ng-controller="ConnectCtrl" class="text-center gradient-bkgrd">
 	<div class="pause-nav">
 		<div class="col-xs-4">
-			<a href="/home"><i class="fa fa-angle-left"></i></a>
+			<a id="back-link" href="/home"><i class="fa fa-angle-left"></i></a>
 		</div>
 		<div class="col-xs-4">
 			<h5 class="page-title">Connect</h5>
@@ -9,43 +9,50 @@
 		<div class="col-xs-4">
 		</div>
 	</div>
-	<div ng-if="!currentUser" class="middle-message">
-		<p>Hey there! Glad to see you're using pause.</p>
-		<p class="thin-text">If you'd like access to these features, please sign in<br>or create an account on our homepage.</p>
-		<p>Take a breath and pause with us.</p>
-		<a class="pause-button pause-button-action" href="/home">return home</a>
+	<div ng-if="!currentUser" class="main-wrapper">
+		<div class="middle-message">
+			<p>Hey there!</p>
+			<br>
+			<p class="thin-text">To connect and share moments, please sign in or create an account on our homepage.</p>
+			<br>
+			<a class="pause-button pause-button-action" href="/home">return home</a>
+		</div>
 	</div>
-	<div class="page-prompt" id="connect-status" ng-if="currentUser">
-		<h4 class="thin-text">{{statusText}}</h4>
-		<h3 ng-if="locationFound && !momentCompleted"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{locationText}}</h3>
-	</div>
-	
-	<div class="main-wrapper" ng-show="currentUser">
+
+	<div ng-show="currentUser">
 		<div class="connect-overlay fade-pulse" ng-show="inMoment && !momentCompleted"></div>
-		<div id="connect-flower-wrapper">
-			<img ng-if="!inMoment && !momentCompleted" src="flower-static.gif" />
-			<img id="flower-gif" ng-show="inMoment" src="flower.gif" />
+
+		<div id="connect-status" ng-if="currentUser">
+			<h3 class="thin-text">{{statusText}}</h3>
+			<h2 ng-if="locationFound && !momentCompleted"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;{{locationText}}</h2>
 		</div>
 
-		<div id="connect-loading-wrapper">
-			<div ng-show="!locationFound && !momentCompleted">
-				<div class="small_circle">
-					<div class="connect-loading-circle small_circle" id="left_fill"></div>
-				</div>&nbsp;&nbsp;&nbsp;&nbsp;
-				<div class="small_circle">
-					<div class="connect-loading-circle small_circle" id="center_fill"></div>
-				</div>&nbsp;&nbsp;&nbsp;&nbsp;
-				<div class="small_circle">
-					<div class="connect-loading-circle small_circle" id="right_fill"></div>
+		<div class="main-wrapper">
+			<div id="connect-flower-wrapper">
+				<img ng-if="!inMoment && !momentCompleted" src="flower-static.gif" />
+				<img id="flower-gif" ng-show="inMoment" src="flower.gif" />
+			</div>
+
+			<div id="connect-loading-wrapper">
+				<div ng-show="!locationFound && !momentCompleted">
+					<div class="small_circle">
+						<div class="connect-loading-circle small_circle" id="left_fill"></div>
+					</div>&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="small_circle">
+						<div class="connect-loading-circle small_circle" id="center_fill"></div>
+					</div>&nbsp;&nbsp;&nbsp;&nbsp;
+					<div class="small_circle">
+						<div class="connect-loading-circle small_circle" id="right_fill"></div>
+					</div>
 				</div>
-			</div>
-			<div ng-show="locationFound && !momentCompleted">
-				<div id="connect-thumb-print"></div>
-				<p class="thin-text text-muted" id="thumb-text">Hold your thumb down to connect</p>
-			</div>
-			<div ng-show="locationFound && momentCompleted">
-				<a class="pause-button pause-button-action" href="/log">Log my mood</a>&nbsp; &nbsp;
-				<a class="pause-button pause-button-fade" href="/home">Return home</a>
+				<div ng-show="locationFound && !momentCompleted">
+					<div id="connect-thumb-print"></div>
+					<p class="thin-text text-muted" id="thumb-text">(place and hold thumb)</p>
+				</div>
+				<div ng-show="locationFound && momentCompleted">
+					<a class="pause-button pause-button-action" href="/log">log mood</a>
+					<a class="pause-button pause-button-fade" href="/home">return home</a>
+				</div>
 			</div>
 		</div>
 	</div>
