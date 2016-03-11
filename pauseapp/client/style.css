@@ -590,17 +590,19 @@ p#connect-load-msg {
  * ======================
  */
 #log-text {
-	padding-top: 1.5em;
+ 	padding-top: 3.5em;
+ }
+#log-text p {
 	font-size: 1.25em;
 	letter-spacing: 0.5px;
 }
 .log-emotions {
 	width: 100%;
-	margin-top: 1.5em;
+	margin-top: 1em;
 	padding: 0.15em 1.75em;
 }
 .log-emotion-block {
-	height: 7.5em;
+	height: 7.45em;
 	opacity: 0.95;
 	filter: alpha(opacity=95);
 	border-bottom: 1em solid white;

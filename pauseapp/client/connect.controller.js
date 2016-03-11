@@ -60,7 +60,7 @@ angular.module('pauseApp').controller('ConnectCtrl', ['$scope', '$http', '$meteo
 			$('#connect-thumb-print').show();
 			$scope.locationFound = true;
 			$scope.$apply(function() {
-				$scope.statusText = 'connected with someone in';
+				$scope.statusText = 'connect with someone in';
 				$scope.locationText = getRandomLocation();
 			});
 		}, 6500)
