@@ -312,11 +312,11 @@ h5 {
 /* upper title layer */
 #home-top-title {
 	position: relative;
-	top: 9em;
+	top: 11em;
 }
 #home-bottom-title {
 	position: relative;
-	top: 36em;
+	top: 40em;
 }
 #home-bottom-title h1 em {
 	font-weight: 400;
@@ -327,7 +327,7 @@ h5 {
 #home-menu {
 	position: relative;
 	margin: auto;
-	top: 17em;
+	top: 20em;
 	left: -1.75em;
 	height: 100%;
 	-webkit-box-shadow: 2px 2px 2px;
@@ -363,7 +363,6 @@ h5 {
 	text-decoration: none;
 	color:#fff;
 }
-
 
 
 
