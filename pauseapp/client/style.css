@@ -82,7 +82,7 @@ h5 {
 	position: absolute;
 	z-index: 5;
 	top: 0px;
-	padding: 2.25em 0 1.25em 0;
+	padding: 2em 0 1em 0;
 	width: 100%;
 	background-color: rgb(78,120,160);
 	text-align: left;
@@ -103,13 +103,14 @@ h5 {
 .pause-nav a:hover { text-decoration: none }
 
 .pause-nav a#back-link {
-	font-size: 2em;
-	padding: 0.35em 1em 0 0.65em;
+	font-size: 2.2em;
+	padding: 0.35em 1em 0 0.4em;
 	position: absolute;
 	top: -0.5em;
 	left: 0em;
 }
-.pause-nav a#past-mood-link {
+.pause-nav a#past-mood-link,
+.pause-nav a#mood-home-link {
 	font-size: 1.75em;
 	padding: 0.5em 0 0 1em;
 	position: absolute;
@@ -126,7 +127,7 @@ h5 {
 	text-transform: lowercase;
 	letter-spacing: 1px;
 	padding: 7px 12px;
-	font-size: 1.3em;
+	font-size: 1.1em;
 }
 .page-title {
 	text-align: center;
@@ -203,6 +204,7 @@ h5 {
 
 #login-dropdown-list {
 	border-radius: 2px;
+	width: 99vw;
 }
 
 /* sign in dialogue modal styling */
@@ -222,6 +224,12 @@ h5 {
 
 .login-password-form {
 	padding: 10px 0;
+}
+
+#login-buttons #login-name-link, #login-buttons #login-sign-in-link {
+	position: relative;
+	top: 2px;
+	left: -10px;
 }
 
 /* Text above input forms */
@@ -312,11 +320,11 @@ h5 {
 /* upper title layer */
 #home-top-title {
 	position: relative;
-	top: 11em;
+	top: 9em;
 }
 #home-bottom-title {
 	position: relative;
-	top: 40em;
+	top: 35em;
 }
 #home-bottom-title h1 em {
 	font-weight: 400;
@@ -327,7 +335,7 @@ h5 {
 #home-menu {
 	position: relative;
 	margin: auto;
-	top: 20em;
+	top: 17em;
 	left: -1.75em;
 	height: 100%;
 	-webkit-box-shadow: 2px 2px 2px;
