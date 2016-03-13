@@ -10,6 +10,7 @@ body {
 	font-weight: 400;
 	color: #373712;
 	padding: 0;
+	background-color: #fffbf7;
 }
 
 p {
@@ -22,10 +23,23 @@ a:hover {
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-	font-weight: 400;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 1.75em;
+}
+
+h3 {
+	font-size: 1.5em;
 }
 
 h2, h3, h4 {
+	font-weight: 400;
 	padding: 5px 0 10px 0;
 }
 
@@ -34,6 +48,7 @@ h4 {
 }
 
 h5 {
+	font-weight: 400;
 	line-height: 1.5em;
 }
 
@@ -56,8 +71,8 @@ h5 {
 
 /* Container for mobile app */
 .main-app {
-	width: 375px;
-	height: 667px;
+	width: 100%;
+	height: 100vh;
 	margin: auto;
 	position: relative;
 }
@@ -67,20 +82,40 @@ h5 {
 	position: absolute;
 	z-index: 5;
 	top: 0px;
-	padding: 20px 0 7px 0;
+	padding: 2em 0 1em 0;
 	width: 100%;
 	background-color: rgb(78,120,160);
 	text-align: left;
+	font-size: 1.1em;
 	color: #fefefe;
 	-webkit-box-shadow: 0px 1px 2px 0px #999;
 	-moz-box-shadow: 0px 1px 2px 0px #999;
 	box-shadow: 0px 1px 2px 0px #999;
 }
-.pause-nav a:hover { text-decoration: none }
+
 .pause-nav--right { text-align: right; }
-.pause-nav a i {
+
+.pause-nav a {
+	padding: 7px 10px;
+	font-size: 1.5em;
 	color: #fefefe;
-	font-size: 1.25em;
+}
+.pause-nav a:hover { text-decoration: none }
+
+.pause-nav a#back-link {
+	font-size: 2.2em;
+	padding: 0.35em 1em 0 0.4em;
+	position: absolute;
+	top: -0.5em;
+	left: 0em;
+}
+.pause-nav a#past-mood-link,
+.pause-nav a#home-link {
+	font-size: 1.75em;
+	padding: 0.5em 0 0 1em;
+	position: absolute;
+	top: -0.5em;
+	right: 0.5em;
 }
 #login {
 	position: absolute;
@@ -90,44 +125,68 @@ h5 {
 	color: inherit;
 	text-decoration: none;
 	text-transform: lowercase;
-	font-weight: 300;
-	font-size: 0.9em;
-	letter-spacing: 0.5px;
+	letter-spacing: 1px;
+	padding: 7px 12px;
+	font-size: 1.1em;
 }
 .page-title {
 	text-align: center;
 	margin-bottom: 0px;
-	font-weight: 400;
-	letter-spacing: 0.5px;
-	font-size: 1em;
+	font-weight: 300;
+	letter-spacing: 1px;
+	font-size: 1.3em;
+	line-height: 1.15em;
+}
+
+.col-xs-3 {
+	padding: 0em;
 }
 
 
 .gradient-bkgrd {
-	background-color: #fdf7f3;
+	background-color: #fffbf7;
 	width: 100%;
 	height: 100%;
 }
-
-.col-xs-3 {
-	padding: 0;
-}
-
 .middle-message {
-	position: absolute;
-	margin: auto;
-	padding: 0px 25px;
-	top: 30%;
-	right: 0;
-	left: 0;
+	padding: 0em 1.5em;
 }
 .middle-message p {
-	font-size: 1.15em;
-	line-height: 1.7em;
+	font-size: 1.45em;
+	line-height: 1.5em;
 }
 .filler-msg-text {
-	font-size: 1.15em;
+	font-size: 1.5em;
 	line-height: 1.7em;
+}
+
+.tip {
+	margin: 0 auto 1.5em auto;
+	width: 8em;
+	height: 8em;
+	display: inline-block;
+	border-radius: 4em;
+	background-color: rgb(78, 120, 160);
+	box-shadow: 2px 2px 3px 0px #565656;
+	text-align: center;
+	font-size: 1.35em;
+	line-height: 1.5em;
+	color: #fffbf7;
+	font-weight: 400;
+	padding-left: 0.25em;
+}
+.tip:hover {
+	cursor: pointer;
+}
+.tip i.fa {
+	font-size: 3em;
+}
+#meditate-tip {
+	padding-top: 1.65em;
+	padding-left: 0.25em;
+}
+#connect-tip {
+	padding-top: 1.75em;
 }
 
 .page-prompt {
@@ -146,61 +205,88 @@ h5 {
  */
 
 #login-dropdown-list {
-	width: 370px;
 	border-radius: 2px;
+	width: 99vw;
 }
 
 /* sign in dialogue modal styling */
 .accounts-dialog * {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.75px;
+	font-size: 1.2em;
 }
 
 /* close text */
 #login-buttons .login-close-text {
-	font-size: 0.75em;
 	color: #707070;
+	margin-bottom: 10px;
+	border: 1px dotted #9a9a9a;
+	border-radius: 2px;
 }
 
 .login-password-form {
-	padding: 10px 0;
+	padding: 0.5em 0;
+}
+
+#login-buttons #login-name-link,
+#login-buttons #login-sign-in-link {
+	position: relative;
+	top: 2px;
+	left: -10px;
 }
 
 /* Text above input forms */
 .accounts-dialog label, .accounts-dialog .title {
-	font-size: 90%;
 	font-weight: 300;
 	text-transform: lowercase;
 }
 
 /* Actual input forms */
 #login-buttons input[type=text], .accounts-dialog input[type=text], #login-buttons input[type=email], .accounts-dialog input[type=email], #login-buttons input[type=password], .accounts-dialog input[type=password] {
-	padding: 10px;
+	padding: 15px 10px;
 	border-radius: 2px;
+	margin-top: 5px;
+	margin-bottom: 10px;
 }
 
 /* sign in button */
 #login-buttons .login-button, .accounts-dialog .login-button {
-	padding: 4px 8px;
+	padding: 15px 10px;
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.5;
-	padding: 10px 5px;
-	font-size: 95%;
-	font-weight: 300;
+	font-size: 1.2em;
 	background-color: #f28a5d;
 	border: 0;
-	border-radius: 2px;
+	border-radius: 5px;
 	text-transform: lowercase;
+	box-shadow: 1px 1px 3px 0px #707070;
 }
-
 /* sign in button hover */
-#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+#login-buttons .login-button:hover, .accounts-dialog #login-buttons-logout:hover {
 	background-color: #d97c53;
 }
+
+.accounts-dialog #login-buttons-open-change-password {
+	margin-top: 1.25em;
+	margin-bottom: 0.5em;
+	background-color: rgba(210,210,210,0.55);
+	color: #a0a0a0;
+}
+.accounts-dialog #login-buttons-open-change-password:hover {
+	background-color: rgba(210,210,210,0.75);
+	color: #a0a0a0;
+}
+
+.accounts-dialog #login-buttons-logout {
+	margin-bottom: 1em;
+}
+
+
 
 /* create account link */
 #login-buttons #signup-link, #login-buttons #back-to-login-link {
 	margin: 10px 0 5px 0;
+	font-size: 0.7em;
 }
 
 
@@ -215,17 +301,17 @@ h5 {
 	color: #fefefe;
 	width: 100%;
 	margin: auto;
-	padding: 0.75em 2em;
-	border-radius: 2px;
-	font-size: 1.05em;
-	letter-spacing: 0.5px;
-	font-weight: 300;
+	padding: 1em 2.1em;
+	border-radius: 5px;
+	font-size: 1.5em;
+	letter-spacing: 0.75px;
 	line-height: 4em;
-	box-shadow: 2px 2px 2px 0px #afafaf;
+	box-shadow: 1px 1px 3px 0px #565656;
 	text-transform: lowercase;
 }
 .pause-button:hover {
 	color: #fefefe;
+	cursor: pointer;
 }
 .pause-button-action {
 	background-color: rgba(242,138,93,1);
@@ -251,15 +337,16 @@ h5 {
  */
 
 /* upper title layer */
-#home-title-wrapper {
+#home-top-title {
 	position: relative;
-	top: 12em;
+	top: 9em;
 }
-#home-subtitle {
-	font-size: 1.1em;
-	margin-bottom: 0;
+#home-bottom-title {
+	position: relative;
+	top: 35em;
 }
-#home-subtitle em {
+#home-bottom-title h1 em {
+	font-weight: 400;
 	letter-spacing: 2px;
 }
 
@@ -267,8 +354,8 @@ h5 {
 #home-menu {
 	position: relative;
 	margin: auto;
-	top: 0em;
-	left: -1.25em;
+	top: 17em;
+	left: -1.75em;
 	height: 100%;
 	-webkit-box-shadow: 2px 2px 2px;
 	-moz-box-shadow: 2px 2px 2px;
@@ -279,7 +366,6 @@ h5 {
 	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #323232;
 	font-size: 1.5em;
-	font-weight: 300;
 	-webkit-box-shadow: 1px 1px 3px #708090;
 	-moz-box-shadow: 1px 1px 3px #708090;
 	box-shadow: 1px 1px 3px #708090;
@@ -298,13 +384,12 @@ h5 {
 	box-shadow: 2px 2px 7px #797979;
 }
 #home-menu li a {
-	font-size: 0.8em;
+	font-size: 0.9em;
 	font-style: italic;
-	letter-spacing: 0.5px;
+	letter-spacing: 0.75px;
 	text-decoration: none;
 	color:#fff;
 }
-
 
 
 
@@ -315,66 +400,65 @@ h5 {
  *  THUMB CONNECTION
  * =========================
  */
+.connect-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	z-index: 9999;
+}
 #connect-status {
 	position: relative;
-	top: 8em;
+	top: 8.5em;
+	width: 100%
 }
-#connect-status h3 {
-	font-size: 1.25em;
-}
-#connect-status h4 {
-	font-size: 1.1em;
-	font-style: italic;
+#connect-flower-wrapper {
+	margin: 14.5em auto 7em auto;
+	width: 100%;
 }
 #connect-flower {
 	width: 100%;
 }
-
-#connect-thumb-print, #thumb-text {
+#connect-loading-wrapper {
 	position: relative;
+	bottom: 4.5em;
+	width: 100%;
 }
 #connect-thumb-print {
+	position: relative;
     background-image: url('thumb2.png');
     background-repeat: no-repeat;
     background-position: center center;
 
-    -webkit-background-size: 70px 100px;
-    -moz-background-size: 70px 100px;
-    background-size: 70px 100px;
-    width: 120px;
-    height: 120px;
+    -webkit-background-size: 5em 7em;
+    -moz-background-size: 5em 7em;
+    background-size: 5em 7em;
+    width: 10em;
+    height: 10em;
     margin: 0 auto 0.5em auto;
-    top: -2.5em;
-	box-shadow: inset 1px 1px 3px 0px #999;
+	box-shadow: inset 2px 2px 4px 0px #999;
 	background-color: #fcf0e7;
-	border-radius: 75px;
+	border-radius: 5em;
 }
 #thumb-text {
-	top: -1.5em;
-}
-
-#connect-loading-wrapper {
-	position: absolute;
-	width: 100%;
-	top: 500px;
-	text-align: center;
+	font-size: 1.5em;
+	margin-top: 1em;
 }
 
 .connect-loading-circle {
     background-color: #4e78a0;
 }
 
-.connect-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 375px;
-	height: 667px;
-	background-color: #fff;
-	z-index: 9999;
+#connect-instructions > *:not(:last-child) {
+	margin-bottom: 1em;
 }
 
-#connect-instructions > *:not(:last-child) {
+p#connect-load-msg {
+	font-size: 1.5em;
+	line-height: 1.5em;
+	letter-spacing: 0.75px;
 	margin-bottom: 1em;
 }
 
@@ -386,80 +470,74 @@ h5 {
  *         MEDITATE SCREEN
  * ==============================
  */
-/*#scan-title {
-	padding-right: 30px;
-	padding-left: 30px;
-}*/
 #body-scan-screen {
-	z-index: 2;
 	position: absolute;
-	top: 25px;
+	top: 0;
 	width: 100%;
 	height: 100vh;
 	-webkit-background-size: 85% 85%;
 	-moz-background-size: 85% 85%;
 	background-size: 85% 85%;
+	background-position: center 90%;
+	background-repeat: no-repeat;
 }
 
-#body-scan-overlay {
-	z-index: 1;
-	position: absolute;
-	width: 100%;
-	height: 100vh;
-	background: url("bodyscan/empty.png") no-repeat center;
-	-webkit-background-size: 85% 85%;
-	-moz-background-size: 85% 85%;
-	background-size: 85% 85%;
+#audio-icon {
+	width: 2em;
+	display: none;
+	position: relative;
+	top: 6em;
+	z-index: 5;
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+	float: right;
+	margin: 10px 30px;
 }
-
 .btn-body-scan {
 	z-index: 3;
 	position: relative;
 	top: 30px;
 }
 
-#audio-icon {
-	width: 23px;
-	display: none;
-	position: relative;
-	top: 4.6em;
-	opacity: 0.8;
-	filter:alpha(opacity=80);
-	/*float: right;
-	margin-right: 10px;*/
-}
 
-.modalDialog {
-	position: fixed;
+
+
+
+/*  ====================
+		POP UP TIPS
+	====================
+*/
+.modal {
 	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
+	background-color: rgba(150, 150, 150, 0.2);
+	z-index: 1050;
 }
-.modalDialog:target {
-	opacity: 1;
-	pointer-events: auto;
+.modal-title {
+	color: #efefef;
 }
-.modalDialog > div {
-	width: 300px;
-	position: relative;
-	margin: 10% auto;
-	padding: 10px 20px 13px 20px;
-	border-radius: 7px;
-	background: #fff;
+.modal-content {
+	border-radius: 5px;
 }
-.modalDialog #modal-x {
-	display: block;
-	text-align: right;
-	color: #cacaca;
+.modal-header {
+	background-color: rgb(78, 120, 160);
+	color: #efefef;
+}
+.modal-header button.close {
+	color: #efefef;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+.middle-message p.modal-body-text {
+	font-size: 1.25em;
+	line-height: 1.65em;
+	text-align: left;
+}
+.modal-footer {
+	text-align: center;
+}
+.modal-footer button {
+	border-radius: 5px;
+	width: 100%;
 }
 
 
@@ -547,24 +625,26 @@ h5 {
  * ======================
  */
 #log-text {
-	padding: 1.25em 1em;
-	width: 93.5%;
-	border-radius: 100px;
+ 	padding-top: 3.5em;
+ }
+#log-text p {
+	font-size: 1.25em;
+	letter-spacing: 0.5px;
 }
 .log-emotions {
 	width: 100%;
-	margin-top: 1.5em;
+	margin-top: 1em;
 	padding: 0.15em 1.75em;
 }
 .log-emotion-block {
-	height: 6em;
+	height: 7.45em;
 	opacity: 0.95;
 	filter: alpha(opacity=95);
-	border: 3px solid white;
-	border-radius: 1px;
+	border-bottom: 1em solid white;
+	border-radius: 3px;
 	cursor: pointer;
-	margin: 2.5px;
-	box-shadow: 1px 1px 5px #7a7a7a;
+	margin: 4px 2.5px;
+	box-shadow: 1px 1px 4px #7a7a7a;
 }
 #afraid-block {
 	background: maroon url("emotions/afraid.jpg") no-repeat center;
@@ -713,9 +793,9 @@ h5 {
 
 .small_circle {
     overflow: hidden;
-    border-radius: 45%;
-    height: 20px;
-    width: 20px;
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
     display: inline-block;
 }
 

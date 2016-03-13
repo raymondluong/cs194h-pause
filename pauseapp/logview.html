@@ -1,12 +1,14 @@
 <div ng-controller="LogviewCtrl" class="gradient-bkgrd text-center">
 	<div class="pause-nav">
-		<div class="col-xs-2">
-			<a href="/log"><i class="fa fa-angle-left"></i></a>
+		<div class="col-xs-3">
+			<a id="back-link" href="/log"><i class="fa fa-angle-left"></i></a>
 		</div>
-		<div class="col-xs-8">
+		<div class="col-xs-6">
 			<h5 class="page-title">Past Moments</h5>
 		</div>
-		<div class="col-xs-2"></div>
+		<div class="col-xs-3 pause-nav--right">
+			<a id="home-link" ng-if="currentUser" href="/home"><i class="fa fa-home"></i></a>
+		</div>
 	</div>
 	<div ng-if="!currentUser" class="middle-message">
 		<a class="filler-msg-text" href="/home">Please return home and sign in.</a>

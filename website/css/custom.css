@@ -2,7 +2,7 @@
 body {
 	font-family: 'Lato', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
 	letter-spacing: 0.5px;
-	color: #333;
+	color: #555;
 }
 
 .navbar-default {
@@ -12,6 +12,11 @@ body {
 	padding: 2px 0 0 5px;
 }
 
+h2 {
+	text-align: center;
+	margin-top: 3em;
+	margin-bottom: 1em;
+}
 
 
 /* style for first header panel
@@ -21,31 +26,42 @@ header .header-content .header-content-inner h1#title {
 	text-transform: lowercase;
 	font-weight: 400;
 	font-style: italic;
-	font-size: 4em;
+	font-size: 10em;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+header .header-content #catchphrase {
+	padding-top: 2em;
 }
 header .header-content .header-content-inner p {
 	font-size: 1.5em;
 	line-height: 1.5em;
 }
-header .header-content #catchphrase {
+header .header-content #header-text {
 	background-color: rgba(220,220,220,0.35);
-    border-radius: 200px;
-    padding: 2.5em 0em 0.05em 0em;
-    max-width: 600px;
-    -webkit-box-shadow: 3px 3px 4px 0px rgba(100,100,100,0.4);
-    -moz-box-shadow: 3px 3px 4px 0px rgba(100,100,100,0.4);
-    box-shadow: 3px 3px 4px 0px rgba(100,100,100,0.4);
+    border-radius: 10px;
+    padding: 3em 0.5em;
+}
+#header-text p {
+	color: #555;
 }
 header .header-content .header-content-inner {
 	margin-top: 2em;
 	margin-bottom: 3em;
 }
+header #lotus {
+	width: 11em;
+	position: relative;
+	top: -5em;
+	left: 10em;
+	z-index: -1;
+}
 
 
 #about {
 	padding: 8em 0.5em;
-	background-color: #fafafa;
-	color: #222;
+	background-color: #f5f5f5;
+	color: #555;
 }
 
 
@@ -56,14 +72,9 @@ header .header-content .header-content-inner {
 	height: 250px;
 	border-right: 0.5px solid #fafafa;
 	border-bottom: 0.5px solid #fafafa;
-	background-color: #A0522D;
-}
-.yr-one {
 	background-color: #008080;
 }
-.yr-two {
-	background-color: rgba(240, 120, 81, 0.9);
-}
+
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name,
 .portfolio-box .portfolio-box-caption .project-links {
@@ -74,6 +85,7 @@ header .header-content .header-content-inner {
 .portfolio-box .portfolio-box-caption .project-name {
 	color: #fff;
 	font-weight: 300;
+	text-transform: lowercase;
 }
 .portfolio-box .portfolio-box-caption .project-links {
 	opacity: 0;
@@ -104,7 +116,8 @@ header .header-content .header-content-inner {
 
 
 #team {
-	background-color: rgba(255,250,250,0.9);
+	background-color: #f5f5f5;
+	color: #555;
 }
 .service-box {
 	max-width: 175px;

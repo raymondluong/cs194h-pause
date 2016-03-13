@@ -2,22 +2,26 @@
 	<div class="main-wrapper">
 		<div class="pause-nav">
 			<div class="col-xs-4">
-				<a href="/"><i class="fa fa-angle-left"></i></a>
+				<a id="back-link" href="/"><i class="fa fa-angle-left"></i></a>
 			</div>
 			<div class="col-xs-4">
 				<h5 class="page-title">Log</h5>
 			</div>
 			<div class="col-xs-4 pause-nav--right">
-				<a ng-if="currentUser" href="/log/view"><i class="fa fa-clock-o"></i></a>
+				<a id="past-mood-link" ng-if="currentUser" href="/log/view"><i class="fa fa-clock-o"></i></a>
 			</div>
 		</div>
 		<div ng-if="!currentUser" class="middle-message">
-			<p>Hey there! Glad to see you're using pause.</p>
-			<p class="thin-text">To log your current mood, please sign in<br>or create an account on our homepage.</p>
-			<p>Take a breath and pause with us.</p>
+			<p>Hey there!</p>
+			<br>
+			<p class="thin-text">To log and track emotions, please sign in or create an account on our homepage.</p>
+			<br>
 			<a class="pause-button pause-button-action" href="/home">return home</a>
 		</div>
-		<p class="thin-text page-prompt" id="log-text" ng-if="currentUser">Which photo <em style="font-weight:400">best</em> captures how you feel right now?</p>
+
+		<div id="log-text">
+			<p ng-if="currentUser">Which photo <em><strong>best</strong></em> captures how you feel?</p>
+		</div>
 		<div class="log-emotions" ng-if="currentUser">
 			<div class="row">
 				<div class="col-xs-3" ng-repeat="emotion in emotions">

@@ -2,7 +2,7 @@
 	<div class="main-wrapper">
 		<div class="pause-nav">
 			<div class="col-xs-4">
-				<a href="/home"><i class="fa fa-angle-left"></i></a>
+				<a id="back-link" href="/home"><i class="fa fa-angle-left"></i></a>
 			</div>
 			<div class="col-xs-4">
 				<h5 class="page-title">Meditate</h5>
@@ -11,11 +11,38 @@
 			</div>
 		</div>
 		<div class="middle-message">
-			<h4 class="page-prompt thin-text"><em>be mindful.</em>
-			</h4>
-			<p>Practice mindfulness and self-awareness by performing a quick, two-minute body scan.</p>
-			<p class="thin-text"><em>Let the visuals and audio on<br>the next screen guide you.</em></p>
-			<p class="text-muted thin-text"><small>(earphones recommended)</small></p>
+			<br>
+
+			<!-- div triggered modal -->
+			<div class="tip thin-text" id="meditate-tip" data-toggle="modal" data-target="#myModal">
+				<i class="fa fa-lightbulb-o"></i>
+				<br><em>be mindful</em>
+			</div>
+
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  	<div class="modal-dialog" role="document">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+				        	<h3 class="modal-title" id="myModalLabel">Mindfulness...</h3>
+				    	</div>
+					    <div class="modal-body">
+					        <p class="modal-body-text">is a mental state achieved by focusing one's awareness on the present moment, while calmly recognizing and accepting one's feelings, thoughts, and sensations.</p>
+					        <p>The body scan is one part of mindfulness meditation and helps one let go of feelings of needing to get stuff done.</p>
+					        <p class="modal-body-text">It trains the mind to move from detailed attention to a wider and more spatial awareness from one moment to the next.</p>
+					    </div>
+					    <div class="modal-footer">
+					      	<a class="pause-button pause-button-action" data-dismiss="modal">Got it</a>
+					    </div>
+			    	</div>
+			  	</div>
+			</div>
+
+
+			<p class="thin-text">Let the visuals and audio on the next screen guide you in a <em>3 min. body scan</em>.</p>
+			<p class="text-muted"><small>(earphones recommended)</small></p>
+			<br>
 			<a class="pause-button pause-button-action" href="/meditate">Ready to begin</a>
 		</div>
 	</div>
