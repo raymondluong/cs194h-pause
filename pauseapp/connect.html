@@ -7,6 +7,7 @@
 			<h5 class="page-title">Connect</h5>
 		</div>
 		<div class="col-xs-4">
+			<a id="home-link" ng-if="currentUser" ng-show="locationFound && momentCompleted" href="/home"><i class="fa fa-home"></i></a>
 		</div>
 	</div>
 	<div ng-if="!currentUser" class="main-wrapper">
@@ -51,7 +52,6 @@
 				</div>
 				<div ng-show="locationFound && momentCompleted">
 					<a class="pause-button pause-button-action" href="/log">log mood</a>
-					<a class="pause-button pause-button-fade" href="/home">return home</a>
 				</div>
 			</div>
 		</div>
