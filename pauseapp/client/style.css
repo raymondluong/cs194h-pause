@@ -480,38 +480,19 @@ p#connect-load-msg {
 	top: 30px;
 }
 
-/*.modalDialog {
-	position: fixed;
+
+
+
+
+/*  ====================
+		POP UP TIPS
+	====================
+*/
+.modal {
 	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
 	background: rgba(0,0,0,0.8);
 	z-index: 99999;
-	opacity:0;
-	-webkit-transition: opacity 400ms ease-in;
-	-moz-transition: opacity 400ms ease-in;
-	transition: opacity 400ms ease-in;
-	pointer-events: none;
 }
-.modalDialog:target {
-	opacity: 1;
-	pointer-events: auto;
-}
-.modalDialog > div {
-	width: 300px;
-	position: relative;
-	margin: 10% auto;
-	padding: 10px 20px 13px 20px;
-	border-radius: 7px;
-	background: #fff;
-}
-.modalDialog #modal-x {
-	display: block;
-	text-align: right;
-	color: #cacaca;
-}*/
 
 
 
