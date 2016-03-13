@@ -26,24 +26,35 @@ header .header-content .header-content-inner h1#title {
 	text-transform: lowercase;
 	font-weight: 400;
 	font-style: italic;
-	font-size: 4em;
+	font-size: 10em;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+header .header-content #catchphrase {
+	padding-top: 2em;
 }
 header .header-content .header-content-inner p {
 	font-size: 1.5em;
 	line-height: 1.5em;
 }
-header .header-content #catchphrase {
+header .header-content #header-text {
 	background-color: rgba(220,220,220,0.35);
-    border-radius: 200px;
-    padding: 2.5em 0em 0.05em 0em;
-    max-width: 600px;
-    -webkit-box-shadow: 3px 3px 4px 0px rgba(100,100,100,0.4);
-    -moz-box-shadow: 3px 3px 4px 0px rgba(100,100,100,0.4);
-    box-shadow: 3px 3px 4px 0px rgba(100,100,100,0.4);
+    border-radius: 10px;
+    padding: 3em 0.5em;
+}
+#header-text p {
+	color: #555;
 }
 header .header-content .header-content-inner {
 	margin-top: 2em;
 	margin-bottom: 3em;
+}
+header #lotus {
+	width: 11em;
+	position: relative;
+	top: -5em;
+	left: 10em;
+	z-index: -1;
 }
 
 
@@ -74,6 +85,7 @@ header .header-content .header-content-inner {
 .portfolio-box .portfolio-box-caption .project-name {
 	color: #fff;
 	font-weight: 300;
+	text-transform: lowercase;
 }
 .portfolio-box .portfolio-box-caption .project-links {
 	opacity: 0;
