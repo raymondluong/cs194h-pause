@@ -12,6 +12,11 @@ body {
 	padding: 2px 0 0 5px;
 }
 
+h2 {
+	text-align: center;
+	margin-top: 3em;
+	margin-bottom: 1em;
+}
 
 
 /* style for first header panel
