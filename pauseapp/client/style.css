@@ -166,15 +166,17 @@ h5 {
 	height: 8em;
 	display: inline-block;
 	border-radius: 4em;
-	/*background-color: rgba(242, 138, 93, 0.65);*/
 	background-color: rgb(78, 120, 160);
-	box-shadow: 2px 2px 3px 0px #909090;
+	box-shadow: 2px 2px 3px 0px #565656;
 	text-align: center;
 	font-size: 1.35em;
 	line-height: 1.5em;
 	color: #fffbf7;
 	font-weight: 400;
 	padding-left: 0.25em;
+}
+.tip:hover {
+	cursor: pointer;
 }
 .tip i.fa {
 	font-size: 3em;
@@ -223,10 +225,11 @@ h5 {
 }
 
 .login-password-form {
-	padding: 10px 0;
+	padding: 0.5em 0;
 }
 
-#login-buttons #login-name-link, #login-buttons #login-sign-in-link {
+#login-buttons #login-name-link,
+#login-buttons #login-sign-in-link {
 	position: relative;
 	top: 2px;
 	left: -10px;
@@ -251,18 +254,34 @@ h5 {
 	padding: 15px 10px;
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.5;
-	font-weight: 300;
 	font-size: 1.2em;
 	background-color: #f28a5d;
 	border: 0;
-	border-radius: 2px;
+	border-radius: 5px;
 	text-transform: lowercase;
+	box-shadow: 1px 1px 3px 0px #707070;
 }
-
 /* sign in button hover */
-#login-buttons .login-button:hover, .accounts-dialog .login-button:hover {
+#login-buttons .login-button:hover, .accounts-dialog #login-buttons-logout:hover {
 	background-color: #d97c53;
 }
+
+.accounts-dialog #login-buttons-open-change-password {
+	margin-top: 1.25em;
+	margin-bottom: 0.5em;
+	background-color: rgba(210,210,210,0.55);
+	color: #a0a0a0;
+}
+.accounts-dialog #login-buttons-open-change-password:hover {
+	background-color: rgba(210,210,210,0.75);
+	color: #a0a0a0;
+}
+
+.accounts-dialog #login-buttons-logout {
+	margin-bottom: 1em;
+}
+
+
 
 /* create account link */
 #login-buttons #signup-link, #login-buttons #back-to-login-link {
@@ -283,16 +302,16 @@ h5 {
 	width: 100%;
 	margin: auto;
 	padding: 1em 2.1em;
-	border-radius: 3px;
+	border-radius: 5px;
 	font-size: 1.5em;
-	letter-spacing: 1px;
-	font-weight: 300;
+	letter-spacing: 0.75px;
 	line-height: 4em;
-	box-shadow: 3px 3px 4px 0px #c0c0c0;
+	box-shadow: 1px 1px 3px 0px #565656;
 	text-transform: lowercase;
 }
 .pause-button:hover {
 	color: #fefefe;
+	cursor: pointer;
 }
 .pause-button-action {
 	background-color: rgba(242,138,93,1);
@@ -490,8 +509,32 @@ p#connect-load-msg {
 */
 .modal {
 	font-family: 'Lato', "Helvetica Neue", Helvetica, Arial, sans-serif;
-	background: rgba(0,0,0,0.8);
-	z-index: 99999;
+	background-color: rgba(150, 150, 150, 0.2);
+	z-index: 1050;
+}
+.modal-content {
+	border-radius: 5px;
+}
+.modal-header {
+	background-color: rgb(78, 120, 160);
+	color: #efefef;
+}
+.modal-header button.close {
+	color: #efefef;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+.middle-message p.modal-body-text {
+	font-size: 1.25em;
+	line-height: 1.65em;
+	text-align: left;
+}
+.modal-footer {
+	text-align: center;
+}
+.modal-footer button {
+	border-radius: 5px;
+	width: 100%;
 }
 
 

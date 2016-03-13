@@ -10,6 +10,7 @@
 			<div class="col-xs-4">
 			</div>
 		</div>
+
 		<div ng-if="!currentUser" class="middle-message">
 			<p>Hey there!</p>
 			<br>
@@ -17,11 +18,36 @@
 			<br>
 			<a class="pause-button pause-button-action" href="/home">return home</a>
 		</div>
+
 		<div ng-if="currentUser" class="middle-message">
-			<div class="tip thin-text" id="connect-tip">
+
+			<!-- div triggered modal -->
+			<div class="tip thin-text" id="connect-tip" data-toggle="modal" data-target="#myModal">
 				<i class="fa fa-heart-o"></i>
-				<br><em>de-stress</em>
+				<br><em>take a pause</em>
 			</div>
+
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			  	<div class="modal-dialog" role="document">
+			    	<div class="modal-content">
+			      		<div class="modal-header">
+				        	<h3 class="modal-title" id="myModalLabel">Taking a Moment...</h3>
+				    	</div>
+					    <div class="modal-body">
+					        <p class="modal-body-text">to stop and breathe helps reset your mind, allowing you to approach the same thing with a fresh, holistic perspective.</p>
+					        <p>We believe that building an anonymous community of others similarly searching for moments of calm in their day will spread the health and love.</p>
+					        <p class="modal-body-text">Through a physical connection by touching thumbs, it's as if you are sharing your vibes with the individual on the other end.</p>
+					    </div>
+					    <div class="modal-footer">
+					      	<a class="pause-button pause-button-action" data-dismiss="modal">Got it!</a>
+					    </div>
+			    	</div>
+			  	</div>
+			</div>
+
+
+
 			<p>Spread the health and love!</p>
 			<p class="thin-text">Join the anonymous community of pausers and connect with another.</p>
 			<!--<p>Connect with another individual who has also searched for a few seconds of stillness.</p>-->
