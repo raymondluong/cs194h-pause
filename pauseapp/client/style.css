@@ -512,6 +512,9 @@ p#connect-load-msg {
 	background-color: rgba(150, 150, 150, 0.2);
 	z-index: 1050;
 }
+.modal-title {
+	color: #efefef;
+}
 .modal-content {
 	border-radius: 5px;
 }
